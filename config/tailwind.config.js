@@ -108,7 +108,7 @@ module.exports = {
         'slide-out-left4': 'slide-out-left 0.6s ease-out',
       },
       backgroundImage : {
-        'home' : "url('collage_header.webp')",
+        'home' : "url('overfly_az.webp')",
         'ctahead' : "url('cta_banner_ideal.webp')",
         'sunset' : "url('sunset.webp')",
         'archbg' : "url('archbg.webp')",
