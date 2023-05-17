@@ -1,0 +1,143 @@
+<%= render "shared/header"%>
+
+<header class="bg-gradient-to-b from-slate-50 to-blue-100">
+  <div class="flex flex-col lg:flex-row">
+    <div class="flex flex-col items-center lg:w-1/2">
+      <span class="p-text text-xl lg:text-2xl pt-20 text-center">Read Below to Learn How to</span>
+      <h1 class="font-bold text-5xl pt-5 text-center">Become a Certificated Pilot</h1>
+      <h2 class="font-semibold text-xl italic pt-5 pb-10 text-center lg:block hidden">We'll help you achieve your aviation goals.  Every step of the way.</h2>
+      <h2 class="font-semibold text-lg italic pt-5 pb-10 text-center lg:hidden">We'll help you achieve your aviation goals.  <br>Every step of the way.</h2>
+      <p class="p-text w-3/4 pb-20">
+        If you're just starting your journey in the world of aviation, you've probably come across a variety of resources on the internet and you don't know where to start.  What's the difference between part 141 and part 61 training?  How much is pilot training going to cost?  Are small airplanes safe?  We'll answer those questions and more below.
+      </p>
+    </div>
+    <div class="flex flex-col items-center lg:w-1/2">
+      <%= image_tag "helicopter_pilot_passed_checkride.webp", alt: "A student pilot at Ideal Aviation Passes His Helicopter Checkride", class: "lg:w-3/4"%>
+    </div>
+  </div>
+</header>
+
+<section class="bg-gradient-to-t lg:bg-gradient-to-l from-ideal-blue to-ideal-blue flex flex-col items-center text-white">
+  <div class="pt-10 flex flex-col items-center">
+    <h2 class="text-center text-4xl font-bold lg:block hidden">Determine if Pilot Training is Right For You</h2>
+    <h2 class="text-center text-4xl font-bold lg:hidden">Determine if Pilot Training is Right For You</h2>
+    <p class="p-text w-3/4 lg:w-1/2  pt-10">The first step is to make a decision on whether or not you really want to become a pilot.  Take a mental inventory of yourself and determine what your long term goals are and how aviation fits in.  Do you want to fly around liesurely with your family and friends?  See the city of St. Louis from above in a private aircraft and then fly to a nearby city for lunch?  Or, are you looking to make a career out of aviation?  Do you want to become an airline pilot?  Or have a career in aviation in a different type of pilot job role?  </p>
+    <p class="p-text w-3/4 lg:w-1/2  pt-10">Do you want to fly helicopters or airplanes?  How much time can you dedicate each week to flight training?  Will your loved ones support you in your decision to become a pilot?  These are some of the questions you should ask yourself before you start pilot training.  No matter what your circumstances and long term ambitions are, the Ideal Aviation team is here to help you reach your goals.</p>
+    <p class="p-text w-3/4 lg:w-1/2  pt-10">We've prepared a short and fun quiz to help you determine if pilot training is right for you.  Start by taking our quick quiz to see if you have what it takes! Our quiz will assess your knowledge and skills related to aviation, as well as your personality traits and interests, to help determine if flying is right for you.</p>
+    <%= link_to "TAKE THE QUIZ", quiz_path, class: "btn-primary bg-slate-500 hover:bg-slate-400 my-10" %>
+  </div>
+</section>
+
+<section class="bg-gradient-to-b from-slate-50 to-white flex flex-col lg:flex-row-reverse items-center pt-10 pb-0 lg:py-10">
+  <div class="flex flex-col items-center justify-center lg:w-1/2 p-text">
+    <h2 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Schedule a Discovery Flight</h2>
+    <p class="w-3/4 pb-10">The first decision you can make is whether you want to fly helicopters (rotary wing) or airplanes (fixed wing).  Schedule a time to meet with our team, tour our hangar, and take flight in one of our aircraft.  During a discovery flight, you'll be paired up with one of our highly qualified FAA certificated flight instructors.</p>
+    <p class="w-3/4 pb-10">You'll get the chance to sit in the pilot seat and commandeer the aircraft.  Your instructor will help you taxi the aircraft out of the ramp and receive clearance from the control tower.  Once airborne, you'll take control of the aircraft and practice basic maneuvers like flying straight and level, turns, climbs, and descents.</p>
+    <p class="w-3/4 pb-10 font-semibold font-sans">Are you up for the opportunity that lies ahead?  Schedule a discovery flight now and see if flying is right for you.</p>
+    <%= link_to "SCHEDULE DISCOVERY FLIGHT", discovery_flight_path, class: "btn-primary mb-10" %>
+  </div>
+  <div class="flex flex-col items-center lg:w-1/2">
+    <%=image_tag "st_louis_arch_aerial.webp", alt: "Discovery flight over the St. Louis Arch", class: "lg:h-screen-2/3 lg:px-12 lg:py-8"%>
+  </div>
+</section>
+
+<%= render "shared/pilot_programs"%>
+
+<section>
+    <div class="flex flex-col items-center">
+      <h2 class="text-center font-semibold text-3xl py-20 hidden lg:block">What's the Difference Between Part 141 and Part 61 Training?</h2>
+      <h2 class="text-center font-semibold text-2xl py-20 lg:hidden">What's the difference between <br>Part 141 and Part 61?</h2>
+      <p class="w-4/5 lg:w-3/5 grid place-items-center pb-10 p-text">Part 141 and Part 61 refer to different sections in the FAA regulations.  Part 141 is a more structured and rigorous training program that is designed for schools that are approved by the FAA to provide training under specific curricula.  Part 61, on the other hand, is a more flexible training program that allows for individualized training plans; however being less structured, students may require more hours to complete Part 61 training.</p>
+
+    </div>
+
+    <div class="flex flex-col lg:flex-row justify-center lg:items-center pl-10 lg:pl-36">
+      
+      
+      <div class="lg:w-1/3">
+        <h3 class="font-bold text-xl">Part 141</h3>
+        <ul class="lg:pb-10 py-5 p-text">
+          <li class="pb-2">
+            <div class="flex flex-row">
+              <div class="text-ideal-blue pr-3 font-extrabold">✓</div>
+                Structured Curriculum
+            </div>
+          </li>
+          <li class="pb-2">
+            <div class="flex flex-row">
+              <div class="text-ideal-blue pr-3 font-extrabold">✓</div>
+                Fewer Required Hours
+            </div>
+          </li>
+          <li class="pb-2">
+            <div class="flex flex-row">
+              <div class="text-ideal-blue pr-3 font-extrabold">✓</div>
+                FAA Approved Syllabus
+            </div>
+          </li>
+          <li class="pb-2">
+            <div class="flex flex-row">
+              <div class="text-ideal-blue pr-3 font-extrabold">✓</div>
+                Flight School Must be FAA Certified
+            </div>
+          </li>
+          <li class="pb-2">
+            <div class="flex flex-row">
+              <div class="text-ideal-blue pr-3 font-extrabold">✓</div>
+                More Experienced Instructors
+            </div>
+          </li>
+          <li class="pb-2">
+            <div class="flex flex-row">
+              <div class="text-ideal-blue pr-3 font-extrabold">✓</div>
+                Geared Towards Career Pilot
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex flex-col items-center">
+      <p class="w-4/5 lg:w-3/5 grid place-items-center pb-20 text-lg text-center font-semibold">Ideal Aviation is one of the very few flight schools in the St. Louis area that is part 141.  We've partnered with SWIC to provide flight training for college credit.</p>
+    </div>
+  </section>
+
+
+
+  <section class="bg-gradient-to-r from-slate-300 to-slate-200  flex flex-col lg:flex-row items-center pt-10 pb-0 lg:py-10">
+  <div class="flex flex-col items-center justify-center lg:w-1/2 p-text">
+    <h2 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Is Flight Training Safe?</h2>
+    <p class="w-3/4 pb-10"> It's natural to wonder about the risks involved when considering learning to fly. Rest assured that flight training is a safe activity, with a strong emphasis on safety in all aspects of training.  The aviation industry places a high priority on safety, and this commitment extends to flight training at Ideal Aviation.</p>
+    <p class="w-3/4 pb-10">The NTSB reported that the fatal accident rate for general aviation has been declining for over a decade, and in 2020, it reached its lowest level ever recorded.  In 2019, the FAA reported that the accident rate for Part 141 flight schools was lower than the rate for Part 61 flight schools.</p>
+    <p class="w-3/4 pb-10 font-semibold font-sans">Our flight instructors are highly trained professionals who take safety seriously.  In addition, our aircraft are meticulously maintained and inspected regularly.</p>
+  </div>
+  <div class="flex flex-col items-center lg:w-1/2">
+    <%=image_tag "preflight.webp", alt: "Pilot performing a preflight check on a cessna 172", class: "lg:h-screen-2/3 "%>
+    <span class="text-slate-500 italic hidden lg:block lg:w-1/2 text-center">Pilot conducting a pre-flight inspection to ensure the aircraft is safe to fly</span>
+  </div>
+</section>
+
+<section class="bg-gradient-to-b from-slate-50 to-white flex flex-col lg:flex-row-reverse items-center pt-10 pb-0 lg:py-10">
+  <div class="flex flex-col items-center justify-center lg:w-1/2 p-text">
+    <h2 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">How Much is Flight Training Going to Cost?</h2>
+    <p class="w-3/4 pb-10">The cost of flight training varies greatly depending on a number of factors such as type of training, the student's aptitude and experience level, and the type of aircraft used.</p>
+    <p class="w-3/4 pb-10">When first starting out, many people only look at the hourly rate for aircraft rental.  However, take into consideration the program as a whole.  Ideal Aviation has great aircraft availability so you can fly more often and retain your knowledge and skills better so you can pass the checkride in a shorter time.</p>
+    <p class="w-3/4 pb-10">Although the actual cost of flight training can vary widely, plan to budget around $15,000 for private pilot fixed wing and $30,000 for private pilot rotary wing.  To get more details on hourly rates, program pricing, and potential financing options; give us a call today and speak to an Ideal Aviation team member.</p>
+    <%= link_to "CONTACT US TODAY", contact_path, class: "btn-primary mb-10" %>
+  </div>
+  <div class="flex flex-col items-center lg:w-1/2">
+    <%=image_tag "pilot_pass_multi_engine_checkride.webp", alt: "Discovery flight over the St. Louis Arch", class: "lg:h-screen-2/3"%>
+    <span class="text-slate-500 italic hidden lg:block lg:w-1/2 text-center">Pilot passing her multi engine checkride</span>
+  </div>
+</section>
+
+<%= render "shared/become_pilot_video"%>
+
+<%#= render "shared/pilot_careers"%>  
+
+<%= render "shared/cta_book"%>  
+
+<%= render "shared/cta_fly_with"%>  
+
+<%= render "shared/footer"%>
+<!--Sticky div-->
+</div>

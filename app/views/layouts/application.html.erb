@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Site Created By:    
+       _____  _       _     _     _____           _     _           
+      |  __ \(_)     | |   | |   |  __ \         | |   | |          
+      | |__) |_  __ _| |__ | |_  | |__) |   _  __| | __| | ___ _ __ 
+      |  _  /| |/ _` | '_ \| __| |  _  / | | |/ _` |/ _` |/ _ \ '__|
+      | | \ \| | (_| | | | | |_  | | \ \ |_| | (_| | (_| |  __/ |   
+      |_|  \_\_|\__, |_| |_|\__| |_|  \_\__,_|\__,_|\__,_|\___|_|   
+      |  \/  |   __/ |  | |      | | (_)                            
+      | \  / | _|___/ __| | _____| |_ _ _ __   __ _                 
+      | |\/| |/ _` | '__| |/ / _ \ __| | '_ \ / _` |                
+      | |  | | (_| | |  |   <  __/ |_| | | | | (_| |                
+      |_|  |_|\__,_|_|  |_|\_\___|\__|_|_| |_|\__, |                
+                                               __/ |                
+                                              |___/                 
+
+    Nice to see you here.  Find new student pilots with Right Rudder Marketing.  https://rightruddermarketing.com -->
+
+    <!--Title-->
+    <title>
+      <% if content_for?(:title) %>
+        <%= yield(:title) %>
+      <% else %>
+        Ideal Aviation St. Louis
+      <% end %>
+    </title>
+
+    <!--Favicon--> 
+    <%= favicon_link_tag asset_path('favicon/favicon.ico') %>
+    <% %w(57 72 76 114 120 144 152 180).each do |size| %>
+      <%= favicon_link_tag "favicon/apple-touch-icon-#{size}x#{size}.png", rel: 'apple-touch-icon', type: 'image/png', sizes: "#{size}x#{size}" %>
+    <% end %>
+
+    <!--Meta Tags-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="title" content="<%= if content_for?(:title) then yield(:title) else 'Ideal Aviation St. Louis' end %>">
+    <meta name="description" content="<%= if content_for?(:meta_description) then yield(:meta_description) else 'Attract more student pilots and grow your flight school with digitial marketing' end %>">
+    <meta name="keywords" content="<%= if content_for?(:meta_keywords) then yield(:meta_keywords) else 'flight school marketing, website design for flight schools, grow flight school business, aviation marketing, website design for flying club fbo, tim jedrek' end %>">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="1 days">
+    <meta name="author" content="Tim Jedrek LLC">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<%= request.original_url %>">
+    <meta property="og:title" content="<%= if content_for?(:title) then yield(:title) else 'Ideal Aviation St. Louis' end %>">
+    <meta property="og:description" content="<%= if content_for?(:meta_description) then yield(:meta_description) else 'Attract more student pilots and grow your flight school with digitial marketing' end %>">
+    <meta property="og:image" content="<%#= if content_for?(:og_image) then yield(:og_image) else image_url('rrmlogo.webp') end %>">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="<%= request.original_url %>">
+    <meta property="twitter:title" content="<%= if content_for?(:title) then yield(:title) else "Ideal Aviation St. Louis" end %>">
+    <meta property="twitter:description" content="<%= if content_for?(:meta_description) then yield(:meta_description) else 'Attract more student pilots and grow your flight school with digitial marketing' end %>">
+    <meta property="twitter:image" content="<%#= if content_for?(:twitter_image) then yield(:twitter_image) else image_url('rrmlogo.webp') end %>">
+
+    <!--CSS-->
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Poppins&display=swap" rel="stylesheet">
+
+    <!--JS-->
+    <%= javascript_importmap_tags %>
+    <!-- Alpine Plugins -->
+    <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+    <!-- Alpine Core -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!--For Alpine Intersect-->
+    <style>
+      [x-cloak] { display: none !important; }
+    </style>
+  </head>
+  
+  <!-- Google Analytics // Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3SVR01EH4G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3SVR01EH4G');
+</script>
+
+  <body>
+    <main class="">
+    <% if admin_signed_in? %>
+      <!--USER MENU-->
+      <%= render "shared/admin_menu" %>
+    <% end %>
+      <%= yield %>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+
+<%= render "shared/header"%>
+<%= render "shared/visit_ideal"%>
+
+<div class="bg-gradient-to-l from-slate-200 to-blue-50">
+  <h1 class="font-bold text-4xl pt-10 text-center">Contact Us</h1>
+  <div class="lg:flex lg:flex-row-reverse items-center lg:items-start">
+  
+
+    <div class="mx-10 lg:px-16 lg:w-1/2">
+      <%= render "form", message: @message %>      
+    </div>
+
+    <div class="mx-0 lg:w-1/2">
+      <%=image_tag "twin_outside.webp", class: "lg:pt-10", alt: ""%>
+    </div>
+
+  </div>
+
+</div>
+
+
+<%= render "shared/footer"%>
