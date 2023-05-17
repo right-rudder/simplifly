@@ -11,7 +11,8 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-        paragraph: ['Nunito Sans','Inter var', ...defaultTheme.fontFamily.sans],
+        paragraph: ['Inter var', ...defaultTheme.fontFamily.sans],
+        header: ['Kanit', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         'custom-50': '#E3F1F6',
