@@ -10,105 +10,116 @@
 
 <section class="flex flex-col lg:flex-row pt-10 pb-0 lg:py-10">
   <div class="flex flex-col items-center lg:w-1/2 p-text">
-    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Do You Think You Could Be a Pilot?</h3>
+    <h3 class="text-3xl font-semibold pb-10 font-header mx-5 text-center">ACCELERATED AIRLINE PROGRAMS</h3>
     <p class="w-3/4">
-    Are you fascinated by the world of aviation? 
-    Have you always dreamed of soaring through the skies?
-    Do you find yourself looking up at the planes overhead, 
-    wondering what it would be like to be the one in control?
+      With our comprehensive training programs, you
+      will gain the skills and knowledge required to
+      become a competent pilot and achieve your dream
+      of flying commercially.
     </p>
     <p class="w-3/4 py-10">
-    Start by taking our quick quiz to see if you have what it takes!
-    Our quiz will assess your knowledge and skills related to 
-    aviation, as well as your personality traits and interests, 
-    to help determine if  flying is right for you.
+      Whether you are just starting out or looking to
+      advance your career, our Accelerated Airline
+      Programs provide a proven path to success in the
+      aviation industry. Contact us today to learn more
+      and take the first step towards your exciting future
+      as a professional pilot.
     </p>
-    <%= link_to "TAKE THE QUIZ", quiz_path, class: "btn-primary mb-10" %>
+    <%= link_to "CONTACT US", root_path, class: "btn-primary mb-10" %>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
-    <%=image_tag "female_pilot_smiling_helicopter.webp", alt: "Student Pilot at Ideal Aviation Flying a Helicopter", class: "lg:h-screen-2/3"%>
+    <%=image_tag "airline_pilot_simplifly_alumni.webp", alt: "Simplifly Alumni Pilot Flying for the Airlines", class: "lg:h-screen-2/3"%>
   </div>
 </section>
 
-<section class="bg-gradient-to-r from-slate-200 to-blue-100 flex flex-col items-center py-10 pb-20">
-  <div class="flex flex-col items-center">
-    <h3 class="text-3xl font-semibold pb-5 font-sans mx-5 text-center pt-10">How to Get Started</h3>
-    <p class="p-text text-center hidden lg:block">
-    If you've always dreamed of becoming a pilot,  <br>
-    now is the perfect time to get started.  <br>
-    We offer a range of programs and services to  <br>
-    help you achieve your aviation goals <br>
+<section class="flex flex-col lg:flex-row-reverse pt-10 lg:py-10 bg-gradient-to-r from-custom-500 to-cyan-500 text-white">
+  <div class="flex flex-col items-center lg:w-1/2 p-text">
+    <h3 class="text-3xl font-semibold pb-10 font-header mx-5 text-center">ARE YOU READY FOR AN ADVENTURE?</h3>
+    <p class="w-3/4">
+      At SimpliFly, we believe that aviation is more than
+      just a career.  It's an adventure. We offer a range
+      of programs that will challenge you, inspire you,
+      and give you the opportunity to explore the world
+      from a unique perspective.
     </p>
-    <p class="p-text text-center lg:hidden w-3/4">
-    If you've always dreamed of becoming a pilot, 
-    now is the perfect time to get started. 
-    We offer a range of programs and services to 
-    help you achieve your aviation goals
+    <p class="w-3/4 py-10">
+      Our team of passionate instructors is dedicated to
+      sharing their love of aviation and providing a safe
+      and enjoyable learning experience for all students.
+      So, are you ready for an adventure? Let us help
+      you take flight and discover the endless
+      possibilities that aviation has to offer.
     </p>
   </div>
-  <div class="grid lg:grid-cols-2 grid-cols-1 gap-10 lg:gap-4 pt-10 lg:w-2/3 z-0">
-    <div class="bg-white rounded-xl lg:rounded-none lg:rounded-tl-3xl mx-10 lg:mx-0 p-5 flex flex-col items-center justify-between">
-      <h4 class="text-xl font-semibold pt-5 pb-3 font-sans mx-5 text-center">Learn About Being a Pilot</h4>
-      <p class="p-text">
-        If you're new to flying, you might not know where to start. Our team of experienced pilots and instructors can help guide you through the process and answer any questions you have about becoming a pilot. Click here to help you understand the pilot training process, and requirements.
-      </p>
-      <%= link_to "BECOME A PILOT", become_path, class: "btn-primary mt-5 text-base" %>
+  <div class="flex flex-col items-center lg:w-1/2">
+    <%=image_tag "female_pilot_smiling.webp", alt: "Female pilot smiling", class: "lg:w-1/2"%>
+  </div>
+</section>
+
+<section class="flex flex-col lg:flex-row pt-10 lg:py-10">
+  <div class="flex flex-col items-center justify-center lg:w-1/2 p-text">
+    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">BOOK A DISCOVERY FLIGHT</h3>
+    <p class="w-3/4 pb-10">
+      If you're new to aviation, starting with a Discovery
+      Flight is the perfect way to get your feet off the
+      ground and experience the joy of flying for the first
+      time. During this introductory flight, you'll take the
+      controls and work with one of our experienced
+      instructors to learn the basics of flying.
+    </p>
+    <p class="w-3/4 pb-10">
+      Our Discovery Flights are the perfect way to
+      determine if flying is for you and help you make an
+      informed decision about pursuing your pilot's
+      license. If you're ready to take the first step, sign
+      up for a Discovery Flight today and discover the
+      thrill of flying for yourself!
+    </p>
+    <%= link_to "BOOK A DISCOVERY FLIGHT", root_path, class: "btn-primary mb-10" %>
+  </div>
+  <div class="flex flex-col items-center lg:w-1/2">
+    <%=image_tag "discovery_flight_cessna.webp", alt: "Taking a discovery flight in a Cessna 172", class: "lg:h-screen-2/3"%>
+  </div>
+</section>
+
+<section class="flex flex-col lg:flex-row lg:justify-center lg:px-10 lg:gap-10 bg-gradient-to-b from-white to-custom-200 lg:pb-10">
+  <div class="flex flex-col items-center lg:w-1/4 lg:hover:scale-105 transition-all duration-300 p-5 lg:p-0">
+    <%= image_tag "team.webp", alt:"Team at Simplifly in an airliner", class: "rounded-t-2xl lg:rounded-none"%>
+    <div class="bg-custom-500 text-white font-header font-semibold w-full text-5xl text-center pb-20 rounded-b-2xl lg:rounded-none">
+      <%=link_to "OUR TEAM", root_path %>
     </div>
-    <div class="bg-white rounded-xl lg:rounded-none lg:rounded-tr-3xl mx-10 lg:mx-0 p-5 flex flex-col items-center justify-between">
-      <h4 class="text-xl font-semibold pt-5 pb-3 font-sans mx-5 text-center">Take a Discovery Flight</h4>
-      <p class="p-text">
-        The best way to experience flying is to take a Discovery Flight.  This is a short introductory flight with one of our experienced instructors that will give you a taste of what it's like to fly an aircraft.  You'll have the opportunity to take the controls and learn basic maneuvers and enjoy the incredible views from above.
-      </p>
-      <%= link_to "SCHEDULE TODAY", discovery_flight_path, class: "btn-primary mt-5 text-base" %>
+  </div>
+  <div class="flex flex-col items-center lg:w-1/4 lg:hover:scale-105 transition-all duration-300 p-5 lg:p-0">
+    <%= image_tag "aircraft.webp", alt:"Our Cessna 172 at Simplifly", class: "rounded-t-2xl lg:rounded-none"%>
+    <div class="bg-custom-500 text-white font-header font-semibold w-full text-5xl text-center pb-20 rounded-b-2xl lg:rounded-none">
+      <%=link_to "AIRCRAFT", root_path %>
     </div>
-    <div class="bg-white rounded-xl lg:rounded-none lg:rounded-bl-3xl mx-10 lg:mx-0 p-5 flex flex-col items-center justify-between">
-      <h4 class="text-xl font-semibold pt-5 pb-3 font-sans mx-5 text-center">Start Flight Training</h4>
-      <p class="p-text">
-        We offer personalized training programs to help	you earn your Private Pilot Certificate and beyond. Our experienced instructors will work with you to develop a training plan that meets your goals, schedule, and learning style. Our facility and fleet are meticulously	maintained to ensure you receive the best	training possible.
-      </p>
-      <%= link_to "OUR COURSES", programs_path, class: "btn-primary mt-5 text-base" %>
-    </div>
-    <div class="bg-white rounded-xl lg:rounded-none lg:rounded-br-3xl mx-10 lg:mx-0 p-5 flex flex-col items-center justify-between">
-      <h4 class="text-xl font-semibold pt-5 pb-3 font-sans mx-5 text-center">Advanced Flight Training</h4>
-      <p class="p-text">
-        Continue your flight training education with additional courses and certifications.  Ideal Aviation offers a range of advanced training options, including instrument training, multi-engine training, commercial training, and more.  We’re here to support you every step of the way in your aviation journey whether you’re flying for fun or for a career.
-      </p>
-      <%#= link_to "ADVANCED TRAINING", advanced_training_path, class: "btn-primary mt-5 text-base" %>
-      <div class="btn-primary mt-5 text-base">ADVANCED TRAINING</div>
+  </div>
+  <div class="flex flex-col items-center lg:w-1/4 lg:hover:scale-105 transition-all duration-300 p-5 lg:p-0">
+    <%= image_tag "why_simplifly.webp", alt:"Student at Simplifly passing a checkride!", class: "rounded-t-2xl lg:rounded-none"%>
+    <div class="bg-custom-500 text-white font-header font-semibold w-full text-5xl text-center pb-8 rounded-b-2xl lg:rounded-none">
+      <%=link_to "WHY SIMPLIFLY?", root_path %>
     </div>
   </div>
 </section>
+
+<section class="bg-gradient-to-b from-gray-800 to-gray-500 text-white">
+  <div class="flex flex-col items-center py-20 px-5">
+    <h3 class="font-header text-5xl font-semibold text-center">WHAT MAKES SIMPLIFLY DIFFERENT</h3>
+    <p class="py-10 text-center max-w-lg text-xl">
+      We understand that every student is different, and we believe in
+      fostering a supportive learning environment that empowers students to
+      reach their full potential. We pride ourselves on providing a unique and
+      personalized learning experience that sets us apart from other flight schools.
+    </p>
+    <%= image_tag "simplifly_scaled.webp"%>
+  </div>
+</section>
+
 
 <%= render "shared/testimonials"%>
 
-<section class="flex flex-col lg:flex-row-reverse py-10">
-  <div class="flex flex-col items-center lg:w-1/2 p-text">
-    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Why Choose Ideal Aviation?</h3>
-    <p class="w-3/4">
-      Fly the Ideal Way.  Ideal Aviation is the place for pilots in St. Louis, Missouri.  We maintain the highest standards of safety in all of our operations.  Our certified flight instructors have decades of combined experience, ensuring that you have the knowledge and skills you need to fly safely and confidently.  
-    </p>
-    <p class="w-3/4 py-10">
-      When you choose to fly at Ideal Aviation, you're not only joining the welcoming and friendly community of aviation, you become part of the Ideal Aviation family.  We are committed to your success and we want to see you succeed in your aviation goals.
-    </p>
-    <%= link_to "JOIN THE FAMILY", contact_path, class: "btn-primary mb-10" %>
-  </div>
-  <div class="flex flex-col items-center lg:w-1/2">
-    <%=image_tag "ideal_team.webp", alt: "Ideal Aviation Team Photo", class: "lg:w-5/6"%>
-  </div>
-</section>
 
-<section class="flex flex-col lg:flex-row py-10">
-  <div class="flex flex-col items-center justify-center lg:w-1/2 p-text">
-    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">State of the Art Facilities</h3>
-    <p class="w-3/4 pb-10">
-      Our facility spans over three hangars and we have a growing fleet of ten aircraft and over 15 certified flight instructors to fit your training needs.  Ideal Aviation offers private classrooms for individualized ground instruction that provide a comfortable and personalized learning environment.  
-    </p>
-    <%= link_to "TAKE A TOUR", location_path, class: "btn-primary mb-10" %>
-  </div>
-  <div class="flex flex-col items-center lg:w-1/2">
-    <%=image_tag "facility.webp", alt: "Cessna 172 Outside the Ideal Aviation Hangar During Sunset", class: "lg:h-screen-2/3"%>
-  </div>
-</section>
 
 <section class="flex flex-col lg:flex-row-reverse pt-10 pb-0 lg:py-10">
   <div class="flex flex-col items-center lg:w-1/2 p-text">
