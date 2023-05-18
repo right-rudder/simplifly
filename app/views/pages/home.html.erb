@@ -119,28 +119,7 @@
 
 <%= render "shared/testimonials"%>
 
-
-
-<section class="flex flex-col lg:flex-row-reverse pt-10 pb-0 lg:py-10">
-  <div class="flex flex-col items-center lg:w-1/2 p-text">
-    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Helicopter and Airplane Pilot Programs</h3>
-    <p class="w-3/4 pb-10">
-      Ideal Aviation offers Part 141 and Part 61 pilot training for rotary wing and fixed wing aircraft.  From private pilot all the way to commercial and CFII MEI, Ideal Aviation is here to help you reach your goals.  Ideal Aviation has also partnered with <%= link_to "Southwestern Illinois College", "https://www.swic.edu/academics/career-degrees/aviation/pilot-training/", target: "blank", class: "text-ideal-blue hover:underline"%> to provide college credit for flight and ground pilot training.
-    </p>
-    <span class="w-3/4">
-      <h4 class="pb-10 font-semibold font-sans">Ideal Aviation is the best flight school in the St. Louis area.  Full staff of CFIs, aircraft availability, clean hangars, and study areas to create the best environment for your pilot training. Start flying with Ideal Aviation today!</h4>
-    </span>
-    <%= link_to "VIEW PROGRAMS", programs_path, class: "btn-primary mb-10" %>
-  </div>
-  <div class="flex flex-col items-center lg:w-1/2">
-    <%=image_tag "student_pilot_recieves_certificate.webp", alt: "Student Pilot Passes Private Pilot Checkride at Ideal Aviation", class: "lg:w-5/6"%>
-    <span class="text-slate-600 italic hidden lg:block">Pass your checkride with Ideal Aviation!</span>
-  </div>
-</section>
-
-<%= render "shared/become_pilot_video"%>
-
-<%= render "shared/visit_ideal"%>
+<%= render "shared/cta_pilot_simple"%>
   
 <%= render "shared/cta_next_steps"%>
 

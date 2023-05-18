@@ -119,7 +119,9 @@ module.exports = {
         'ideal-ramp' : "url('ideal_ramp.webp')",
         'aerial' : "url('aerial.webp')",
         'pilot-thumbs' : "url('pilot_thumbs.webp')",
-        'hangarbg' : "url('hangarbg.webp')",        
+        'hangarbg' : "url('hangarbg.webp')",
+        'mountain' : "url('mountain_backdrop.webp')",
+        
       },
       height: theme => ({
         'screen-1/2': '50vh',
