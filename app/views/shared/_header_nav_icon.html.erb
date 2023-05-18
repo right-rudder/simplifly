@@ -1,11 +1,11 @@
 <nav class="sticky top-0 z-50 flex flex-row justify-between items-center drop-shadow-2xl bg-slate-50 transform-gpu">
-  <div class="pl-3 lg:pl-0">
+  <div class="pl-3 py-2 lg:py-0 lg:pl-0">
     <%= link_to root_path do %>
       <%= image_tag "simpliflylogo.webp", alt: "ideal aviation logo", class: "lg:h-24 h-16"%>
     <% end %>
   </div>
   <!--JS for drops-->
-  <div class="hidden lg:flex flex-row gap-10 italic items-center font-semibold text-xl mr-5" 
+  <div class="hidden lg:flex flex-row font-header gap-10 items-center font-semibold text-2xl mr-5" 
     x-data="{ 
       fly_drop: false, 
       pilot_drop: false,

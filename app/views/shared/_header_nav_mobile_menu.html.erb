@@ -25,14 +25,14 @@
       x-transition:leave="transition ease-in duration-300 transform"
       x-transition:leave-start="translate-x-0 opacity-100"
       x-transition:leave-end="-translate-x-full opacity-0"
-      class="absolute h-screen-mobile overflow-y-auto w-screen left-0 top-16 bg-gradient-to-b from-slate-50 to-blue-200 pt-3 flex flex-col z-50"
+      class="absolute h-screen-mobile font-header text-xl overflow-y-auto w-screen left-0 top-16 bg-gradient-to-b from-slate-50 to-blue-200 pt-3 flex flex-col z-50"
 >
   <div class="ml-16 mr-5 mt-5" x-data="{
           mobile_resources_drop: false,
           mobile_now_drop: false,
           mobile_certification_drop: false,
           mobile_about_drop: false }">
-    <ul class="space-y-4 font-semibold italic">
+    <ul class="space-y-4 font-semibold">
       <li><%= link_to "ENROLL TODAY", root_path%></li>
       <li><%= link_to "REQUEST INFO", root_path%></li>
       <li>
