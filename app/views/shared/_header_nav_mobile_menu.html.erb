@@ -33,10 +33,11 @@
           mobile_certification_drop: false,
           mobile_about_drop: false }">
     <ul class="space-y-4 font-semibold italic">
-      <li><%= link_to "NEW TO FLYING?", become_path%></li>
+      <li><%= link_to "ENROLL TODAY", root_path%></li>
+      <li><%= link_to "REQUEST INFO", root_path%></li>
       <li>
         <div class="flex flex-row justify-between" >
-          <div class=""><%= link_to "PILOT RESOURCES", pilot_resources_path%></div>
+          <div class=""><%= link_to "BECOME A PILOT", root_path%></div>
           <div class="px-5 py-1" x-on:click="mobile_resources_drop = ! mobile_resources_drop">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="transition-transform duration-500 ease-in-out" viewBox="0 0 16 16" x-bind:class="{ 'rotate-[90deg]': mobile_resources_drop }">
               <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
@@ -44,22 +45,22 @@
           </div>
         </div>
       </li>
-        <!--Pilot Resources Drop Down-->
+        <!--Drop Down-->
         <li class="ml-5 animate-slide-in-left" x-show="mobile_resources_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left': !mobile_resources_drop}">
-          <%= link_to "SCHEDULER" ,"https://app.flightschedulepro.com/Account/Login?", target: "blank"%>
+          <%= link_to "PILOT TRAINING OVERVIEW" , root_path, target: "blank"%>
         </li>
         <li class="ml-5 animate-slide-in-left2" x-show="mobile_resources_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left2': !mobile_resources_drop}">
-          <%= link_to "FIXED WING FLEET", fixed_wing_path%>
+          <%= link_to "PROJECTED TIMELINE", root_path%>
         </li>
         <li class="ml-5 animate-slide-in-left3" x-show="mobile_resources_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left3': !mobile_resources_drop}">
-          <%= link_to "ROTARY WING FLEET", rotary_wing_path%>
+          <%= link_to "DISCOVERY FLIGHT", root_path%>
         </li>
         <li class="ml-5 animate-slide-in-left4" x-show="mobile_resources_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left4': !mobile_resources_drop}">
-          <%= link_to "TRAINING RESOURCES", pilot_resources_path%>
+          <%= link_to "FAQs", root_path%>
         </li>
       <li>
         <div class="flex flex-row justify-between" >
-          <div class=""><%=link_to "FLY NOW", become_path%></div>
+          <div class=""><%=link_to "THE SIMPLIFLY WAY", root_path%></div>
           <div class="px-5 py-1" x-on:click="mobile_now_drop = ! mobile_now_drop">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="transition-transform duration-500 ease-in-out" viewBox="0 0 16 16" x-bind:class="{ 'rotate-[90deg]': mobile_now_drop }">
               <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
@@ -67,20 +68,23 @@
           </div>
         </div>
       </li>
-        <!--Now Drop Down-->
+        <!--Drop Down-->
         <li class="ml-5 animate-slide-in-left" x-show="mobile_now_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left': !mobile_now_drop}">
-          <%=link_to "DISCOVERY FLIGHT", discovery_flight_path%>
+          <%=link_to "WHY SIMPLIFLY", root_path%>
         </li>
         <li class="ml-5 animate-slide-in-left2" x-show="mobile_now_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left2': !mobile_now_drop}">
-          <%=link_to "PILOT PROGRAMS", programs_path%>
+          <%=link_to "OUR TEAM", root_path%>
           
         </li>
         <li class="ml-5 animate-slide-in-left3" x-show="mobile_now_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left3': !mobile_now_drop}">
-          <%=link_to "AIRCRAFT RENTAL", aircraft_rental_path%>
+          <%=link_to "OUR AIRCRAFT", root_path%>
+        </li>
+        <li class="ml-5 animate-slide-in-left3" x-show="mobile_now_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left3': !mobile_now_drop}">
+          <%=link_to "OUR LOCATION", root_path%>
         </li>
       <li>
         <div class="flex flex-row justify-between" >
-          <div class=""><%= link_to "PILOT CERTIFICATION", programs_path%></div>
+          <div class=""><%= link_to "AIRLINE PROGRAM", root_path%></div>
           <div class="px-5 py-1" x-on:click="mobile_certification_drop = ! mobile_certification_drop">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="transition-transform duration-500 ease-in-out" viewBox="0 0 16 16" x-bind:class="{ 'rotate-[90deg]': mobile_certification_drop }">
               <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
@@ -88,39 +92,18 @@
           </div>
         </div>
       </li>
-        <!--PILOT CERTIFICATION Drop Down-->
+        <!--Drop Down-->
         <li class="ml-5 animate-slide-in-left" x-show="mobile_certification_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left': !mobile_certification_drop}">
-          <%=link_to "AIRCRAFT PILOT TRAINING", airplane_training_path%>
+          <%=link_to "AIRLINE PROGRAM", root_path%>
         </li>
         <li class="ml-5 animate-slide-in-left2" x-show="mobile_certification_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left2': !mobile_certification_drop}">
-          <%=link_to "HELICOPTER PILOT TRAINING", helicopter_training_path%>
+          <%=link_to "PROGRAM COST", root_path%>
         </li>
         <li class="ml-5 animate-slide-in-left3" x-show="mobile_certification_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left3': !mobile_certification_drop}">
-          <%=link_to "PRIVATE PILOT TRAINING", private_pilot_path%>
+          <%=link_to "BLOG", root_path%>
         </li>
-        <!--<li class="ml-5 animate-slide-in-left4" x-show="mobile_certification_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left4': !mobile_certification_drop}">
-          <%=link_to "ADVANCED TRAINING", advanced_training_path%>
-        </li>-->
-      <li><%=link_to "NEWS", news_path%></li>
-      <li>
-        <div class="flex flex-row justify-between" >
-          <div class=""><%=link_to "ABOUT US", about_us_path%></div>
-          <div class="px-5 py-1" x-on:click="mobile_about_drop = ! mobile_about_drop">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="transition-transform duration-500 ease-in-out" viewBox="0 0 16 16" x-bind:class="{ 'rotate-[90deg]': mobile_about_drop }">
-              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-            </svg>
-          </div>
-        </div>
-      </li>
-        <!--Now Drop Down-->
-        <li class="ml-5 animate-slide-in-left" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left': !mobile_about_drop}">
-          <%=link_to "OUR STORY", about_us_path%>
-        </li>
-        <li class="ml-5 animate-slide-in-left2" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left2': !mobile_about_drop}">
-          <%=link_to "OUR TEAM", our_team_path%>
-        </li>
-        <li class="ml-5 animate-slide-in-left3" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left3': !mobile_about_drop}">
-          <%=link_to "WHERE TO FIND US", location_path%>
+        <li class="ml-5 animate-slide-in-left4" x-show="mobile_certification_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left4': !mobile_certification_drop}">
+          <%=link_to "QUIZ", root_path%>
         </li>
     </ul>
   </div>
