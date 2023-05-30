@@ -102,11 +102,13 @@ module.exports = {
         'slide-in-left2': 'slide-in-left 0.7s ease-out',
         'slide-in-left3': 'slide-in-left 0.8s ease-out',
         'slide-in-left4': 'slide-in-left 1s ease-out',
+        'slide-in-left5': 'slide-in-left 1.1s ease-out',
 
         'slide-out-left': 'slide-out-left 0.3s ease-out',
         'slide-out-left2': 'slide-out-left 0.4s ease-out',
         'slide-out-left3': 'slide-out-left 0.5s ease-out',
         'slide-out-left4': 'slide-out-left 0.6s ease-out',
+        'slide-out-left5': 'slide-out-left 0.7s ease-out',
       },
       backgroundImage : {
         'home' : "url('overfly_az.webp')",
