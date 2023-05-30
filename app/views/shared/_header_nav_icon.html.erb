@@ -7,7 +7,7 @@
           'x-data' => '{ scrollPosition: 0 }', 
           'x-init' => 'window.addEventListener("scroll", () => { scrollPosition = window.scrollY })',
           'x-bind:class' => '{ "scale-100 lg:w-4/5 lg:scale-100 transition-all duration-1000": scrollPosition <= 50, 
-                                "scale-75 lg:w-3/5 lg:scale-100 transition-all duration-1000": scrollPosition > 50 }'
+                                "-translate-y-3 scale-75 lg:w-1/2 lg:translate-y-0 lg:scale-100 transition-all duration-1000": scrollPosition > 50 }'
           %>
     <% end %>
   </div>
