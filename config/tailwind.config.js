@@ -123,6 +123,8 @@ module.exports = {
         'pilot-thumbs' : "url('pilot_thumbs.webp')",
         'hangarbg' : "url('hangarbg.webp')",
         'mountain' : "url('mountain_backdrop.webp')",
+        'discovery-flight' : "url('discovery-flight-bg.webp')"
+        
         
       },
       height: theme => ({
