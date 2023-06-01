@@ -1,6 +1,6 @@
 class DiscoverFlight < ApplicationRecord
   before_validation :strip_phone_number
-  after_save :to_lacrm
+  #after_save :to_lacrm  ### NOT NEEDED.  For Ideal Aviation or flight schools that use LACRM
   
   validates :first_name, presence: true
   validates :last_name, presence: true
