@@ -1,25 +1,59 @@
 
 <footer class="bg-white">
 
-  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-    <hr class="my-6 border-gray-800 border-2 sm:mx-auto lg:my-8 hidden lg:block" />
-
-    <div class="flex-row hidden lg:flex justify-between">
-      <div class="font-header text-2xl font-semibold">
-        BECOME A PILOT
-      </div>
-      <div class="font-header text-2xl font-semibold">
-        THE SIMPLIFLY WAY
-      </div>
-      <div class="font-header text-2xl font-semibold">
-        AIRLINE PROGRAM
-      </div>
-      <div class="font-header text-2xl font-semibold">
-        CONTACT US
-      </div>
-    </div>
-
-    <hr class="my-6 border-gray-800 border-2 sm:mx-auto lg:my-8 hidden lg:block" />
+  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 ">
+    
+    <ul class="hidden lg:block">					
+      <hr class="my-6 border-gray-800 border-2 sm:mx-auto lg:my-8 hidden lg:block" />
+      <li class="relative " x-data="{ selected: false }" @mouseenter="selected = true" @mouseleave="selected = false">
+        <div class="flex-row flex w-full justify-between" x-on:mouseover="open = true" x-on:mouseout="open = false">
+          <div class="font-header text-2xl font-semibold w-1/4">
+            <%= link_to "HOW TO BECOME A PILOT"%>
+          </div>
+          <div class="font-header text-2xl font-semibold w-1/4 pl-10" >
+            <%= link_to "AIRLINE PILOT COURSES"%>
+          </div>
+          <div class="font-header text-2xl font-semibold w-1/4 pl-20">
+            <%= link_to "WHY SIMPLIFLY"%>
+          </div>
+          <div class="font-header text-2xl font-semibold w-1/8">
+            <%= link_to "CONTACT US"%>
+          </div>
+        </div>
+        <!--Hover menu-->
+        <div class=" relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container1" x-bind:style="selected ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+          <div class="flex-row flex w-full justify-between pt-5">
+            <div class="font-header text-2xl font-semibold w-1/4">
+              <ul>
+                <li class="pb-3"><%= link_to "DISCOVERY FLIGHT"%></li>
+                <li class="pb-3"><%= link_to "ENROLL AT SIMPLIFLY"%></li>
+                <li class=""><%= link_to "INSTRUCT AT SIMPLIFLY"%></li>
+              </ul>
+            </div>
+            <div class="font-header text-2xl font-semibold w-1/4 pl-12" >
+              <ul>
+                <li class="pb-3"><%= link_to "PILOT TRAINING"%></li>
+                <li class="pb-3"><%= link_to "TIMELINE"%></li>
+                <li class=""><%= link_to "COST"%></li>
+              </ul>
+            </div>
+            <div class="font-header text-2xl font-semibold w-1/4 pl-24">
+              <ul>
+                <li class="pb-3"><%= link_to "OUR TEAM"%></li>
+                <li class="pb-3"><%= link_to "AIRPLANES"%></li>
+                <li class=""><%= link_to "LOCATIONS"%></li>
+              </ul>
+            </div>
+            <div class="font-header text-2xl font-semibold w-1/8 pl-40">
+              <!--BLANK-->
+            </div>
+          </div>
+        </div>
+      </li>
+      <hr class="my-6 border-gray-800 border-2 sm:mx-auto lg:my-8 hidden lg:block" />
+    </ul>
+    
+    
 
 
     <div class="md:flex md:justify-between">
