@@ -126,7 +126,7 @@ module.exports = {
         'home' : "url('overfly_az.webp')",
         'ctahead' : "url('cta_banner_ideal.webp')",
         'sunset' : "url('sunset.webp')",
-        'archbg' : "url('archbg.webp')",
+        'pilots-airliner' : "url('pilots-in-airliner.webp')",
         'piper' : "url('piper_sunset.webp')",
         'cessna-sunset' : "url('cessna_sunset_dark.webp')",
         'dark-hangar' : "url('dark_hangar.webp')",
