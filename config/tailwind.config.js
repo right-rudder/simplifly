@@ -15,6 +15,7 @@ module.exports = {
         header: ['Kanit', ...defaultTheme.fontFamily.sans],
       },
       colors: {
+        /* Previous color scheme.. Blake said its too dark and not blue/light enough... uh huh ..
         'custom-50': '#E3F1F6',
         'custom-100': '#C7E3ED',
         'custom-200': '#ABD4E4',
@@ -25,6 +26,17 @@ module.exports = {
         'custom-700': '#0F475B',
         'custom-800': '#0B3545',
         'custom-900': '#07232E',
+        */
+        'custom-50': '#d0ebf4',
+        'custom-100': '#aec4cc',
+        'custom-200': '#90bccc',
+        'custom-300': '#60b3d7',
+        'custom-400': '#4299b8',
+        'custom-500': '#198eb8',
+        'custom-600': '#1780a6',
+        'custom-700': '#135b88',
+        'custom-800': '#0f4b6f',
+        'custom-900': '#08293d',
       },
       keyframes: {
         'plane-enter': {
