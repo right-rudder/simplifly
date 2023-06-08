@@ -1,0 +1,48 @@
+<section class="bg-slate-200 flex flex-col pt-10 pb-0 lg:py-10">
+  <div class="flex flex-col lg:flex-row">
+    <div class="lg:w-1/2 flex flex-col items-center ml-10">
+      <div class="grid place-items-center pb-10">
+        <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Visit SimpliFly Today</h3>
+        <p class="w-3/4 p-text">Come visit SimpliFly and speak to one of our team members.  We are located at St. Louis Downtown Airport (KCPS) just minutes away from the Gateway Arch.</p>
+      </div>
+
+      <!--NAP-->
+      <div class="flex flex-col gap-5 w-3/4 pb-10">
+        <div class="flex flex-row">
+          <div class="">
+            <%= image_tag "pin.webp", class: "h-7 max-w-min", alt: "map icon"%>
+          </div>
+          <div class="ml-5 p-text">
+            5600 Vector Dr<br>
+            Sauget, IL 62206
+          </div>
+        </div>
+        
+        <div class="flex flex-row">
+          <div class="">
+            <%= image_tag "phone.webp", class: "h-7 max-w-min", alt: "phone icon"%>
+          </div>
+          <div class="ml-5 p-text">
+            <a href="tel:1-618-350-4408">1-618-350-4408</a><br>
+          </div>
+        </div>
+        
+        <div class="flex flex-row">
+          <div class="">
+            <%= image_tag "email.webp", class: "h-7 max-w-min", alt: "email icon"%>
+          </div>
+          <div class="ml-5 p-text">
+            <a href="mailto:info@idealaviationstl.com">info@idealaviationstl.com</a>
+          </div>
+        </div>
+      </div>
+      <% if current_page?(contact_path) || current_page?(location_path) %>
+      <% else %>
+        <%= link_to "VISIT IDEAL", location_path, class: "btn-primary mb-10 ml-5 lg:ml-20 w-52 " %>
+      <% end %>
+    </div>
+    <div class="lg:w-1/2 flex flex-col items-center">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3118.9284959262027!2d-90.16488488255615!3d38.58149439999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b2176bb00437%3A0xc55163b52114baf9!2sIdeal%20Aviation!5e0!3m2!1sen!2sus!4v1680478014007!5m2!1sen!2sus" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="lg:w-3/4 w-full aspect-auto"></iframe>
+    </div>
+  </div>
+</section>
