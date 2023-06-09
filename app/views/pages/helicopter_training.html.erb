@@ -11,7 +11,7 @@
       <p class="p-text w-3/4 pb-5">
         This allows us to provide all our students, especially America's veterans, a more comprehensive learning experience leading to a career in aviation. Whether your goal is to fly for fun or become a professional helicopter pilot, we can get you enrolled in the right program.
       </p>
-      <%= link_to "SEND US A MESSAGE", contact_path, class: "btn-primary my-3" %>
+      <%= link_to "SEND US A MESSAGE", contact_path, data: { turbo: false }, class: "btn-primary my-3" %>
     </div>
     <div class="flex flex-col items-center lg:w-1/2">
       <%= image_tag "helicopter.webp", alt: "Helicopter hovering outside Ideal Aviation hangar", class: ""%>
@@ -27,7 +27,7 @@
   <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
       <h1 class="font-bold text-5xl text-center">Ideal Aviation Helicopters</h1>
       <h2 class="font-bold text-4xl text-center py-10">Check out the helicopter fleet at Ideal Aviation</h2>
-      <%= link_to "VIEW ROTARY WING AIRCRAFT", rotary_wing_path, class: "btn-primary" %>
+      <%= link_to "VIEW ROTARY WING AIRCRAFT", rotary_wing_path, data: { turbo: false }, class: "btn-primary" %>
   </div>
 </header>
 

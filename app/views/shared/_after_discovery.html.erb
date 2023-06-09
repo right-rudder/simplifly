@@ -76,7 +76,7 @@
 
   <div class=" max-w-2xl mx-5 lg:mx-auto p-text pb-10 flex flex-col items-center">
     At Ideal Aviation, we are passionate about aviation and sharing the joy of flying with others. Don't procrastinate. Contact us today to get started on your aviation journey.
-      <%=link_to contact_path, class: "mx-auto" do%>
+      <%=link_to contact_path, data: { turbo: false }, class: "mx-auto" do%>
         <div class="btn-primary mt-5">
           CONTACT US
         </div>

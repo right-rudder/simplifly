@@ -4,7 +4,7 @@
   <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
       <h1 class="font-bold text-5xl text-center">Fixed Wing Aircraft</h1>
       <h2 class="font-bold text-4xl text-center py-10">Fly an airplane today at Ideal Aviation</h2>
-      <%= link_to "GET CHECKED OUT NOW", rental_checkout_path, class: "btn-primary" %>
+      <%= link_to "GET CHECKED OUT NOW", rental_checkout_path, data: { turbo: false }, class: "btn-primary" %>
   </div>
 </header>
 
@@ -17,7 +17,7 @@
     <p class="w-3/4 pb-10">
       Tecnam P92s are equipped with the Garmin G3X touch screen avionics system. This innovative system provides pilots with two advanced and user-friendly 10.6 inch touch screens that makes flying safer and more enjoyable.  To top it all off, enjoy a comfortable ride with a premium interior and easily adjustable Italian leather seats.  Come fly with us and experience the comfort and luxury of our Tecnam aircraft. 
     </p>
-    <%= link_to "FLY THE TECNAM P92", rental_checkout_path, class: "btn-primary mb-10" %>
+    <%= link_to "FLY THE TECNAM P92", rental_checkout_path, data: { turbo: false }, class: "btn-primary mb-10" %>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
     <!--Slider--->
@@ -84,7 +84,7 @@
     <p class="w-3/4 pb-10">
       The Piper Pilot 100i is a reliable cross country plane and IFR trainer, with a GFC500 autopilot, GNX375 GPS, and backup Garmin G5. Synthetic vision technology provides valuable information for informed decision making while flying. Its advanced technology and performance make it an ideal choice for pilots serious about their training.
     </p>
-    <%= link_to "FLY THE PIPER PILOT", rental_checkout_path, class: "btn-primary mb-10" %>
+    <%= link_to "FLY THE PIPER PILOT", rental_checkout_path, data: { turbo: false }, class: "btn-primary mb-10" %>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
     <!--Slider--->

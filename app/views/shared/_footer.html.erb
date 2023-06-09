@@ -8,16 +8,16 @@
       <li class="relative " x-data="{ selected: false }" @mouseenter="selected = true" @mouseleave="selected = false">
         <div class="flex-row flex w-full justify-between" x-on:mouseover="open = true" x-on:mouseout="open = false">
           <div class="font-header text-2xl font-semibold w-1/4 hover:text-sky-500 duration-500" >
-            <%= link_to "HOW TO BECOME A PILOT", class: ""%>
+            <%= link_to "HOW TO BECOME A PILOT", data: { turbo: false }, class: ""%>
           </div>
           <div class="font-header text-2xl font-semibold w-1/4 pl-10 hover:text-sky-500 duration-500" >
-            <%= link_to "AIRLINE PILOT COURSES", airline_pilot_courses_path, class: ""%>
+            <%= link_to "AIRLINE PILOT COURSES", airline_pilot_courses_path, data: { turbo: false }, class: ""%>
           </div>
           <div class="font-header text-2xl font-semibold w-1/4 pl-20 hover:text-sky-500 duration-500" >
-            <%= link_to "WHY SIMPLIFLY", class: ""%>
+            <%= link_to "WHY SIMPLIFLY", data: { turbo: false }, class: ""%>
           </div>
           <div class="font-header text-2xl font-semibold w-1/8 hover:text-sky-500 duration-500" >
-            <%= link_to "CONTACT US", contact_path, class: ""%>
+            <%= link_to "CONTACT US", contact_path, data: { turbo: false }, class: ""%>
           </div>
         </div>
         <!--Hover menu-->
@@ -25,23 +25,23 @@
           <div class="flex-row flex w-full justify-between pt-5">
             <div class="font-header text-2xl font-semibold w-1/4">
               <ul>
-                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "DISCOVERY FLIGHT"%></li>
-                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "ENROLL AT SIMPLIFLY"%></li>
-                <li class="hover:text-sky-500 duration-500 "><%= link_to "INSTRUCT AT SIMPLIFLY"%></li>
+                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "DISCOVERY FLIGHT", data: { turbo: false }%></li>
+                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "ENROLL AT SIMPLIFLY", data: { turbo: false }%></li>
+                <li class="hover:text-sky-500 duration-500 "><%= link_to "INSTRUCT AT SIMPLIFLY", data: { turbo: false }%></li>
               </ul>
             </div>
             <div class="font-header text-2xl font-semibold w-1/4 pl-12" >
               <ul>
-                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "PILOT TRAINING"%></li>
-                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "TIMELINE"%></li>
-                <li class="hover:text-sky-500 duration-500 "><%= link_to "COST"%></li>
+                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "PILOT TRAINING", data: { turbo: false }%></li>
+                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "TIMELINE", data: { turbo: false }%></li>
+                <li class="hover:text-sky-500 duration-500 "><%= link_to "COST", data: { turbo: false }%></li>
               </ul>
             </div>
             <div class="font-header text-2xl font-semibold w-1/4 pl-24">
               <ul>
-                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "OUR TEAM"%></li>
-                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "AIRPLANES"%></li>
-                <li class="hover:text-sky-500 duration-500 "><%= link_to "LOCATIONS", location_path%></li>
+                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "OUR TEAM", data: { turbo: false }%></li>
+                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "AIRPLANES", data: { turbo: false }%></li>
+                <li class="hover:text-sky-500 duration-500 "><%= link_to "LOCATIONS", location_path, data: { turbo: false }%></li>
               </ul>
             </div>
             <div class="font-header text-2xl font-semibold w-1/8 pl-40">

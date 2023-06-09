@@ -4,7 +4,7 @@
   <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
       <h1 class="font-bold text-5xl text-center">Rotary Wing Aircraft</h1>
       <h2 class="font-bold text-4xl text-center py-10">Fly a helicopter today at Ideal Aviation</h2>
-      <%= link_to "GET CHECKED OUT NOW", rental_checkout_path, class: "btn-primary" %>
+      <%= link_to "GET CHECKED OUT NOW", rental_checkout_path, data: { turbo: false }, class: "btn-primary" %>
   </div>
 </header>
 
@@ -17,7 +17,7 @@
     <p class="w-3/4 pb-10">
       The Cabri's spacious cabin, comfortable seats, and excellent visibility provide an optimal learning environment for pilots of all skill levels. Whether you are a beginner or an experienced pilot, our Cabri helicopter will allow you to master the art of helicopter flight in a safe and controlled setting. With its advanced technology and exceptional safety features, the Guimbal Cabri is the perfect helicopter for flight training, and Ideal Aviation is proud to offer this exceptional aircraft to our students.
     </p>
-    <%= link_to "FLY THE GUIMBAL CABRI", rental_checkout_path, class: "btn-primary mb-10" %>
+    <%= link_to "FLY THE GUIMBAL CABRI", rental_checkout_path, data: { turbo: false }, class: "btn-primary mb-10" %>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
     <!--Slider--->
@@ -84,7 +84,7 @@
     <p class="w-3/4 pb-10">
       The simulator's customizable scenarios and weather conditions allow pilots to practice a wide range of flight maneuvers and emergency procedures, making it a valuable tool for pilots of all levels. Whether you're a new pilot looking to build your skills or an experienced pilot looking to maintain your proficiency, the Elite Simulator is the perfect training tool to help you achieve your goals.
     </p>
-    <%= link_to "FLY ELITE SIMULATOR", rental_checkout_path, class: "btn-primary mb-10" %>
+    <%= link_to "FLY ELITE SIMULATOR", rental_checkout_path, data: { turbo: false }, class: "btn-primary mb-10" %>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
     <%= image_tag "elite.webp", alt: "Elite Helicopter simulator training", class: "lg:w-3/4"%>

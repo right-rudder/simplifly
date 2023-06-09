@@ -4,7 +4,7 @@
   <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
       <h1 class="font-semibold font-header text-5xl lg:text-8xl lg:px-20 text-center">AIRLINE PILOT COURSES</h1>
       <h2 class="font-bold text-xl lg:text-3xl italic text-center py-5 lg:py-10">Start flight training today and join the SimpliFly family</h2>
-      <%= link_to "ENROLL TODAY", root_path, class: "btn-primary" %>
+      <%= link_to "ENROLL TODAY", root_path, data: { turbo: false }, class: "btn-primary" %>
   </div>
 </header>
 
@@ -40,7 +40,7 @@
     <p class="w-3/4 pb-10">Pilots, as professionals responsible for operating and navigating aircraft, typically possess a range of characteristics and traits that contribute to their success in their field.</p>
     <p class="w-3/4 pb-10">If you're ready to soar to new heights or up for the exhilarating challenge of becoming a pilot yourself, don't hesitate to get in touch with us. Contact us today to embark on an exciting journey in the world of aviation.</p>
     <p class="w-3/4 pb-10 font-semibold font-sans">Get in contact with the team at SimpliFly and let's work together to complete your aviation goals.</p>
-    <%= link_to "CONTACT US", contact_path, class: "btn-primary mb-10" %>
+    <%= link_to "CONTACT US", contact_path, data: { turbo: false }, class: "btn-primary mb-10" %>
   </div>
   <div class="flex flex-col items-center lg:w-1/2 pb-10 lg:pb-0">
     <div class="flex flex-col w-3/4">
@@ -90,8 +90,8 @@
     <p class="w-3/4 pb-10">The cost of flight training varies greatly depending on a number of factors such as type of training, the student's aptitude and experience level, and the type of aircraft used.</p>
     <p class="w-3/4 pb-10">Although the actual cost of flight training can vary widely, plan to budget around $15,000 for private pilot fixed wing.  To get more details on hourly rates, program pricing, and potential financing options; give us a call today and speak to a SimpliFly team member.</p>
     <div class="flex gap-5 mb-10">
-    <%= link_to "VIEW PRICING", contact_path, class: "btn-primary" %>
-    <%= link_to "CONTACT US", contact_path, class: "btn-secondary" %>
+    <%= link_to "VIEW PRICING", contact_path, data: { turbo: false }, class: "btn-primary" %>
+    <%= link_to "CONTACT US", contact_path, data: { turbo: false }, class: "btn-secondary" %>
     </div>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
