@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   
   # Contact form
   get 'contact', to: 'messages#new', as: :contact
-  get 'visit-ideal-aviation', to: 'messages#location', as: :location
+  get 'visit-simplifly', to: 'messages#location', as: :location
   get 'contact-confirmation', to: 'messages#confirmation', as: :contact_confirmation
 
   # Quiz form

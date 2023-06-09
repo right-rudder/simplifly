@@ -137,6 +137,7 @@ module.exports = {
         'mountain' : "url('mountain_backdrop.webp')",
         'discovery-flight' : "url('discovery-flight-bg.webp')",
         'airline-cockpit' : "url('airline_cockpit.webp')",
+        'canyon' : "url('canyon-background.webp')",
         
         
         
