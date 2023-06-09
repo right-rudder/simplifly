@@ -29,7 +29,11 @@
   </div>
 
   <div class="my-5">
-    <%= form.label "How can we help?", class: "p-text" %>
+    <% if current_page?(cfi_path)%>
+      <%= form.label "Tell us about yourself", class: "p-text" %>
+      <% else %>
+        <%= form.label "How can we help?", class: "p-text" %>
+    <%end%>
     <%= form.text_area :body, rows: 4, class: "block shadow rounded-md border border-slate-200 outline-none px-3 py-2 mt-2 w-full focus:border-ideal-blue focus:ring-ideal-blue" %>
   </div>
 
@@ -41,6 +45,10 @@
   <%# end %>
 
   <div class="inline">
+  <% if current_page?(cfi_path)%>
+    <%= form.submit "APPLY TODAY", class: "btn-primary mb-10" %>
+    <% else %>
     <%= form.submit "SEND MESSAGE", class: "btn-primary mb-10" %>
+  <% end %>
   </div>
 <% end %>
