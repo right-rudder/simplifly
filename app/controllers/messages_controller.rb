@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
   before_action :set_message, only: %i[ show edit update destroy ]
-  before_action :authenticate_admin!, except: [:create, :new, :confirmation, :location]
+  before_action :authenticate_admin!, except: [:create, :new, :confirmation, :location, :cfi]
   invisible_captcha only: [:create], honeypot: :confirm_email
 
   # GET /messages or /messages.json
@@ -20,6 +20,9 @@ class MessagesController < ApplicationController
     @message = Message.new
   end
   def location
+    @message = Message.new
+  end
+  def cfi
     @message = Message.new
   end
 

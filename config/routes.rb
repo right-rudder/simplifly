@@ -24,8 +24,9 @@ Rails.application.routes.draw do
   
   # Contact form
   get 'contact', to: 'messages#new', as: :contact
-  get 'visit-simplifly', to: 'messages#location', as: :location
   get 'contact-confirmation', to: 'messages#confirmation', as: :contact_confirmation
+  get 'visit-simplifly', to: 'messages#location', as: :location
+  get 'instruct-at-simplifly', to: 'messages#cfi', as: :cfi
 
   # Quiz form
   get 'quiz', to: 'quiz_results#new', as: :quiz
