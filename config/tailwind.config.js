@@ -124,7 +124,7 @@ module.exports = {
       },
       backgroundImage : {
         'home' : "url('overfly_az.webp')",
-        'ctahead' : "url('cta_banner_ideal.webp')",
+        'ctahead' : "url('cessna-sunset.webp')",
         'sunset' : "url('sunset.webp')",
         'pilots-airliner' : "url('pilots-in-airliner.webp')",
         'piper' : "url('piper_sunset.webp')",
