@@ -20,7 +20,7 @@
       </p>
     </div>
     <div class="flex flex-col items-center lg:w-1/2">
-      <%= image_tag "pilot_pass_checkride_cessna.webp", alt: "A student pilot at Ideal Aviation Passes His Helicopter Checkride", class: "lg:w-3/4"%>
+      <%= image_tag "airline_pilot.webp", alt: "A SimpliFly alumni now flying at the airlines", class: "lg:w-3/4"%>
     </div>
   </div>
 </header>
@@ -70,76 +70,17 @@
 
 <%= render "shared/pilot_programs"%>
 
-<section>
-    <div class="flex flex-col items-center">
-      <h2 class="text-center font-semibold text-3xl py-20 hidden lg:block">What's the Difference Between Part 141 and Part 61 Training?</h2>
-      <h2 class="text-center font-semibold text-2xl py-20 lg:hidden">What's the difference between <br>Part 141 and Part 61?</h2>
-      <p class="w-4/5 lg:w-3/5 grid place-items-center pb-10 p-text">Part 141 and Part 61 refer to different sections in the FAA regulations.  Part 141 is a more structured and rigorous training program that is designed for schools that are approved by the FAA to provide training under specific curricula.  Part 61, on the other hand, is a more flexible training program that allows for individualized training plans; however being less structured, students may require more hours to complete Part 61 training.</p>
-
-    </div>
-
-    <div class="flex flex-col lg:flex-row justify-center lg:items-center pl-10 lg:pl-36">
-      
-      
-      <div class="lg:w-1/3">
-        <h3 class="font-bold text-xl">Part 141</h3>
-        <ul class="lg:pb-10 py-5 p-text">
-          <li class="pb-2">
-            <div class="flex flex-row">
-              <div class="text-ideal-blue pr-3 font-extrabold">✓</div>
-                Structured Curriculum
-            </div>
-          </li>
-          <li class="pb-2">
-            <div class="flex flex-row">
-              <div class="text-ideal-blue pr-3 font-extrabold">✓</div>
-                Fewer Required Hours
-            </div>
-          </li>
-          <li class="pb-2">
-            <div class="flex flex-row">
-              <div class="text-ideal-blue pr-3 font-extrabold">✓</div>
-                FAA Approved Syllabus
-            </div>
-          </li>
-          <li class="pb-2">
-            <div class="flex flex-row">
-              <div class="text-ideal-blue pr-3 font-extrabold">✓</div>
-                Flight School Must be FAA Certified
-            </div>
-          </li>
-          <li class="pb-2">
-            <div class="flex flex-row">
-              <div class="text-ideal-blue pr-3 font-extrabold">✓</div>
-                More Experienced Instructors
-            </div>
-          </li>
-          <li class="pb-2">
-            <div class="flex flex-row">
-              <div class="text-ideal-blue pr-3 font-extrabold">✓</div>
-                Geared Towards Career Pilot
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="flex flex-col items-center">
-      <p class="w-4/5 lg:w-3/5 grid place-items-center pb-20 text-lg text-center font-semibold">Ideal Aviation is one of the very few flight schools in the St. Louis area that is part 141.  We've partnered with SWIC to provide flight training for college credit.</p>
-    </div>
-  </section>
-
-
 
   <section class="bg-gradient-to-r from-slate-300 to-slate-200  flex flex-col lg:flex-row items-center pt-10 pb-0 lg:py-10">
   <div class="flex flex-col items-center justify-center lg:w-1/2 p-text">
     <h2 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Is Flight Training Safe?</h2>
-    <p class="w-3/4 pb-10"> It's natural to wonder about the risks involved when considering learning to fly. Rest assured that flight training is a safe activity, with a strong emphasis on safety in all aspects of training.  The aviation industry places a high priority on safety, and this commitment extends to flight training at Ideal Aviation.</p>
-    <p class="w-3/4 pb-10">The NTSB reported that the fatal accident rate for general aviation has been declining for over a decade, and in 2020, it reached its lowest level ever recorded.  In 2019, the FAA reported that the accident rate for Part 141 flight schools was lower than the rate for Part 61 flight schools.</p>
-    <p class="w-3/4 pb-10 font-semibold font-sans">Our flight instructors are highly trained professionals who take safety seriously.  In addition, our aircraft are meticulously maintained and inspected regularly.</p>
+    <p class="w-3/4 pb-10">When contemplating the journey of learning to fly, it's natural to have concerns about potential risks. However, you can find reassurance in the fact that flight training is a safety-centric activity, with a steadfast focus on safety throughout every aspect of the training process. The aviation industry upholds an unwavering commitment to safety, and this commitment seamlessly extends to flight training at SimpliFly.</p>
+    <p class="w-3/4 pb-10">The <%= link_to "NTSB reported", "https://www.ntsb.gov/safety/data/Pages/GeneralAviationDashboard.aspx", target: "blank", class: "text-sky-700 hover:underline"%> that the fatal accident rate for general aviation has been declining for over a decade, and in 2020, it reached its lowest level ever recorded.</p>
+    <p class="w-3/4 pb-10 font-semibold font-sans">SimpliFly takes safety seriously.  We are a team of highly trained professionals.  In addition, our aircraft are meticulously maintained and inspected regularly.</p>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
     <%=image_tag "preflight.webp", alt: "Pilot performing a preflight check on a cessna 172", class: "lg:h-screen-2/3 "%>
-    <span class="text-slate-500 italic hidden lg:block lg:w-1/2 text-center">Pilot conducting a pre-flight inspection to ensure the aircraft is safe to fly</span>
+    <span class="text-slate-500 italic hidden lg:block lg:w-2/3 text-center">Student pilot conducting a pre-flight inspection right before his first solo flight to ensure the aircraft is safe to fly</span>
   </div>
 </section>
 
@@ -147,21 +88,15 @@
   <div class="flex flex-col items-center justify-center lg:w-1/2 p-text">
     <h2 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">How Much is Flight Training Going to Cost?</h2>
     <p class="w-3/4 pb-10">The cost of flight training varies greatly depending on a number of factors such as type of training, the student's aptitude and experience level, and the type of aircraft used.</p>
-    <p class="w-3/4 pb-10">When first starting out, many people only look at the hourly rate for aircraft rental.  However, take into consideration the program as a whole.  Ideal Aviation has great aircraft availability so you can fly more often and retain your knowledge and skills better so you can pass the checkride in a shorter time.</p>
-    <p class="w-3/4 pb-10">Although the actual cost of flight training can vary widely, plan to budget around $15,000 for private pilot fixed wing and $30,000 for private pilot rotary wing.  To get more details on hourly rates, program pricing, and potential financing options; give us a call today and speak to an Ideal Aviation team member.</p>
+    <p class="w-3/4 pb-10">Although the actual cost of flight training can vary widely, plan to budget around $15,000 for private pilot fixed wing.  To get more details on hourly rates, program pricing, and potential financing options; give us a call today and speak to a SimpliFly team member.</p>
     <%= link_to "CONTACT US TODAY", contact_path, class: "btn-primary mb-10" %>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
-    <%=image_tag "pilot_pass_multi_engine_checkride.webp", alt: "Discovery flight over the St. Louis Arch", class: "lg:h-screen-2/3"%>
-    <span class="text-slate-500 italic hidden lg:block lg:w-1/2 text-center">Pilot passing her multi engine checkride</span>
+    <%=image_tag "pilot_pass_checkride_cessna.webp", alt: "Pilot passing private pilot checkride at SimpliFly", class: "lg:h-screen-2/3"%>
+    <span class="text-slate-500 italic hidden lg:block lg:w-1/2 text-center">Pilot passing his private pilot checkride at SimpliFly Flight School</span>
   </div>
 </section>
 
-<%= render "shared/become_pilot_video"%>
-
-<%#= render "shared/pilot_careers"%>  
-
-<%= render "shared/cta_book"%>  
 
 <%= render "shared/cta_fly_with"%>  
 
