@@ -10,8 +10,7 @@ Rails.application.routes.draw do
 
 
   post 'uploader/image', to: 'uploader#image' #add upload image to posts 
-  get 'news', to: 'posts#index', as: :news
-  get 'pilot-resources', to: 'posts#index', as: :pilot_resources
+  get 'blog', to: 'posts#index', as: :blog
   resources :posts
   
   
