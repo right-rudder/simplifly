@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   def home
   end
 
-  def become_a_pilot
+  def airline_pilot_courses
     @book_download = BookDownload.new
   end
 

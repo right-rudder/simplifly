@@ -44,7 +44,7 @@ Rails.application.routes.draw do
   get 'book-download-confirmation', to: 'book_downloads#confirmation', as: :book_download_confirmation
 
   # Static Pages
-  get 'how-to-become-a-pilot', to: 'pages#become_a_pilot', as: :become
+  get 'airline-pilot-courses', to: 'pages#airline_pilot_courses', as: :airline_pilot_courses
   get 'pilot-programs', to: 'pages#pilot_programs', as: :programs
   get 'aircraft-rental', to: 'pages#aircraft_rental', as: :aircraft_rental
   get 'fixed-wing-airplane-fleet', to: 'pages#fixed_wing', as: :fixed_wing
