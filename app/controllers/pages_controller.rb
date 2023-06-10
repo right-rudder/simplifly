@@ -2,8 +2,10 @@ class PagesController < ApplicationController
   def home
   end
 
+  def pilot_training
+  end
+  
   def airline_pilot_courses
-    @book_download = BookDownload.new
   end
 
   def pilot_programs
