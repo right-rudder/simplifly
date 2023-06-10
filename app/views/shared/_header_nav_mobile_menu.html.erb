@@ -47,13 +47,13 @@
       </li>
         <!--Drop Down-->
         <li class="ml-5 animate-slide-in-left" x-show="mobile_resources_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left': !mobile_resources_drop}">
-          <%= link_to "DISCOVERY FLIGHT" , root_path, data: { turbo: false }, target: "blank"%>
+          <%= link_to "DISCOVERY FLIGHT" , discovery_flight_path, data: { turbo: false }, target: "blank"%>
         </li>
         <li class="ml-5 animate-slide-in-left2" x-show="mobile_resources_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left2': !mobile_resources_drop}">
           <%= link_to "ENROLL AT SIMPLIFLY", root_path, data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left3" x-show="mobile_resources_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left3': !mobile_resources_drop}">
-          <%= link_to "INSTRUCT AT SIMPLIFLY", root_path, data: { turbo: false }%>
+          <%= link_to "INSTRUCT AT SIMPLIFLY", cfi_path, data: { turbo: false }%>
         </li>
       <li>
         <div class="flex flex-row justify-between" >
@@ -116,7 +116,7 @@
           <%=link_to "AIRPLANES", root_path, data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left4" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left4': !mobile_about_drop}">
-          <%=link_to "LOCATIONS", root_path, data: { turbo: false }%>
+          <%=link_to "LOCATIONS", location_path, data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left5" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left5': !mobile_about_drop}">
           <%=link_to "BLOG", root_path, data: { turbo: false }%>
