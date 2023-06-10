@@ -1,45 +1,35 @@
 <%= render "shared/header"%>
 
-<section class="bg-gradient-to-t lg:bg-gradient-to-l from-ideal-blue to-ideal-blue-dark text-white">
+<section class="bg-gradient-to-t lg:bg-gradient-to-l from-sky-800 to-slate-900 text-white">
   <div class="flex flex-col lg:flex-row-reverse lg:items-center pt-10 lg:py-10">
     <!--Text Section-->
     <div class="lg:w-1/2 flex flex-col justify-center items-center pb-10">
-      <p class="text-xl lg:text-3xl text-center">How to Become a Pilot at Ideal Aviation</p>
-      <h2 class="font-bold text-3xl lg:text-5xl pt-5 text-center"><span class="text-slate-300">Private Pilot Certificate</span></h2>
-      <h2 class="font-bold text-3xl lg:text-5xl text-center">In St. Louis</h2>
+      <p class="text-xl lg:text-3xl text-center">How to Become a Pilot at SimpliFly</p>
+      <h2 class="font-bold text-3xl lg:text-5xl pt-5 text-center">Private Pilot Certificate</h2>
       <p class="w-5/6 lg:w-4/5 pt-5 text-left lg:text-left text-lg lg:text-base p-text">
-      Ideal Aviation believes that anyone with a passion for flying can become a pilot with the right training, dedication, and support. Watch our video by Bill Macon that outlines the three main tests you need to pass to obtain your pilot's license: the medical exam, written test, and flight test (check ride).
+      The first step in your aviation journey is to get your private pilot certificate.  There are three main tests that you need to pass to get your pilot license: the medical exam, written test, and the flight test (checkride).
       </p>
       <p class="w-5/6 lg:w-4/5 pt-5 text-left lg:text-left text-lg lg:text-base p-text">
-      We believe that the key to your success lies in our commitment to providing the highest quality flight training available, with a focus on safety, professionalism, and individual attention.
+      We believe that the key to your success lies in our commitment to providing the highest quality flight training available, with a focus on safety, professionalism, and personalized attention.
       </p>
     </div>
-    <!--video section-->
     <div class="lg:w-1/2">
       <div class="grid place-items-center lg:mx-10">
-        <div style="height: 0px; overflow: hidden; padding-top: 56.25%; position: relative; width: 100%;">
-          <iframe
-              style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"
-              src="https://tube.rvere.com/embed?v=Gsyvxrt7hi4"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen>
-          </iframe>
-        </div>
+        <%= image_tag "two-pilot-smiling.webp" , alt: "Two SimpliFly pilots smiling", class: "lg:rounded-2xl lg:w-5/6"%>
+        
       </div>
     </div>
   </div>
 </section>
 
-<section class="flex flex-col lg:flex-row items-center pt-10 pb-0 lg:py-10">
+<section class="flex flex-col lg:flex-row items-center pt-10 pb-0 lg:py-10 bg-slate-50">
   <div class="flex flex-col items-center lg:w-1/2 p-text">
     <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Step 1. Medical Exam</h3>
     <p class="w-3/4">
-      The Federal Aviation Administration (FAA) requires all pilots to meet certain medical standards to ensure that they are physically and mentally fit to fly. At Ideal Aviation, we understand that the medical exam can seem daunting, which is why we provide support and guidance to our students throughout the process.
+      The Federal Aviation Administration (FAA) requires all pilots to meet certain medical standards to ensure that they are physically and mentally fit to fly. At SimpliFly, we understand that the medical exam can seem daunting, which is why we provide support and guidance to our students throughout the process.
     </p>
     <p class="w-3/4 py-10">
-      We work closely with certified aviation medical examiners and will be able to link you up with an Aviation Medical Examiner (AME).  Our experienced team of instructors will guide you through the exam process, explain what the exam entails, and what conditions may disqualify you from obtaining a pilot's license. We'll provide you with tips on how to prepare for the exam, including what to bring, what to expect on the day, and how to deal with any potential issues that may arise. 
+      We work closely with certified aviation medical examiners and will be able to link you up with an Aviation Medical Examiner (AME).  Our experienced team of instructors will help you through the exam process, explain what the exam entails, and what conditions may disqualify you from obtaining a pilot's license. We'll provide you with tips on how to prepare for the exam, including what to bring, what to expect on the day, and how to deal with any potential issues that may arise. 
     </p>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
@@ -47,22 +37,22 @@
   </div>
 </section>
 
-<section class="flex flex-col lg:flex-row-reverse items-center pt-10 pb-0 lg:py-10">
+<section class="flex flex-col lg:flex-row-reverse items-center pt-10 pb-0 lg:py-10 bg-slate-50">
   <div class="flex flex-col items-center lg:w-1/2 p-text">
     <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Step 2. Written Exam</h3>
     <p class="w-3/4">
-      The written exam is the second step towards obtaining your pilot's license. It covers a wide range of topics, including regulations, airspace, weather, aerodynamics, and aircraft performance. The exam is designed to test your knowledge and ensure that you have a comprehensive understanding of what it takes to be a safe and competent pilot.
+      Obtaining your pilot's license involves passing a written exam, which serves as the crucial second step in the process. This comprehensive examination encompasses a wide range of subjects, including regulations, airspace, weather, aerodynamics, and aircraft performance. It serves as a means to assess your knowledge and ensure that you possess a deep understanding of the essential aspects required to be a safe and competent pilot.
     </p>
     <p class="w-3/4 py-10">
-      At Ideal Aviation, we understand that the written exam can be challenging, which is why we provide our students with comprehensive ground school training to help them prepare. Our experienced instructors will guide you through the study materials, providing you with a clear understanding of the concepts covered on the exam.
+      At SimpliFly, we recognize the challenges that the written exam may present, and we are committed to supporting our students in their preparation. Our dedicated approach includes providing comprehensive ground school training, led by experienced instructors who will assist you in navigating the study materials. Through their guidance, you will gain a clear comprehension of the key concepts covered in the exam, empowering you to approach it with confidence and proficiency.
     </p>
   </div>
-  <div class="flex flex-col items-center lg:w-1/2">
-    <%=image_tag "group_ground.webp", alt: "Group ground session", class: "lg:h-screen-3/4"%>
+  <div class="lg:w-1/2 flex flex-col items-center">
+    <%=image_tag "e6b-plotter.webp" , alt: "e6b and plotter", class: "lg:w-5/6 rounded-2xl"%>
   </div>
 </section>
 
-<section class="flex flex-col lg:flex-row items-center pt-10 pb-0 lg:py-10">
+<section class="flex flex-col lg:flex-row items-center pt-10 pb-0 lg:py-10 bg-slate-50">
   <div class="flex flex-col items-center lg:w-1/2 p-text">
     <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center">Step 3. Flight Exam</h3>
     <p class="w-3/4">
@@ -76,7 +66,7 @@
     </p>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
-    <%=image_tag "helicopter_pass.webp", alt: "Student passing helicopter checkride", class: "lg:h-screen-3/4"%>
+    <%=image_tag "ppl-pass.webp", alt: "Student passing ppl checkride", class: "lg:h-screen-3/4 lg:rounded-2xl"%>
   </div>
 </section>
 
