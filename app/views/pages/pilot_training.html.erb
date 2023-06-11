@@ -3,7 +3,7 @@
 <header class="bg-gradient-to-b from-slate-50 to-blue-100">
   <div class="flex flex-col lg:flex-row-reverse">
     <div class="flex flex-col items-center lg:w-1/2">
-      <h1 class="font-bold text-5xl pt-10 text-center">Pilot Training Programs</h1>
+      <h1 class="font-bold text-5xl font-header uppercase pt-10 text-center">Pilot Training Programs</h1>
       <h2 class="font-semibold text-xl italic pt-5 pb-3 px-10 text-center">Pilot training courses to help you reach your goals</h2>
       <p class="p-text w-3/4 pb-5">
         SimpliFly makes becoming a pilot simple.  Offering training for pathways to the airlines, we can help you get your private pilot certificate and more.
@@ -29,12 +29,92 @@
       <%= link_to "ENROLL TODAY", contact_path, data: { turbo: false }, class: "btn-primary my-3" %>
     </div>
     <div class="flex flex-col items-center lg:w-1/2">
-      <%= image_tag "pilot_thumbs.webp", alt: "Pilot giving the thumbs up by a cessna 172", class: "lg:w-2/3"%>
+      <%= image_tag "pilot_with_checkride_pass.webp", alt: "Pilot giving the thumbs up by a cessna 172", class: "lg:w-4/5"%>
     </div>
   </div>
 </header>
 
 <%= render "shared/cta_discovery_flight_right"%>
+
+<section class="bg-gradient-to-r from-sky-700 to-sky-600 text-white">
+  <div class="flex flex-col items-center">
+    <h2 class="text-center font-bold text-4xl lg:text-5xl font-header uppercase py-20">SimpliFly offers Flexible and Accelerated Prgrams</h2>
+    <p class="w-4/5 lg:w-3/5 grid place-items-center text-xl pb-20">Depending on your availability and commitment, we offer programs to fit your need and schedule.  Study full time or part time.  The team at SimpliFly is here to help you reach your aviation goals.</p>
+  </div>
+  <!--Comparison-->
+  <div class="flex flex-col lg:flex-row justify-center lg:items-center pl-10 lg:pl-36 lg:gap-24">
+    <!--competitor-->
+    <div class="lg:w-2/5">
+      <h3 class="font-bold text-xl">Accelerated Track</h3>
+      <ul class="lg:pb-10 py-5">
+        <li class="pb-2">
+          <div class="flex flex-row">
+            <div class="pr-3 font-extrabold">✈</div>
+              Full Time
+          </div>
+          <div class="pl-7 italic text-slate-300">Engage in full time daily training in a learning environment that maximizes exposure and practice time, accelerating your progress towards obtaining a pilot's license.</div>
+        </li>
+        <li class="pb-2">
+          <div class="flex flex-row">
+            <div class="pr-3 font-extrabold">✈</div>
+              Fly daily
+          </div>
+          <div class="pl-7 italic text-slate-300">Fly as often as possible.  Weather and maintenance permitting.</div>
+        </li>
+        <li class="pb-2">
+          <div class="flex flex-row">
+            <div class="pr-3 font-extrabold">✈</div>
+              Condensed duration
+          </div>
+          <div class="pl-7 italic text-slate-300">Designed to be completed in a shorter timeframe compared to flexible programs, allowing students to obtain their pilot's license quickly and efficiently.</div>
+        </li>
+        <li class="pb-2">
+          <div class="flex flex-row">
+            <div class="pr-3 font-extrabold">✈</div>
+              Immersive and intense
+          </div>
+          <div class="pl-7 italic text-slate-300">The intensive nature of the program allows students to fully immerse themselves in aviation training, promoting a deeper level of engagement and focus on their learning objectives.</div>
+        </li>
+      </ul>
+    </div>
+    
+    <!--Us-->
+    <div class="lg:w-2/5">
+      <h3 class="font-bold text-xl">Flexible Track</h3>
+      <ul class="lg:pb-10 py-5">
+        <li class="pb-2">
+          <div class="flex flex-row">
+            <div class="pr-3 font-extrabold">✈</div>
+              Part Time
+          </div>
+          <div class="pl-7 italic text-slate-300">Dedicate 1-2 times a week for flight lessons, allowing for greater flexibility in balancing other commitments like work or education.</div>
+        </li>
+        <li class="pb-2">
+          <div class="flex flex-row">
+            <div class="pr-3 font-extrabold">✈</div>
+              Fly few times a week
+          </div>
+          <div class="pl-7 italic text-slate-300">Fly when your schedule allows.  Weather and maintenance permitting.</div>
+        </li>
+        <li class="pb-2">
+          <div class="flex flex-row">
+            <div class="pr-3 font-extrabold">✈</div>
+              Extended duration
+          </div>
+          <div class="pl-7 italic text-slate-300">The program may have a longer overall duration due to the reduced frequency of training sessions, providing trainees with a more relaxed pace and time to absorb and practice skills.</div>
+        </li>
+        <li class="pb-2">
+          <div class="flex flex-row">
+            <div class="pr-3 font-extrabold">✈</div>
+              Reduced intensity
+          </div>
+          <div class="pl-7 italic text-slate-300">The training sessions are spread out, allowing students to manage the learning curve at a pace that suits their comfort level, potentially reducing stress and enhancing confidence in their abilities.</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 
 <%= render "shared/pilot_programs"%>
 <%= render "shared/testimonials"%>
