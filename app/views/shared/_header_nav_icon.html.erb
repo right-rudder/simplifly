@@ -94,7 +94,7 @@
         <!--Drop down Menu-->
         <div class="flex flex-col gap-3 mx-5 items-start">
           <div class="items-center hover:text-white">
-            <%= link_to root_path, data: { turbo: false }, class: "hover:text-white" do %>
+            <%= link_to pilot_training_path, data: { turbo: false }, class: "hover:text-white" do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                 PILOT TRAINING
                 <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-white h-4 ml-3 opacity-0" 
