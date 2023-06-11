@@ -3,7 +3,7 @@
         class="flex items-center space-x-2 focus:outline-none">
 
   <span x-text="open ? 'Close' : 'Menu'"
-        class="text-lg font-semibold text-ideal-blue">Menu</span>
+        class="text-lg font-semibold ">Menu</span>
   
   <div class="w-6 flex items-center justify-center relative text-white">
     <span x-bind:class="open ? 'translate-y-0 rotate-45' : '-translate-y-2'"
@@ -25,7 +25,7 @@
       x-transition:leave="transition ease-in duration-300 transform"
       x-transition:leave-start="translate-x-0 opacity-100"
       x-transition:leave-end="-translate-x-full opacity-0"
-      class="absolute h-screen-mobile font-header text-xl overflow-y-auto w-screen left-0 top-16 bg-gradient-to-b from-custom-400/90 to-blue-200 pt-10 flex flex-col z-30"
+      class="absolute h-screen-mobile font-header text-xl overflow-y-auto w-screen left-0 top-16 bg-gradient-to-b from-sky-600/90 to-sky-100 pt-10 flex flex-col z-30"
 >
   <div class="ml-16 mr-5 mt-5" x-data="{
           mobile_resources_drop: false,
