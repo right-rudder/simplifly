@@ -2,6 +2,9 @@ class PagesController < ApplicationController
   def home
   end
 
+  def instrument
+  end
+  
   def pilot_training
   end
   
