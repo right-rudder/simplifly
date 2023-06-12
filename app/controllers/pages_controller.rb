@@ -2,7 +2,13 @@ class PagesController < ApplicationController
   def home
   end
 
+  def private_pilot
+  end
+
   def instrument
+  end
+
+  def commercial
   end
   
   def pilot_training
@@ -30,9 +36,6 @@ class PagesController < ApplicationController
 
   def helicopter_training
     @book_download = BookDownload.new
-  end
-
-  def private_pilot
   end
 
   def about_us
