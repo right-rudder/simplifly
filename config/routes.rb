@@ -44,6 +44,7 @@ Rails.application.routes.draw do
   get 'book-download-confirmation', to: 'book_downloads#confirmation', as: :book_download_confirmation
 
   # Static Pages
+  get 'multi-engine-rating', to: 'pages#multi', as: :multi
   get 'commercial-pilot-training', to: 'pages#commercial', as: :commercial
   get 'instrument-rating', to: 'pages#instrument', as: :instrument
   get 'private-pilot-training', to: 'pages#private_pilot', as: :private_pilot
