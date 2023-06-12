@@ -139,6 +139,7 @@ module.exports = {
         'airline-cockpit' : "url('airline_cockpit.webp')",
         'canyon' : "url('canyon-background.webp')",
         'cfi-pass' : "url('cfi-pass.webp')",
+        'airline-departure' : "url('airline-departure.webp')",
         
         
         

@@ -2,6 +2,9 @@ class PagesController < ApplicationController
   def home
   end
 
+  def timeline
+  end
+  
   def private_pilot
   end
 
