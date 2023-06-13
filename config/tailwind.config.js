@@ -141,6 +141,7 @@ module.exports = {
         'cfi-pass' : "url('cfi-pass.webp')",
         'airline-departure' : "url('airline-departure.webp')",
         'planes-parked' : "url('planes-parked.webp')",
+        'skyline' : "url('skyline.webp')",
         
         
         
