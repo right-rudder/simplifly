@@ -54,7 +54,7 @@
 
   <div class="flex flex-col lg:flex-row w-full">
     <!--Mins and Averages-->
-    <div class="lg:w-1/2 flex flex-col items-center">
+    <div class="lg:w-1/2 flex flex-col items-center mb-20">
       <div class="">
         <h4 class="font-semibold uppercase text-xl font-header">Private Pilot Minimums</h4>
         <ul>
@@ -86,10 +86,26 @@
       
     </div>
     
-    <!--Actual Calc-->
+    <!--Calculator-->
     <div class="lg:w-1/2 flex flex-col items-center">
-    
+      <div class="grid grid-cols-2 lg:w-1/2 bg-slate-50 pt-5 rounded-2xl" x-data="{ flight : '', instructor : '', sim : ''}">
+        <div class="font-header uppercase font-semibold text-xl pb-5 pl-5">Input</div>
+        <div class="font-header uppercase font-semibold text-xl pb-5 text-right pr-5">Cost</div>
+
+        <input type="text" id="flight" placeholder="Flight Hours" class="rounded-lg focus:ring-sky-500 focus:border-sky-500 w-40 ml-5" x-model="flight">
+        <div id="flight_hours_cost" class="py-2 text-right pr-10" x-text="'$' + (flight * 160)">$0</div>
+
+        <input type="text" id="instructor" placeholder="Instructor Hours" class="rounded-lg focus:ring-sky-500 focus:border-sky-500 w-40 ml-5 mt-5" x-model="instructor">
+        <div id="instructor_hours_cost" class="py-2 text-right pr-10 mt-5" x-text="'$' + (instructor * 70)">$0</div>
+
+        <input type="text" id="sim" placeholder="Simulator Hours" class="rounded-lg focus:ring-sky-500 focus:border-sky-500 w-40 ml-5 mt-5" x-model="sim">
+        <div id="simulator_hours_cost" class="py-2 text-right pr-10 mt-5" x-text="'$' + (sim * 130)">$0</div>
+
+        <div class="font-header uppercase font-semibold text-xl py-5 pl-5">Total Cost</div>
+        <div class="font-header uppercase font-semibold text-xl py-5 text-right pr-9" x-text="'$' + (flight * 160 + instructor * 70 + sim * 130)">$0</div>
+      </div>
     </div>
+
   </div>
 </section>
 
