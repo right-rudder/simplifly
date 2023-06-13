@@ -44,6 +44,7 @@ Rails.application.routes.draw do
   get 'book-download-confirmation', to: 'book_downloads#confirmation', as: :book_download_confirmation
 
   # Static Pages
+  get 'financing', to: 'pages#financing', as: :financing
   get 'approximate-pilot-training-costs', to: 'pages#cost', as: :cost
   get 'timeline-to-be-a-pilot', to: 'pages#timeline', as: :timeline
   get 'multi-engine-rating', to: 'pages#multi', as: :multi
