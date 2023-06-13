@@ -45,6 +45,7 @@ Rails.application.routes.draw do
 
   # Static Pages
   get 'financing', to: 'pages#financing', as: :financing
+  get 'pilot-training-pricing-calculator', to: 'pages#cost' 
   get 'approximate-pilot-training-costs', to: 'pages#cost', as: :cost
   get 'timeline-to-be-a-pilot', to: 'pages#timeline', as: :timeline
   get 'multi-engine-rating', to: 'pages#multi', as: :multi
