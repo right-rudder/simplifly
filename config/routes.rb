@@ -15,10 +15,10 @@ Rails.application.routes.draw do
   
   
   
-  resources :book_downloads
-  resources :checkouts
+  #resources :book_downloads
+  #resources :checkouts
   resources :discover_flights
-  resources :quiz_results
+  #resources :quiz_results
   resources :messages
   
   
