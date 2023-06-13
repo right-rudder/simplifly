@@ -140,6 +140,7 @@ module.exports = {
         'canyon' : "url('canyon-background.webp')",
         'cfi-pass' : "url('cfi-pass.webp')",
         'airline-departure' : "url('airline-departure.webp')",
+        'planes-parked' : "url('planes-parked.webp')",
         
         
         
