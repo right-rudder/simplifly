@@ -29,19 +29,19 @@ Rails.application.routes.draw do
   get 'instruct-at-simplifly', to: 'messages#cfi', as: :cfi
 
   # Quiz form
-  get 'quiz', to: 'quiz_results#new', as: :quiz
-  get 'quiz-confirmation', to: 'quiz_results#confirmation', as: :quiz_confirmation
+  #get 'quiz', to: 'quiz_results#new', as: :quiz
+  #get 'quiz-confirmation', to: 'quiz_results#confirmation', as: :quiz_confirmation
 
   # Discovery flight form
   get 'discovery-flight', to: 'discover_flights#new', as: :discovery_flight
   get 'discovery-flight-confirmation', to: 'discover_flights#confirmation', as: :discovery_confirmation
 
   # Check out form
-  get 'rental-checkout', to: 'checkouts#new', as: :rental_checkout
-  get 'rental-checkout-confirmation', to: 'checkouts#confirmation', as: :checkout_confirmation
+  #get 'rental-checkout', to: 'checkouts#new', as: :rental_checkout
+  #get 'rental-checkout-confirmation', to: 'checkouts#confirmation', as: :checkout_confirmation
 
   # Book Download
-  get 'book-download-confirmation', to: 'book_downloads#confirmation', as: :book_download_confirmation
+  #get 'book-download-confirmation', to: 'book_downloads#confirmation', as: :book_download_confirmation
 
   # Static Pages
   get 'financing', to: 'pages#financing', as: :financing
@@ -54,6 +54,7 @@ Rails.application.routes.draw do
   get 'pilot-training', to: 'pages#pilot_training', as: :pilot_training
   get 'airline-pilot-courses', to: 'pages#airline_pilot_courses', as: :airline_pilot_courses
   get 'pilot-programs', to: 'pages#pilot_programs', as: :programs
+  get 'our-team', to: 'pages#our_team', as: :our_team
   #get 'aircraft-rental', to: 'pages#aircraft_rental', as: :aircraft_rental
   #get 'fixed-wing-airplane-fleet', to: 'pages#fixed_wing', as: :fixed_wing
   #get 'rotary-wing-helicopter-fleet', to: 'pages#rotary_wing', as: :rotary_wing
@@ -61,9 +62,8 @@ Rails.application.routes.draw do
   #get 'helicopter-pilot-training', to: 'pages#helicopter_training', as: :helicopter_training
   #get 'about-ideal-aviation', to: 'pages#about_us', as: :about_us
   #get 'advanced_training', to: 'pages#advanced_training', as: :advanced_training
-  get 'our-team', to: 'pages#our_team', as: :our_team
   #get 'pilot-resources', to: 'pages#pilot_resources', as: :pilot_resources
-  get 'careers', to: 'pages#careers', as: :careers
+  #get 'careers', to: 'pages#careers', as: :careers
   
 
 end
