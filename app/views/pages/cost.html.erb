@@ -1,12 +1,96 @@
 <%= render "shared/header"%>
 
 <header class="bg-student bg-cover lg:bg-[center_top_-5rem] h-screen-3/4 flex flex-col items-center justify-center">
-<h1 class="uppercase font-header text-5xl lg:text-7xl font-semibold text-center">Approximate Training Costs</h1>
-<h2 class="italic text-3xl lg:text-5xl text-center pt-10 font-semibold">Affordable options for pilot training</h2>
+  <h1 class="uppercase font-header text-5xl lg:text-7xl font-semibold text-center">Approximate Training Costs</h1>
+  <h2 class="italic text-3xl lg:text-5xl text-center pt-10 font-semibold">Affordable options for pilot training</h2>
 </header>
 
-<section>
+<section class="flex flex-col items-center pb-20 bg-slate-50">
+  <h3 class="uppercase font-header text-3xl lg:text-5xl font-semibold text-center pt-20 pb-10">Current Pricing</h3>
 
+  <div class="max-w-xl">
+    <div class="grid grid-cols-2">
+      <!--Table head-->
+      <div class="bg-sky-600 text-white font-semibold pl-2 py-2 rounded-tl-2xl">
+      Item
+      </div>
+      <div class="bg-sky-600 text-white font-semibold text-right pr-5 py-2 rounded-tr-2xl">
+      Pricing
+      </div>
+      <!--1st row-->
+      <div class="pl-2 py-3">
+      Airplane Rental
+      </div>
+      <div class="pr-2 text-right py-3">
+      $160 / Hour
+      </div>
+      <!--2nd row-->
+      <div class="pl-2 py-3 bg-slate-200">
+      Instruction
+      </div>
+      <div class="pr-2 text-right py-3 bg-slate-200">
+      $70 / Hour
+      </div>
+      <!--3rd row-->
+      <div class="pl-2 py-3">
+      Airplane and Instructor
+      </div>
+      <div class="pr-2 text-right py-3">
+      $230 / Hour
+      </div>
+      <!--4th row-->
+      <div class="pl-2 py-3 bg-slate-200 rounded-bl-2xl">
+      Simulator and Instructor
+      </div>
+      <div class="pr-2 text-right py-3 bg-slate-200 rounded-br-2xl">
+      $130 / Hour
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flex flex-col items-center bg-gradient-to-r from-slate-200 to-sky-100 pb-20">
+  <h3 class="uppercase font-header text-3xl lg:text-5xl font-semibold text-center py-20">Cost Estimator</h3>
+
+  <div class="flex flex-col lg:flex-row w-full">
+    <!--Mins and Averages-->
+    <div class="lg:w-1/2 flex flex-col items-center">
+      <div class="">
+        <h4 class="font-semibold uppercase text-xl font-header">Private Pilot Minimums</h4>
+        <ul>
+          <li>40 hours total flight time</li>
+          <li>20 hours flight time with instructor</li>
+        </ul>
+        <h4 class="font-semibold uppercase text-xl font-header pt-5">Private Pilot Average</h4>
+        <ul>
+          <li>75 hours total flight time</li>
+          <li>30 hours flight time with instructor</li>
+          <li>10 hours ground instruction</li>
+        </ul>
+        <h4 class="font-semibold uppercase text-xl font-header pt-5">Instrument Minimums</h4>
+        <ul>
+          <li>50 hours flight time</li>
+          <li>15 hours with an instructor</li>
+        </ul>
+        <h4 class="font-semibold uppercase text-xl font-header pt-5">Instrument Average</h4>
+        <ul>
+          <li>75 hours flight time</li>
+          <li>25 hours with an instructor</li>
+          <li>10 hours ground instruction</li>
+        </ul>
+        <h4 class="font-semibold uppercase text-xl font-header pt-5">Commercial Minimums</h4>
+        <ul>
+          <li>250 hours flight time</li>
+        </ul>
+      </div>
+      
+    </div>
+    
+    <!--Actual Calc-->
+    <div class="lg:w-1/2 flex flex-col items-center">
+    
+    </div>
+  </div>
 </section>
 
 <%= render "shared/footer"%>
