@@ -142,6 +142,8 @@ module.exports = {
         'airline-departure' : "url('airline-departure.webp')",
         'planes-parked' : "url('planes-parked.webp')",
         'skyline' : "url('skyline.webp')",
+        'fountain' : "url('fountain.webp')",
+        'student' : "url('student-pilot-before-solo.webp')",
         
         
         
