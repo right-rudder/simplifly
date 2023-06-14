@@ -127,27 +127,18 @@ module.exports = {
         'ctahead' : "url('cessna-sunset.webp')",
         'sunset' : "url('sunset.webp')",
         'pilots-airliner' : "url('pilots-in-airliner.webp')",
-        'piper' : "url('piper_sunset.webp')",
         'cessna-sunset' : "url('cessna_sunset_dark.webp')",
-        'dark-hangar' : "url('dark_hangar.webp')",
-        'ideal-ramp' : "url('ideal_ramp.webp')",
         'aerial' : "url('aerial.webp')",
-        'pilot-thumbs' : "url('pilot_thumbs.webp')",
         'hangarbg' : "url('hangarbg.webp')",
         'mountain' : "url('mountain_backdrop.webp')",
         'discovery-flight' : "url('discovery-flight-bg.webp')",
         'airline-cockpit' : "url('airline_cockpit.webp')",
         'canyon' : "url('canyon-background.webp')",
         'cfi-pass' : "url('cfi-pass.webp')",
-        'airline-departure' : "url('airline-departure.webp')",
         'planes-parked' : "url('planes-parked.webp')",
         'skyline' : "url('skyline.webp')",
         'fountain' : "url('fountain.webp')",
         'student' : "url('student-pilot-before-solo.webp')",
-        
-        
-        
-        
       },
       height: theme => ({
         'screen-1/2': '50vh',
