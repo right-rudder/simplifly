@@ -29,6 +29,24 @@
   background-position: 0 100%
 }
 
+.outline-letters {
+  color: transparent;
+  -webkit-text-stroke: 5px white;
+  -webkit-text-fill-color: transparent;
+  /* For other browsers */
+  text-stroke: 5px white;
+  text-fill-color: transparent;
+}
+
+.outline-letters-sm {
+  color: transparent;
+  -webkit-text-stroke: 3px white;
+  -webkit-text-fill-color: transparent;
+  /* For other browsers */
+  text-stroke: 3px white;
+  text-fill-color: transparent;
+}
+
 
  /* Move reCAPTCHA v3 badge a little higher 
  

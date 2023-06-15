@@ -139,6 +139,8 @@ module.exports = {
         'skyline' : "url('skyline.webp')",
         'fountain' : "url('fountain.webp')",
         'student' : "url('student-pilot-before-solo.webp')",
+        'thumbs' : "url('thumbs-up-in-front-of-cessna.webp')",
+        
       },
       height: theme => ({
         'screen-1/2': '50vh',
