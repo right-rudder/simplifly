@@ -44,6 +44,7 @@ Rails.application.routes.draw do
   #get 'book-download-confirmation', to: 'book_downloads#confirmation', as: :book_download_confirmation
 
   # Static Pages
+  get 'why-simplifly', to: 'pages#why_simplifly', as: :why_simplifly
   get 'financing', to: 'pages#financing', as: :financing
   get 'pilot-training-pricing-calculator', to: 'pages#cost' 
   get 'approximate-pilot-training-costs', to: 'pages#cost', as: :cost
