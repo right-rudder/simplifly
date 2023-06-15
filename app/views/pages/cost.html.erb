@@ -18,11 +18,18 @@
       Pricing
       </div>
       <!--1st row-->
+      <div class="pl-2 py-3 bg-slate-200">
+      Single Engine Airplane Rental
+      </div>
+      <div class="pr-2 text-right py-3 bg-slate-200">
+      $160 / Hour
+      </div>
+      <!--multi row-->
       <div class="pl-2 py-3">
-      Airplane Rental
+      Multi Engine Airplane Rental
       </div>
       <div class="pr-2 text-right py-3">
-      $160 / Hour
+      $390 / Hour
       </div>
       <!--2nd row-->
       <div class="pl-2 py-3 bg-slate-200">
@@ -39,10 +46,10 @@
       $230 / Hour
       </div>
       <!--4th row-->
-      <div class="pl-2 py-3 bg-slate-200 rounded-bl-2xl">
+      <div class="pl-2 py-3 rounded-bl-2xl bg-slate-200">
       Simulator and Instructor
       </div>
-      <div class="pr-2 text-right py-3 bg-slate-200 rounded-br-2xl">
+      <div class="pr-2 text-right py-3 rounded-br-2xl bg-slate-200">
       $130 / Hour
       </div>
     </div>
@@ -52,7 +59,7 @@
 <section class="flex flex-col items-center bg-gradient-to-r from-slate-200 to-sky-100 pb-5 lg:pb-10">
   <h3 class="uppercase font-header text-3xl lg:text-5xl font-semibold text-center pt-20 pb-20">Cost Estimator</h3>
 
-  <div class="flex flex-col lg:flex-row w-full" x-data="{ flight: '', instructor: '', sim: '' }">
+  <div class="flex flex-col lg:flex-row w-full" x-data="{ flight: '', instructor: '', sim: '', multi: '' }">
     <!--Mins and Averages-->
     <div class="lg:w-1/2 flex flex-col items-center mb-20 mx-5">
       <div class="">
@@ -64,7 +71,7 @@
           </ul>
           <!--Mobile button with scroll-->
           <button class="btn-primary text-sm uppercase py-2 h-min lg:hidden" 
-                x-on:click="flight=40, instructor=20, sim=0" 
+                x-on:click="flight=40, instructor=20, sim=0, multi=0" 
                 onclick="event.preventDefault(); 
                 const contactElement = document.getElementById('calculator');
                 const targetOffset = contactElement.offsetTop -40;
@@ -73,7 +80,7 @@
           </button>
           <!--Desktop button with no scroll-->
           <button class="btn-primary text-sm uppercase py-2 h-min hidden lg:block" 
-                x-on:click="flight=40, instructor=20, sim=0">
+                x-on:click="flight=40, instructor=20, sim=0, multi=0">
           Calculate
           </button>
         </div>
@@ -85,7 +92,7 @@
             <li>10 hours ground instruction</li>
           </ul>
           <button class="btn-primary text-sm uppercase py-2 h-min lg:hidden" 
-                  x-on:click="flight=75, instructor=40, sim=0"
+                  x-on:click="flight=75, instructor=40, sim=0, multi=0"
                   onclick="event.preventDefault(); 
                   const contactElement = document.getElementById('calculator');
                   const targetOffset = contactElement.offsetTop -40;
@@ -93,18 +100,18 @@
           Calculate
           </button>
           <button class="btn-primary text-sm uppercase py-2 h-min hidden lg:block" 
-                  x-on:click="flight=75, instructor=40, sim=0">
+                  x-on:click="flight=75, instructor=40, sim=0, multi=0">
           Calculate
           </button>
         </div>
         <h4 class="font-semibold uppercase text-base lg:text-xl font-header pt-5">Instrument Minimums</h4>
         <div class="flex justify-between gap-10">
           <ul class="text-sm lg:text-base">
-            <li>50 hours flight time</li>
+            <li>50 hours total flight time</li>
             <li>15 hours with an instructor</li>
           </ul>
           <button class="btn-primary text-sm uppercase py-2 h-min lg:hidden" 
-            x-on:click="flight=50, instructor=15, sim=0"
+            x-on:click="flight=50, instructor=15, sim=0, multi=0"
             onclick="event.preventDefault(); 
             const contactElement = document.getElementById('calculator');
             const targetOffset = contactElement.offsetTop -40;
@@ -112,20 +119,20 @@
           Calculate
           </button>
           <button class="btn-primary text-sm uppercase py-2 h-min hidden lg:block" 
-            x-on:click="flight=50, instructor=15, sim=0">
+            x-on:click="flight=50, instructor=15, sim=0, multi=0">
           Calculate
           </button>
         </div>
         <h4 class="font-semibold uppercase text-base lg:text-xl font-header pt-5">Instrument Average</h4>
         <div class="flex justify-between gap-10">
           <ul class="text-sm lg:text-base">
-            <li>65 hours flight time</li>
+            <li>65 hours total flight time</li>
             <li>25 hours with an instructor</li>
             <li>10 hours ground instruction</li>
             <li>10 hours simulator</li>
           </ul>
           <button class="btn-primary text-sm uppercase py-2 h-min lg:hidden" 
-            x-on:click="flight=65, instructor=35, sim=10"
+            x-on:click="flight=65, instructor=35, sim=10, multi=0"
             onclick="event.preventDefault(); 
             const contactElement = document.getElementById('calculator');
             const targetOffset = contactElement.offsetTop -40;
@@ -133,17 +140,17 @@
           Calculate
           </button>
           <button class="btn-primary text-sm uppercase py-2 h-min hidden lg:block" 
-            x-on:click="flight=65, instructor=35, sim=10">
+            x-on:click="flight=65, instructor=35, sim=10, multi=0">
           Calculate
           </button>
         </div>
         <h4 class="font-semibold uppercase text-base lg:text-xl font-header pt-5">Commercial Minimums</h4>
         <div class="flex justify-between gap-10">
           <ul class="text-sm lg:text-base">
-            <li>250 hours flight time</li>
+            <li>250 hours total flight time</li>
           </ul>
           <button class="btn-primary text-sm uppercase lg:-mt-5 py-2 h-min lg:hidden" 
-            x-on:click="flight=250, instructor=0, sim=0"
+            x-on:click="flight=250, instructor=0, sim=0, multi=0"
             onclick="event.preventDefault(); 
             const contactElement = document.getElementById('calculator');
             const targetOffset = contactElement.offsetTop -40;
@@ -151,7 +158,26 @@
           Calculate
           </button>
           <button class="btn-primary text-sm uppercase lg:-mt-5 py-2 h-min hidden lg:block" 
-            x-on:click="flight=250, instructor=0, sim=0">
+            x-on:click="flight=250, instructor=0, sim=0, multi=0">
+          Calculate
+          </button>
+        </div>
+        <h4 class="font-semibold uppercase text-base lg:text-xl font-header pt-5">Multi Engine Average</h4>
+        <div class="flex justify-between gap-10">
+          <ul class="text-sm lg:text-base">
+            <li>15 hours multi engine time</li>
+            <li>15 hours with an instructor</li>
+          </ul>
+          <button class="btn-primary text-sm uppercase lg:-mt-5 py-2 h-min lg:hidden" 
+            x-on:click="flight=0, instructor=15, sim=0, multi=15"
+            onclick="event.preventDefault(); 
+            const contactElement = document.getElementById('calculator');
+            const targetOffset = contactElement.offsetTop -40;
+            window.scrollTo({ top: targetOffset, behavior: 'smooth' });">
+          Calculate
+          </button>
+          <button class="btn-primary text-sm uppercase lg:-mt-5 py-2 h-min hidden lg:block" 
+            x-on:click="flight=0, instructor=15, sim=0, multi=15">
           Calculate
           </button>
         </div>
@@ -182,10 +208,16 @@
         </div>
         <div id="simulator_hours_cost" class="py-2 text-right pr-10 mt-5" x-text="isNaN(sim) ? 'N/A' : ('$' + (sim * 130).toLocaleString())"></div>
 
+        <div class="flex flex-col">
+          <span class="text-sm text-slate-500 ml-5 pt-5 ">Multi Engine Hours</span>
+          <input type="text" id="sim" placeholder="Multi Engine Hours" class="placeholder:text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 w-40 ml-5" x-model="multi">
+        </div>
+        <div id="multi_hours_cost" class="py-2 text-right pr-10 mt-5" x-text="isNaN(multi) ? 'N/A' : ('$' + (multi * 390).toLocaleString())"></div>
+
         <div class="font-header uppercase font-semibold text-xl py-5 pl-5">Total Cost</div>
-        <div class="font-header uppercase font-semibold text-xl py-5 text-right pr-9" x-text="isNaN(flight) || isNaN(instructor) || isNaN(sim) ? 'N/A' : ('$' + (flight * 160 + instructor * 70 + sim * 130).toLocaleString())"></div>
+        <div class="font-header uppercase font-semibold text-xl py-5 text-right pr-9" x-text="isNaN(flight) || isNaN(multi) || isNaN(instructor) || isNaN(sim) ? 'N/A' : ('$' + (flight * 160 + instructor * 70 + sim * 130 + multi * 390).toLocaleString())"></div>
         
-        <template x-if="isNaN(flight) || isNaN(instructor) || isNaN(sim)">
+        <template x-if="isNaN(flight) || isNaN(multi) || isNaN(instructor) || isNaN(sim)">
           <div class="text-red-500 mt-2 ml-5 col-span-2 pb-5">Please enter valid numbers for all fields.</div>
         </template>
       </div>
