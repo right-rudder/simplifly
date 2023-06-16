@@ -1,6 +1,6 @@
 class EnrollmentsController < ApplicationController
   before_action :set_enrollment, only: %i[ show edit update destroy ]
-  before_action :authenticate_admin!, except: [:create, :new, :confirmation]
+  #before_action :authenticate_admin!, except: [:create, :new, :confirmation]
   invisible_captcha only: [:create], honeypot: :confirm_email
 
   # GET /enrollments or /enrollments.json
@@ -36,18 +36,18 @@ class EnrollmentsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /enrollments/1 or /enrollments/1.json
-  def update
-    respond_to do |format|
-      if @enrollment.update(enrollment_params)
-        format.html { redirect_to enrollment_url(@enrollment), notice: "Enrollment was successfully updated." }
-        format.json { render :show, status: :ok, location: @enrollment }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @enrollment.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  ## PATCH/PUT /enrollments/1 or /enrollments/1.json
+  #def update
+  #  respond_to do |format|
+  #    if @enrollment.update(enrollment_params)
+  #      format.html { redirect_to enrollment_url(@enrollment), notice: "Enrollment was successfully updated." }
+  #      format.json { render :show, status: :ok, location: @enrollment }
+  #    else
+  #      format.html { render :edit, status: :unprocessable_entity }
+  #      format.json { render json: @enrollment.errors, status: :unprocessable_entity }
+  #    end
+  #  end
+  #end
 
   # DELETE /enrollments/1 or /enrollments/1.json
   def destroy
@@ -67,6 +67,6 @@ class EnrollmentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def enrollment_params
-      params.require(:enrollment).permit(:first_name, :last_name, :phone, :email, :goals, :previous_training, :comments, :preferred_date, :preferred_availability, :alternate_date, :alternate_availability)
+      params.require(:enrollment).permit(:first_name, :last_name, :phone, :email, :goals, :previous_training, :comments, :preferred_date, :preferred_availability, :alternate_date, :alternate_availability, :location)
     end
 end
