@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :enrollments
   
   devise_scope :admins do
     # Redirests signing out users back to sign-in
@@ -14,24 +13,22 @@ Rails.application.routes.draw do
   get 'blog', to: 'posts#index', as: :blog
   resources :posts
   
-  
-  
+  resources :discover_flights
+  resources :messages
+  resources :enrollments
   #resources :book_downloads
   #resources :checkouts
-  resources :discover_flights
   #resources :quiz_results
-  resources :messages
-  
-  
+
+  # Enrollment form
+  get 'enroll-at-simplifly', to: 'enrollments#new', as: :enroll
+  get 'enrollment-confirmation', to: 'enrollments#new', as: :enroll_confirmation
+
   # Contact form
   get 'contact', to: 'messages#new', as: :contact
   get 'contact-confirmation', to: 'messages#confirmation', as: :contact_confirmation
   get 'visit-simplifly', to: 'messages#location', as: :location
   get 'instruct-at-simplifly', to: 'messages#cfi', as: :cfi
-
-  # Quiz form
-  #get 'quiz', to: 'quiz_results#new', as: :quiz
-  #get 'quiz-confirmation', to: 'quiz_results#confirmation', as: :quiz_confirmation
 
   # Discovery flight form
   get 'discovery-flight', to: 'discover_flights#new', as: :discovery_flight
@@ -43,6 +40,10 @@ Rails.application.routes.draw do
 
   # Book Download
   #get 'book-download-confirmation', to: 'book_downloads#confirmation', as: :book_download_confirmation
+
+  # Quiz form
+  #get 'quiz', to: 'quiz_results#new', as: :quiz
+  #get 'quiz-confirmation', to: 'quiz_results#confirmation', as: :quiz_confirmation
 
   # Static Pages
   get 'why-simplifly', to: 'pages#why_simplifly', as: :why_simplifly
