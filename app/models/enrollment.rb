@@ -1,6 +1,6 @@
 class Enrollment < ApplicationRecord
   before_validation :strip_phone_number
-  #after_save :to_lacrm
+  after_save :to_lacrm
 
   validates :first_name, presence: true
   validates :last_name, presence: true
@@ -58,24 +58,10 @@ class Enrollment < ApplicationRecord
       "Parameters" => {
         "ContactId" => contact_id,
         "Note" => "
-          What type of training are you interested in:  #{self.program}
-    
-          Why do you want to become a pilot: #{self.why_pilot}
-          
-          What are your aviation goals: #{self.goals}
-          
-          Do you have any previous training: #{self.previous_training}
-          
-          How do you learn best: #{self.learn_style}
-          
-          Do you prefer to have a lot of structure and clear expectations, or do you prefer a more flexible approach: #{self.structure}
-        
-          What kind of guidance and support would you prefer from your flight instructor: #{self.guidance}
-        
-          Do you know how a wing generates lift: #{self.wings_lift}
-        
-          Anything else you'd like us to know: #{self.comments}
-        
+          Previous Training: #{self.previous_training}
+          Goals: #{self.goals}
+          Comments: #{self.comments}
+
           Selected Date: #{self.preferred_date}
           Selected Time: #{self.preferred_availability}
           Alternate Date: #{self.alternate_date}
