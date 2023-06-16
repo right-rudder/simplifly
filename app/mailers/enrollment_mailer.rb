@@ -5,7 +5,7 @@ class EnrollmentMailer < ApplicationMailer
   def enrollment_email(message)
     @message = message
 
-    mail(to: @message.email, bcc: ["no-reply@simplifly-co.com", ""], subject: "✈️ Application to Enroll at SimpliFly")
+    mail(to: @message.email, bcc: ["no-reply@simplifly-co.com", "info@simpliflyco.com"], subject: "✈️ Application to Enroll at SimpliFly")
   end
 
 
