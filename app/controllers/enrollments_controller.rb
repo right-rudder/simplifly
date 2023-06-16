@@ -1,6 +1,6 @@
 class EnrollmentsController < ApplicationController
   before_action :set_enrollment, only: %i[ show edit update destroy ]
-  #before_action :authenticate_admin!, except: [:create, :new, :confirmation]
+  before_action :authenticate_admin!, except: [:create, :new, :confirmation]
   invisible_captcha only: [:create], honeypot: :confirm_email
 
   # GET /enrollments or /enrollments.json
@@ -30,6 +30,7 @@ class EnrollmentsController < ApplicationController
 
     respond_to do |format|
       if @enrollment.save
+        EnrollmentMailer.enrollment_email(@enrollment).deliver_later
         format.html { redirect_to enroll_confirmation_path, notice: @enrollment.first_name }
         #format.json { render :show, status: :created, location: @enrollment }
       else
