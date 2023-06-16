@@ -140,6 +140,7 @@ module.exports = {
         'fountain' : "url('fountain.webp')",
         'student' : "url('student-pilot-before-solo.webp')",
         'thumbs' : "url('thumbs-up-in-front-of-cessna.webp')",
+        'behind' : "url('behind-pic.webp')",
         
       },
       height: theme => ({
