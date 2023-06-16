@@ -40,7 +40,7 @@
         <!--Drop down Menu-->
         <div class="flex flex-col gap-3 mx-5 items-start" >
           <div class="items-center hover:text-white">
-            <%= link_to discovery_flight_path, data: { turbo: false }, class: "hover:text-white" do %>
+            <%= link_to discovery_flight_path, data: { turbo: false }, target: "blank", class: "hover:text-white" do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                 DISCOVERY FLIGHT
                 <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-white h-4 ml-3 opacity-0" 
@@ -53,7 +53,7 @@
             <% end %>
           </div>
           <div class="items-center hover:text-white">
-            <%= link_to enroll_path, data: { turbo: false }, class: "hover:text-white" do %>
+            <%= link_to enroll_path, data: { turbo: false }, target: "blank", class: "hover:text-white" do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                 ENROLL AT SIMPLIFLY
                 <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-white h-4 ml-3 opacity-0" 
@@ -257,7 +257,7 @@
             <% end %>
           </div>
           <div class="items-center hover:text-white">
-            <%= link_to root_path, data: { turbo: false }, class: "hover:text-white" do %>
+            <%= link_to blog_path, data: { turbo: false }, class: "hover:text-white" do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
                 BLOG
                 <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-white h-4 ml-3 opacity-0" 

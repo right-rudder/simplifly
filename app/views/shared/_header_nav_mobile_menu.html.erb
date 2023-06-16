@@ -33,8 +33,8 @@
           mobile_certification_drop: false,
           mobile_about_drop: false }">
     <ul class="space-y-4 font-semibold">
-      <li><%= link_to "ENROLL TODAY", enroll_path, data: { turbo: false }%></li>
-      <li><%= link_to "DISCOVERY FLIGHT", discovery_flight_path, data: { turbo: false }%></li>
+      <li><%= link_to "ENROLL TODAY", enroll_path, target: "blank", data: { turbo: false }%></li>
+      <li><%= link_to "DISCOVERY FLIGHT", discovery_flight_path, target: "blank", data: { turbo: false }%></li>
       <li>
         <div class="flex flex-row justify-between" >
           <div class=""><%= link_to "HOW TO BECOME A PILOT", root_path, data: { turbo: false }%></div>
@@ -50,7 +50,7 @@
           <%= link_to "DISCOVERY FLIGHT" , discovery_flight_path, data: { turbo: false }, target: "blank"%>
         </li>
         <li class="ml-5 animate-slide-in-left2" x-show="mobile_resources_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left2': !mobile_resources_drop}">
-          <%= link_to "ENROLL AT SIMPLIFLY", enroll_path, data: { turbo: false }%>
+          <%= link_to "ENROLL AT SIMPLIFLY", enroll_path, target: "blank", data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left3" x-show="mobile_resources_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left3': !mobile_resources_drop}">
           <%= link_to "INSTRUCT AT SIMPLIFLY", cfi_path, data: { turbo: false }%>
@@ -119,7 +119,7 @@
           <%=link_to "LOCATIONS", location_path, data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left5" x-show="mobile_about_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left5': !mobile_about_drop}">
-          <%=link_to "BLOG", root_path, data: { turbo: false }%>
+          <%=link_to "BLOG", blog_path, data: { turbo: false }%>
         </li>
     </ul>
   </div>
