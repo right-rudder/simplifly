@@ -41,7 +41,7 @@ class Enrollment < ApplicationRecord
         "Name" => "#{self.first_name} #{self.last_name}",
         "Email" => "#{self.email}",
         "Phone" => "#{self.phone}",
-        "Background Info" => "Originated from quiz form on website",
+        "Background Info" => "Originated from enrollment form on website",
       }
     }
 
