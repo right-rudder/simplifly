@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :enrollments
   
   devise_scope :admins do
     # Redirests signing out users back to sign-in
