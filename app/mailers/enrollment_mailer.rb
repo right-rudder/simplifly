@@ -1,0 +1,2 @@
+class EnrollmentMailer < ApplicationMailer
+end
