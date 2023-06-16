@@ -8,6 +8,9 @@ class EnrollmentsController < ApplicationController
     @enrollments = Enrollment.all
   end
 
+  def confirmation
+  end
+
   # GET /enrollments/1 or /enrollments/1.json
   def show
   end
@@ -27,8 +30,8 @@ class EnrollmentsController < ApplicationController
 
     respond_to do |format|
       if @enrollment.save
-        format.html { redirect_to enrollment_url(@enrollment), notice: "Enrollment was successfully created." }
-        format.json { render :show, status: :created, location: @enrollment }
+        format.html { redirect_to enroll_confirmation_path, notice: @enrollment.first_name }
+        #format.json { render :show, status: :created, location: @enrollment }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @enrollment.errors, status: :unprocessable_entity }

@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 
   # Enrollment form
   get 'enroll-at-simplifly', to: 'enrollments#new', as: :enroll
-  get 'enrollment-confirmation', to: 'enrollments#new', as: :enroll_confirmation
+  get 'enrollment-confirmation', to: 'enrollments#confirmation', as: :enroll_confirmation
 
   # Contact form
   get 'contact', to: 'messages#new', as: :contact
