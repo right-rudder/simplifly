@@ -4,6 +4,12 @@ class PagesController < ApplicationController
 
   def why_simplifly
   end
+
+  def accelerated
+  end
+
+  def flexible
+  end
   
   def cost
   end
