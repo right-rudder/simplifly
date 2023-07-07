@@ -1,5 +1,11 @@
 <%= render "shared/header"%>
 
+<%# Declare variables %>
+<% airplane_rental = "165" %>
+<% multi_rental = "390" %>
+<% instruction = "70" %>
+<% simulator = "130" %>
+
 <header class="bg-student bg-cover lg:bg-[center_top_-5rem] h-screen-3/4 flex flex-col items-center justify-center">
   <h1 class="uppercase font-header text-5xl lg:text-7xl font-semibold text-center">Approximate Training Costs</h1>
   <h2 class="italic text-3xl lg:text-5xl text-center pt-10 font-semibold">Affordable options for pilot training</h2>
@@ -22,35 +28,35 @@
       Single Engine Airplane Rental
       </div>
       <div class="pr-2 text-right py-3 bg-slate-200">
-      $160 / Hour
+      $<%= airplane_rental %> / Hour
       </div>
       <!--multi row-->
       <div class="pl-2 py-3">
       Multi Engine Airplane Rental
       </div>
       <div class="pr-2 text-right py-3">
-      $390 / Hour
+      $<%= multi_rental %> / Hour
       </div>
       <!--2nd row-->
       <div class="pl-2 py-3 bg-slate-200">
       Instruction
       </div>
       <div class="pr-2 text-right py-3 bg-slate-200">
-      $70 / Hour
+      $<%= instruction %> / Hour
       </div>
       <!--3rd row-->
       <div class="pl-2 py-3">
-      Airplane and Instructor
+      Single Engine Airplane and Instructor
       </div>
       <div class="pr-2 text-right py-3">
-      $230 / Hour
+      $<%= (airplane_rental.to_i + instruction.to_i).to_s %> / Hour
       </div>
       <!--4th row-->
       <div class="pl-2 py-3 rounded-bl-2xl bg-slate-200">
       Simulator and Instructor
       </div>
       <div class="pr-2 text-right py-3 rounded-br-2xl bg-slate-200">
-      $130 / Hour
+      $<%= simulator %> / Hour
       </div>
     </div>
   </div>
@@ -194,28 +200,28 @@
           <span class="text-sm text-slate-500 ml-5">Flight Hours</span>
           <input type="text" id="flight" placeholder="Flight Hours" class="rounded-lg focus:ring-sky-500 focus:border-sky-500 w-40 ml-5" x-model="flight">
         </div>
-        <div id="flight_hours_cost" class="py-2 text-right pr-10 pt-6" x-text="isNaN(flight) ? 'N/A' : ('$' + (flight * 160).toLocaleString())"></div>
+        <div id="flight_hours_cost" class="py-2 text-right pr-10 pt-6" x-text="isNaN(flight) ? 'N/A' : ('$' + (flight * <%= airplane_rental %>).toLocaleString())"></div>
         
         <div class="flex flex-col">
           <span class="text-sm text-slate-500 ml-5 pt-5">Instructor Hours</span>
           <input type="text" id="instructor" placeholder="Instructor Hours" class="rounded-lg focus:ring-sky-500 focus:border-sky-500 w-40 ml-5" x-model="instructor">
         </div>
-        <div id="instructor_hours_cost" class="py-2 text-right pr-10 mb-5 pt-12" x-text="isNaN(instructor) ? 'N/A' : ('$' + (instructor * 70).toLocaleString())"></div>
+        <div id="instructor_hours_cost" class="py-2 text-right pr-10 mb-5 pt-12" x-text="isNaN(instructor) ? 'N/A' : ('$' + (instructor * <%= instruction %>).toLocaleString())"></div>
 
         <div class="flex flex-col">
           <span class="text-sm text-slate-500 ml-5">Simulator Hours</span>
           <input type="text" id="sim" placeholder="Simulator Hours" class="rounded-lg focus:ring-sky-500 focus:border-sky-500 w-40 ml-5" x-model="sim">
         </div>
-        <div id="simulator_hours_cost" class="py-2 text-right pr-10 mt-5" x-text="isNaN(sim) ? 'N/A' : ('$' + (sim * 130).toLocaleString())"></div>
+        <div id="simulator_hours_cost" class="py-2 text-right pr-10 mt-5" x-text="isNaN(sim) ? 'N/A' : ('$' + (sim * <%= simulator %>).toLocaleString())"></div>
 
         <div class="flex flex-col">
           <span class="text-sm text-slate-500 ml-5 pt-5 ">Multi Engine Hours</span>
           <input type="text" id="sim" placeholder="Multi Engine Hours" class="placeholder:text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 w-40 ml-5" x-model="multi">
         </div>
-        <div id="multi_hours_cost" class="py-2 text-right pr-10 mt-5" x-text="isNaN(multi) ? 'N/A' : ('$' + (multi * 390).toLocaleString())"></div>
+        <div id="multi_hours_cost" class="py-2 text-right pr-10 mt-5" x-text="isNaN(multi) ? 'N/A' : ('$' + (multi * <%= multi_rental %>).toLocaleString())"></div>
 
         <div class="font-header uppercase font-semibold text-xl py-5 pl-5">Total Cost</div>
-        <div class="font-header uppercase font-semibold text-xl py-5 text-right pr-9" x-text="isNaN(flight) || isNaN(multi) || isNaN(instructor) || isNaN(sim) ? 'N/A' : ('$' + (flight * 160 + instructor * 70 + sim * 130 + multi * 390).toLocaleString())"></div>
+        <div class="font-header uppercase font-semibold text-xl py-5 text-right pr-9" x-text="isNaN(flight) || isNaN(multi) || isNaN(instructor) || isNaN(sim) ? 'N/A' : ('$' + (flight * <%= airplane_rental %> + instructor * <%= instruction %> + sim * <%= simulator %> + multi * <%= multi_rental %>).toLocaleString())"></div>
         
         <template x-if="isNaN(flight) || isNaN(multi) || isNaN(instructor) || isNaN(sim)">
           <div class="text-red-500 mt-2 ml-5 col-span-2 pb-5">Please enter valid numbers for all fields.</div>
