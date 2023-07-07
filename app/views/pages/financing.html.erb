@@ -48,12 +48,12 @@
       We've prepared a free informational booklet to help you understand how financing with Stratus Financial works.  Click below to find out more and download the booklet.
     </p>
     <div class="flex flex-col lg:flex-row gap-5">
-    <%= link_to "https://drive.google.com/file/d/1GhC2wpZhougPr60E2F7bZE0p78QTITXk/view?usp=share_link", target: "blank", data: { turbo: false } do%>
-      <div class="btn-secondary text-base w-64">DOWNLOAD BOOKLET</div>
-    <%end%>
-    <%= link_to "https://drive.google.com/file/d/1GhC2wpZhougPr60E2F7bZE0p78QTITXk/view?usp=share_link", target: "blank", data: { turbo: false } do%>
-      <div class="btn-primary text-base w-64">CHECK OUT STRATUS</div>
-    <%end%>
+      <%= link_to stratus_path, data: { turbo: false } do%>
+        <div class="btn-primary text-base w-64">CHECK OUT STRATUS</div>
+      <%end%>
+      <%= link_to "https://drive.google.com/file/d/1GhC2wpZhougPr60E2F7bZE0p78QTITXk/view?usp=share_link", target: "blank", data: { turbo: false } do%>
+        <div class="btn-secondary text-base w-64">DOWNLOAD BOOKLET</div>
+      <%end%>
     </div>
     
     <h2 class="text-5xl font-header uppercase font-semibold pt-20">Meritize</h2>
@@ -71,11 +71,11 @@
 
     </p>
     <div class="flex flex-col lg:flex-row gap-5">
-      <%= link_to "https://apply.meritize.com/?pc=19144", target: "blank", data: { turbo: false } do%>
-        <div class="btn-secondary text-base w-64">APPLY TO MERITIZE</div>
+      <%= link_to meritize_path, data: { turbo: false } do%>
+        <div class="btn-primary text-base w-64">CHECK OUT MERITIZE</div>
       <%end%>
       <%= link_to "https://apply.meritize.com/?pc=19144", target: "blank", data: { turbo: false } do%>
-        <div class="btn-primary text-base w-64">CHECK OUT MERITIZE</div>
+        <div class="btn-secondary text-base w-64">APPLY TO MERITIZE</div>
       <%end%>
     </div>
 
