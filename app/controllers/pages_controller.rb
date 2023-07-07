@@ -2,6 +2,12 @@ class PagesController < ApplicationController
   def home
   end
 
+  def stratus
+  end
+
+  def meritize
+  end
+
   def why_simplifly
   end
 
