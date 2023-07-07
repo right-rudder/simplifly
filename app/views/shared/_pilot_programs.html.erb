@@ -1,5 +1,5 @@
 <section class="bg-gradient-to-r from-sky-100 to-blue-50 md:px-16">
-  <% if current_page?(accelerated_path)%>
+  <% if current_page?(accelerated_path) || current_page?(flexible_path)%>
   <div class="pt-10"></div>
   <% else%>
   <h2 class="text-3xl font-semibold py-10 font-sans text-center px-5">Pilot Training Courses</h2>
@@ -94,7 +94,7 @@
       </div>
     </div>
   </div>
-  <% if current_page?(accelerated_path)%>
+  <% if current_page?(accelerated_path) || current_page?(flexible_path)%>
   <div class="pt-10"></div>
   <% else%>
   <%end%>
