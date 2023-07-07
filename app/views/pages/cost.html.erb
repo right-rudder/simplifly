@@ -228,6 +228,33 @@
           <div class="text-red-500 mt-2 ml-5 col-span-2 pb-5">Please enter valid numbers for all fields.</div>
         </template>
       </div>
+
+      <div class="mb-10 px-5">
+        <h4 class="font-semibold uppercase text-base lg:text-xl font-header pt-5">Zero to Hero (PPL-CFII)</h4>
+        <div class="flex justify-between gap-10">
+          <ul class="text-sm lg:text-base">
+            <li>275 hours single engine time</li>
+            <li>25 hours multi engine time</li>
+            <li>370 hours instruction</li>
+          </ul>
+          <button class="btn-primary text-sm uppercase -mt-5 py-2 h-min lg:hidden" 
+            x-on:click="flight=275, instructor=370, sim=0, multi=25"
+            onclick="event.preventDefault(); 
+            const contactElement = document.getElementById('calculator');
+            const targetOffset = contactElement.offsetTop -40;
+            window.scrollTo({ top: targetOffset, behavior: 'smooth' });">
+          Calculate
+          </button>
+          <button class="btn-primary text-sm uppercase lg:-mt-5 py-2 h-min hidden lg:block" 
+            x-on:click="flight=275, instructor=370, sim=0, multi=25">
+          Calculate
+          </button>
+        </div>
+        <div class="italic text-slate-500 pb-10 max-w-2xl">
+        * Not including books, checkride fees, headset, and iPad (~$12,000)
+        </div>
+      </div>
+      
     </div>
   </div>
 
