@@ -3,3 +3,5 @@
 
 User-agent: *
 Disallow: /admins
+
+Sitemap: https://simpliflyco.com/sitemap.xml.gz
