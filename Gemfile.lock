@@ -223,6 +223,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    sitemap_generator (5.3.1)
+      builder (~> 3.0)
     sprockets (4.1.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -288,6 +290,7 @@ DEPENDENCIES
   rails (~> 7.0.4)
   recaptcha
   selenium-webdriver
+  sitemap_generator (~> 5.1)
   sprockets-rails
   stimulus-rails
   tailwindcss-rails
