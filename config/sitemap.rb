@@ -25,6 +25,7 @@ SitemapGenerator::Sitemap.create do
   #     add article_path(article), :lastmod => article.updated_at
   #   end
 
+  #Static Pages
   add '/stratus-finance'
   add '/meritize'
   add '/accelerated-pilot-training'
@@ -42,6 +43,16 @@ SitemapGenerator::Sitemap.create do
   add '/airline-pilot-courses'
   add '/pilot-programs'
   add '/our-team'
+
+  #Blog
+  add '/blog'
+
+  #Forms
+  add '/enroll-at-simplifly'
+  add '/contact'
+  add '/visit-simplifly'
+  add '/instruct-at-simplifly'
+  add '/discovery-flight'
 
 
 end
