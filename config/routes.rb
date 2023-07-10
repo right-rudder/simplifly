@@ -80,4 +80,16 @@ Rails.application.routes.draw do
   #get 'careers', to: 'pages#careers', as: :careers
   
 
+  # Previous Site's Routes
+  get 'home/flight-training', to: 'pages#why_simplifly'
+  get 'program-pricing', to: 'pages#cost'
+  get 'programs', to: 'pages#pilot_training'
+  get 'book-a-flight', to: 'discover_flights#new'
+  get 'locations', to: 'messages#location'
+  get 'contact-us', to: 'messages#new'
+  get 'simplifying-your-training', to: 'pages#why_simplifly'
+  get 'flight-instructors', to: 'pages#our_team'
+  get 'category/pilot', to: 'pages#airline_pilot_courses'
+  get 'becoming-a-pilot-timeline', to: 'pages#timeline'
+  get 'private-pilots-license', to: 'pages#private_pilot'
 end
