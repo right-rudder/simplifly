@@ -21,9 +21,11 @@ class PagesController < ApplicationController
   end
 
   def timeline
+    @book_download = BookDownload.new
   end
   
   def private_pilot
+    @book_download = BookDownload.new
   end
 
   def instrument
@@ -37,10 +39,10 @@ class PagesController < ApplicationController
   end
   
   def airline_pilot_courses
+    @book_download = BookDownload.new
   end
 
   def pilot_programs
-    @book_download = BookDownload.new
   end
 
   def aircraft_rental
@@ -53,11 +55,9 @@ class PagesController < ApplicationController
   end
 
   def airplane_training
-    @book_download = BookDownload.new
   end
 
   def helicopter_training
-    @book_download = BookDownload.new
   end
 
   def about_us
