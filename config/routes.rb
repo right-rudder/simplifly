@@ -36,6 +36,9 @@ Rails.application.routes.draw do
   get 'visit-simplifly', to: 'messages#location', as: :location
   get 'instruct-at-simplifly', to: 'messages#cfi', as: :cfi
 
+  # Book Download
+  get 'book-download-confirmation', to: 'book_downloads#confirmation', as: :book_download_confirmation
+
   # Discovery flight form
   get 'discovery-flight', to: 'discover_flights#new', as: :discovery_flight
   #get 'discovery-flight-confirmation', to: 'discover_flights#confirmation', as: :discovery_confirmation
@@ -43,9 +46,6 @@ Rails.application.routes.draw do
   # Check out form
   #get 'rental-checkout', to: 'checkouts#new', as: :rental_checkout
   #get 'rental-checkout-confirmation', to: 'checkouts#confirmation', as: :checkout_confirmation
-
-  # Book Download
-  #get 'book-download-confirmation', to: 'book_downloads#confirmation', as: :book_download_confirmation
 
   # Quiz form
   #get 'quiz', to: 'quiz_results#new', as: :quiz
