@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   resources :discover_flights
   resources :messages
   resources :enrollments
-  #resources :book_downloads
+  resources :book_downloads
   #resources :checkouts
   #resources :quiz_results
 
