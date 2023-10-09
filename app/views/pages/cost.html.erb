@@ -16,6 +16,10 @@
   <h2 class="italic text-3xl lg:text-5xl text-center pt-10 font-semibold">Affordable options for pilot training</h2>
 </header>
 
+<section class="flex flex-col items-center bg-gradient-to-r from-slate-200 to-sky-100 pb-5 lg:pb-10">
+  <h3 class="uppercase font-header text-3xl lg:text-5xl font-semibold text-center pt-20 pb-20">Pilot Programs</h3>
+</section>
+
 <section class="flex flex-col items-center pb-20 bg-gradient-to-r from-white to-slate-200">
   <h3 class="uppercase font-header text-3xl lg:text-5xl font-semibold text-center pt-20 pb-10">Current Pricing</h3>
 
@@ -69,7 +73,7 @@
 </section>
 
 <section class="flex flex-col items-center bg-gradient-to-r from-slate-200 to-sky-100 pb-5 lg:pb-10">
-  <h3 class="uppercase font-header text-3xl lg:text-5xl font-semibold text-center pt-20 pb-20">Cost Estimator</h3>
+  <h3 class="uppercase font-header text-3xl lg:text-5xl font-semibold text-center pt-20 pb-20">Hour Estimator</h3>
 
   <div class="flex flex-col lg:flex-row w-full" x-data="{ flight: '', instructor: '', sim: '', multi: '' }">
     <!--Mins and Averages-->
@@ -193,6 +197,27 @@
           Calculate
           </button>
         </div>
+        <%# Begin
+        <h4 class="font-semibold uppercase text-base lg:text-xl font-header pt-5">Zero to Hero <br><span class="italic">Airline Pilot Program</span></h4>
+        <div class="flex justify-between gap-10">
+          <ul class="text-sm lg:text-base">
+            <li>Go from no flight experience to airline pilot</li>
+          </ul>
+          <button class="btn-primary text-sm uppercase lg:-mt-5 py-2 h-min lg:hidden" 
+            x-on:click="flight=0, instructor=15, sim=0, multi=15"
+            onclick="event.preventDefault(); 
+            const contactElement = document.getElementById('calculator');
+            const targetOffset = contactElement.offsetTop -40;
+            window.scrollTo({ top: targetOffset, behavior: 'smooth' });">
+          Calculate
+          </button>
+          <button class="btn-primary text-sm uppercase lg:-mt-5 py-2 h-min hidden lg:block" 
+            x-on:click="flight=0, instructor=15, sim=0, multi=15">
+          Calculate
+          </button>
+        </div>
+        %>
+
       </div>
     </div>
     
