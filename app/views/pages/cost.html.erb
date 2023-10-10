@@ -10,6 +10,13 @@
 <% multi_rental = "400" %>
 <% instruction = "70" %>
 <% simulator = "130" %>
+<% zero_to_hero = "78250" %>
+<% ppl_to_hero = "59750" %>
+<% mei_addon = "10500" %>
+<% checkride_addon = "7000" %>
+<% written_addon = "1050" %>
+<% online_addon = "1000" %>
+<% headset_addon = "1200" %>
 
 <header class="bg-student bg-cover lg:bg-[center_top_-5rem] h-screen-3/4 flex flex-col items-center justify-center">
   <h1 class="uppercase font-header text-5xl lg:text-7xl font-semibold text-center">Approximate Training Costs</h1>
@@ -19,23 +26,16 @@
 <div class="bg-gradient-to-r from-slate-200 to-sky-100 px-3">
   <!--Pilot Training Programs-->
   <div class="container m-auto px-6 py-20 md:px-12 lg:px-20">
-    <div class="m-auto text-center lg:w-8/12 xl:w-7/12">
-      <h3 class="uppercase font-header text-3xl lg:text-5xl font-semibold text-center pb-10">Pilot Training Programs</h3>
+    <div class="m-auto text-center lg:w-10/12 xl:w-9/12">
+      <h3 class="uppercase font-header text-3xl lg:text-5xl font-semibold text-center pb-10">Airline Pilot <br class="lg:hidden">Training Programs</h3>
     </div>
     <div 
-    x-data="{ totalCost: 78250, checkbox1: false, checkbox2: false, checkbox3: false, checkbox4: false, checkbox5: false, checkboxClick: 0 }" 
+    x-data="{ totalCost: <%=zero_to_hero%>, checkbox1: false, checkbox2: false, checkbox3: false, checkbox4: false, checkbox5: false, checkboxClick: 0 }" 
     class="mt-12 m-auto -space-y-4 items-center justify-center md:flex md:space-y-0 md:-space-x-4 xl:w-10/12"
     >
       <div class="relative z-10 -mx-4 group md:w-6/12 md:mx-0 lg:w-5/12">
         <div aria-hidden="true" class="absolute top-0 w-full h-full rounded-2xl bg-white shadow-xl transition duration-500 group-hover:scale-105 transform-gpu"></div>
         <div class="relative p-6 space-y-6 lg:p-8">
-          <div>
-            <div class="relative flex justify-around">
-              <div class="flex items-end">
-                <span class="text-4xl text-gray-800 font-bold font-header uppercase text-center">Airline Pilot Program</span>
-              </div>
-            </div>
-          </div>
           <h3 class="text-3xl text-gray-700 font-semibold text-center">Zero to Hero</h3>
           <div class="relative flex justify-around">
             <div class="flex items-center">
@@ -61,6 +61,10 @@
             </li>
             <li class="space-x-2">
               <span class="text-sky-500 font-semibold">&check;</span>
+              <span>Multi Engine Rating</span>
+            </li>
+            <li class="space-x-2">
+              <span class="text-sky-500 font-semibold">&check;</span>
               <span>CFI Certificate</span>
             </li>
             <li class="space-x-2">
@@ -78,11 +82,7 @@
             </a>
             <span>or</span>
           </p>
-          <button type="submit" title="Submit" class="block w-full py-3 px-6 text-center rounded-xl transition bg-sky-600 hover:bg-sky-700 active:bg-sky-800 focus:bg-indigo-600">
-            <span class="text-white font-semibold">
-              Contact Us Today
-            </span>
-          </button>
+          <%= link_to "Contact Us Today", contact_path, data: { turbo: false }, class: "block w-full py-3 px-6 text-center rounded-xl transition bg-sky-600 hover:bg-sky-700 active:bg-sky-800 focus:bg-sky-600 text-white font-semibold" %>
         </div>
       </div>
 
@@ -118,7 +118,7 @@
               <!-- Grid of add ons items -->
               <div class="flex items-center">
                 <div class="promoted-checkbox">
-                  <input id="checkbox1" type="checkbox" class="promoted-input-checkbox" x-model="checkbox1" x-on:change="totalCost = checkbox1 ? totalCost + 10500 : totalCost - 10500; checkboxClick = checkbox1 ? checkboxClick + 1 : checkboxClick - 1">
+                  <input id="checkbox1" type="checkbox" class="promoted-input-checkbox" x-model="checkbox1" x-on:change="totalCost = checkbox1 ? totalCost + <%= mei_addon%> : totalCost - <%= mei_addon%>; checkboxClick = checkbox1 ? checkboxClick + 1 : checkboxClick - 1">
                   <label for="checkbox1">
                     <svg><use xlink:href="#checkmark" /></svg>
                   </label>
@@ -127,7 +127,7 @@
               </div>
               <div class="flex items-center">
                 <div class="promoted-checkbox">
-                  <input id="checkbox2" type="checkbox" class="promoted-input-checkbox" x-model="checkbox2" x-on:change="totalCost = checkbox2 ? totalCost + 7000 : totalCost - 7000; checkboxClick = checkbox2 ? checkboxClick + 1 : checkboxClick - 1">
+                  <input id="checkbox2" type="checkbox" class="promoted-input-checkbox" x-model="checkbox2" x-on:change="totalCost = checkbox2 ? totalCost + <%= checkride_addon %> : totalCost - <%= checkride_addon %>; checkboxClick = checkbox2 ? checkboxClick + 1 : checkboxClick - 1">
                   <label for="checkbox2">
                     <svg><use xlink:href="#checkmark" /></svg>
                   </label>
@@ -136,7 +136,7 @@
               </div>
               <div class="flex items-center">
                 <div class="promoted-checkbox">
-                  <input id="checkbox3" type="checkbox" class="promoted-input-checkbox" x-model="checkbox3" x-on:change="totalCost = checkbox3 ? totalCost + 1050 : totalCost - 1050; checkboxClick = checkbox3 ? checkboxClick + 1 : checkboxClick - 1">
+                  <input id="checkbox3" type="checkbox" class="promoted-input-checkbox" x-model="checkbox3" x-on:change="totalCost = checkbox3 ? totalCost + <%= written_addon %> : totalCost - <%= written_addon %>; checkboxClick = checkbox3 ? checkboxClick + 1 : checkboxClick - 1">
                   <label for="checkbox3">
                     <svg><use xlink:href="#checkmark" /></svg>
                   </label>
@@ -145,7 +145,7 @@
               </div>
               <div class="flex items-center">
                 <div class="promoted-checkbox">
-                  <input id="checkbox4" type="checkbox" class="promoted-input-checkbox" x-model="checkbox4" x-on:change="totalCost = checkbox4 ? totalCost + 1000 : totalCost - 1000; checkboxClick = checkbox4 ? checkboxClick + 1 : checkboxClick - 1">
+                  <input id="checkbox4" type="checkbox" class="promoted-input-checkbox" x-model="checkbox4" x-on:change="totalCost = checkbox4 ? totalCost + <%= online_addon%> : totalCost - <%= online_addon%>; checkboxClick = checkbox4 ? checkboxClick + 1 : checkboxClick - 1">
                   <label for="checkbox4">
                     <svg><use xlink:href="#checkmark" /></svg>
                   </label>
@@ -154,7 +154,7 @@
               </div>
               <div class="flex items-center">
                 <div class="promoted-checkbox">
-                  <input id="checkbox5" type="checkbox" class="promoted-input-checkbox" x-model="checkbox5" x-on:change="totalCost = checkbox5 ? totalCost + 1200 : totalCost - 1200; checkboxClick = checkbox5 ? checkboxClick + 1 : checkboxClick - 1">
+                  <input id="checkbox5" type="checkbox" class="promoted-input-checkbox" x-model="checkbox5" x-on:change="totalCost = checkbox5 ? totalCost + <%= headset_addon%> : totalCost - <%= headset_addon%>; checkboxClick = checkbox5 ? checkboxClick + 1 : checkboxClick - 1">
                   <label for="checkbox5">
                     <svg><use xlink:href="#checkmark" /></svg>
                   </label>
@@ -170,26 +170,20 @@
       </div>
     </div>
 
-
-
-    <div class="mt-12 m-auto -space-y-4 items-center justify-center md:flex md:space-y-0 md:-space-x-4 xl:w-10/12">
+    <div 
+    x-data="{ totalCost: <%=ppl_to_hero%>, checkbox6: false, checkbox7: false, checkbox8: false, checkbox9: false, checkbox10: false, checkboxClick: 0 }" 
+    class="mt-12 m-auto -space-y-4 items-center justify-center md:flex md:space-y-0 md:-space-x-4 xl:w-10/12"
+    >
       <div class="relative z-10 -mx-4 group md:w-6/12 md:mx-0 lg:w-5/12">
         <div aria-hidden="true" class="absolute top-0 w-full h-full rounded-2xl bg-white shadow-xl transition duration-500 group-hover:scale-105 transform-gpu"></div>
         <div class="relative p-6 space-y-6 lg:p-8">
-          <div>
-            <div class="relative flex justify-around">
-              <div class="flex items-end">
-                <span class="text-4xl text-gray-800 font-bold font-header uppercase text-center">Airline Pilot Program</span>
-              </div>
-            </div>
-          </div>
           <h3 class="text-3xl text-gray-700 font-semibold text-center">PPL to Hero</h3>
           <div class="relative flex justify-around">
             <div class="flex items-center">
               <div class="">
                 <span class="block text-3xl text-gray-800 font-bold">$</span>
               </div>
-              <span class="text-4xl text-gray-700 font-bold leading-0">59,750</span>
+              <span class="text-4xl text-gray-700 font-bold leading-0" x-text="totalCost.toLocaleString()"></span>
             </div>
           </div>
           <p class="italic text-center">Continue your training after your private pilot certificate and get career ready</p>
@@ -201,6 +195,10 @@
             <li class="space-x-2">
               <span class="text-sky-500 font-semibold">&check;</span>
               <span>Commercial Certificate</span>
+            </li>
+            <li class="space-x-2">
+              <span class="text-sky-500 font-semibold">&check;</span>
+              <span>Multi Engine Rating</span>
             </li>
             <li class="space-x-2">
               <span class="text-sky-500 font-semibold">&check;</span>
@@ -221,11 +219,7 @@
             </a>
             <span>or</span>
           </p>
-          <button type="submit" title="Submit" class="block w-full py-3 px-6 text-center rounded-xl transition bg-sky-600 hover:bg-sky-700 active:bg-sky-800 focus:bg-indigo-600">
-            <span class="text-white font-semibold">
-              Contact Us Today
-            </span>
-          </button>
+          <%= link_to "Contact Us Today", contact_path, data: { turbo: false }, class: "block w-full py-3 px-6 text-center rounded-xl transition bg-sky-600 hover:bg-sky-700 active:bg-sky-800 focus:bg-sky-600 text-white font-semibold" %>
         </div>
       </div>
 
@@ -235,7 +229,7 @@
           <ul role="list" class="space-y-4 pb-6 text-gray-600">
             <li class="space-x-2">
               <span class="text-sky-500 font-semibold">&check;</span>
-              <span>Accelerated full time programs</span>
+              <span>Accelerated full-time programs</span>
             </li>
             <li class="space-x-2">
               <span class="text-sky-500 font-semibold">&check;</span>
@@ -247,65 +241,72 @@
             </li>
           </ul>
           <p class="text-gray-700 font-semibold text-2xl">Add ons</p>
-          
+
           <div class="mt-6 flex justify-between gap-6">
             <div class="grid grid-cols-1 lg:grid-cols-2">
-              <%# Grid of add ons items%>
+              <!-- Define the Checkmark -->
+              <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+                <symbol id="checkmark" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-miterlimit="10" fill="none"  d="M22.9 3.7l-15.2 16.6-6.6-7.1">
+                  </path>
+                </symbol>
+              </svg>
+
+              <!-- Grid of add ons items -->
               <div class="flex items-center">
                 <div class="promoted-checkbox">
-                  <input id="checkbox6" type="checkbox" class="promoted-input-checkbox"/>
+                  <input id="checkbox6" type="checkbox" class="promoted-input-checkbox" x-model="checkbox6" x-on:change="totalCost = checkbox6 ? totalCost + <%= mei_addon%> : totalCost - <%= mei_addon%>; checkboxClick = checkbox6 ? checkboxClick + 1 : checkboxClick - 1">
                   <label for="checkbox6">
-                    <svg><use xlink:href="#checkmark" /></svg>      
+                    <svg><use xlink:href="#checkmark" /></svg>
                   </label>
                 </div>
                 <span class="text-gray-600">MEI</span>
               </div>
               <div class="flex items-center">
                 <div class="promoted-checkbox">
-                  <input id="checkbox7" type="checkbox" class="promoted-input-checkbox"/>
+                  <input id="checkbox7" type="checkbox" class="promoted-input-checkbox" x-model="checkbox7" x-on:change="totalCost = checkbox7 ? totalCost + <%= checkride_addon %> : totalCost - <%= checkride_addon %>; checkboxClick = checkbox7 ? checkboxClick + 1 : checkboxClick - 1">
                   <label for="checkbox7">
-                    <svg><use xlink:href="#checkmark" /></svg>      
+                    <svg><use xlink:href="#checkmark" /></svg>
                   </label>
                 </div>
                 <span class="text-gray-600">Checkride Fees</span>
               </div>
               <div class="flex items-center">
                 <div class="promoted-checkbox">
-                  <input id="checkbox8" type="checkbox" class="promoted-input-checkbox"/>
+                  <input id="checkbox8" type="checkbox" class="promoted-input-checkbox" x-model="checkbox8" x-on:change="totalCost = checkbox8 ? totalCost + <%= written_addon %> : totalCost - <%= written_addon %>; checkboxClick = checkbox8 ? checkboxClick + 1 : checkboxClick - 1">
                   <label for="checkbox8">
-                    <svg><use xlink:href="#checkmark" /></svg>      
+                    <svg><use xlink:href="#checkmark" /></svg>
                   </label>
                 </div>
                 <span class="text-gray-600">Written test fees</span>
               </div>
               <div class="flex items-center">
                 <div class="promoted-checkbox">
-                  <input id="checkbox9" type="checkbox" class="promoted-input-checkbox"/>
+                  <input id="checkbox9" type="checkbox" class="promoted-input-checkbox" x-model="checkbox9" x-on:change="totalCost = checkbox9 ? totalCost + <%= online_addon%> : totalCost - <%= online_addon%>; checkboxClick = checkbox9 ? checkboxClick + 1 : checkboxClick - 1">
                   <label for="checkbox9">
-                    <svg><use xlink:href="#checkmark" /></svg>      
+                    <svg><use xlink:href="#checkmark" /></svg>
                   </label>
                 </div>
                 <span class="text-gray-600">Starter bundle and online courses</span>
               </div>
               <div class="flex items-center">
                 <div class="promoted-checkbox">
-                  <input id="checkbox10" type="checkbox" class="promoted-input-checkbox"/>
+                  <input id="checkbox10" type="checkbox" class="promoted-input-checkbox" x-model="checkbox10" x-on:change="totalCost = checkbox10 ? totalCost + <%= headset_addon%> : totalCost - <%= headset_addon%>; checkboxClick = checkbox10 ? checkboxClick + 1 : checkboxClick - 1">
                   <label for="checkbox10">
-                    <svg><use xlink:href="#checkmark" /></svg>      
+                    <svg><use xlink:href="#checkmark" /></svg>
                   </label>
                 </div>
                 <span class="text-gray-600">Aviation headset</span>
               </div>
             </div>
-
+          </div>
+          <div x-show="checkboxClick > 0" class="text-gray-500 pt-5 italic lg:hidden">
+            Updated Cost: $<span x-text="totalCost.toLocaleString()"></span>
           </div>
         </div>
       </div>
     </div>
-
-
   </div>
-
 </div>
 
 <section class="bg-gradient-to-b from-sky-100 to-sky-200">
