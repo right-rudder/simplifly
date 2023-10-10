@@ -1,0 +1,76 @@
+<style>
+  /* Variables */
+  :root {
+    --brand: #0ea5e9; /* Updated color */
+    --grey-25: #e6e6e6;
+    --grey-5: #fcfcfc;
+  }
+
+  /* Global Box Sizing */
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  /* HTML5 Boilerplate accessible hidden styles */
+  .promoted-input-checkbox {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  /* Promoted Checkbox */
+  .promoted-checkbox input:checked + label > svg {
+    height: 24px; /* Adjust the height */
+    width: 24px; /* Adjust the width */
+    animation: draw-checkbox ease-in-out 0.2s forwards;
+  }
+
+  .promoted-checkbox label {
+    color: var(--brand);
+    line-height: 40px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block; /* Added to ensure the label has a size */
+    vertical-align: middle; /* Added to vertically center the label content */
+  }
+
+  .promoted-checkbox label:after {
+    content: "";
+    height: 24px; /* Adjust the height */
+    width: 24px; /* Adjust the width */
+    margin-right: 1rem;
+    border: 1px solid rgb(31 41 55); /* Adjust the border thickness */
+    border-radius: 3px;
+    display: inline-block; /* Added to ensure the pseudo-element has a size */
+    vertical-align: middle; /* Added to vertically center the pseudo-element */
+    transition: 0.15s all ease-out;
+  }
+
+  .promoted-checkbox svg {
+    stroke: var(--brand);
+    stroke-width: 2px; /* Adjust the stroke width */
+    height: 0; /* Firefox fix */
+    width: 100%; /* Adjust the width */
+    position: absolute;
+    left: 0;
+    top: 8px;
+    stroke-dasharray: 33; /* Adjust the stroke-dasharray */
+  }
+
+  /* Keyframes */
+  @keyframes draw-checkbox {
+    0% {
+      stroke-dashoffset: 33; /* Adjust the stroke-dashoffset */
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+</style>
