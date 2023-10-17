@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  #resources :registration_forms
 
     # 404/500 pages
     get 'errors/not_found'

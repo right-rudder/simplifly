@@ -1,0 +1,97 @@
+<div id="<%= dom_id registration_form %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">First name:</strong>
+    <%= registration_form.first_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Last name:</strong>
+    <%= registration_form.last_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Email:</strong>
+    <%= registration_form.email %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Phone:</strong>
+    <%= registration_form.phone %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Street:</strong>
+    <%= registration_form.street %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">City:</strong>
+    <%= registration_form.city %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">State:</strong>
+    <%= registration_form.state %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Zip:</strong>
+    <%= registration_form.zip %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Emergency name:</strong>
+    <%= registration_form.emergency_name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Emergency phone:</strong>
+    <%= registration_form.emergency_phone %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Emergency email:</strong>
+    <%= registration_form.emergency_email %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Course:</strong>
+    <%= registration_form.course %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Hours planned:</strong>
+    <%= registration_form.hours_planned %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Goal:</strong>
+    <%= registration_form.goal %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Financed:</strong>
+    <%= registration_form.financed %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Total time:</strong>
+    <%= registration_form.total_time %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Certificates held:</strong>
+    <%= registration_form.certificates_held %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Committed:</strong>
+    <%= registration_form.committed %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this registration form", registration_form, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this registration form', edit_registration_form_path(registration_form), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
