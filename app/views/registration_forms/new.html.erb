@@ -1,7 +1,12 @@
-<div class="mx-auto md:w-2/3 w-full">
-  <h1 class="font-bold text-4xl">New registration form</h1>
 
-  <%= render "form", registration_form: @registration_form %>
+<header class="flex flex-row items-center justify-center gap-5 lg:gap-10 bg-gradient-to-t from-sky-300 to-slate-100 px-3 py-5">
+  <%= image_tag "simplifly_250.webp", alt: "SimpliFly Logo", class: "lg:w-32 w-20"%>
+  <h1 class="font-bold lg:text-5xl text-3xl font-header uppercase text-right">New Pilot Registration</h1>
+</header>
 
-  <%= link_to 'Back to registration forms', registration_forms_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+
+<div class="flex flex-col w-full items-center">
+  <div class="max-w-4xl w-full px-5">
+    <%= render "form", registration_form: @registration_form %>
+  </div>
 </div>
