@@ -1,107 +1,170 @@
-<%= form_with(model: registration_form, class: "contents") do |form| %>
-  <% if registration_form.errors.any? %>
-    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(registration_form.errors.count, "error") %> prohibited this registration_form from being saved:</h2>
+<% title("New Pilot Registration | SimpliFly") %>
 
-      <ul>
-        <% registration_form.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+<div class="" x-data="{ selectedTrainingOption: '' }">
+  <%= form_with(model: registration_form, class: "contents") do |form| %>
+    <% if registration_form.errors.any? %>
+      <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+        <h2><%= pluralize(registration_form.errors.count, "error") %> prohibited this form from being sent:</h2>
+
+        <ul>
+          <% registration_form.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <h2 class="font-header uppercase font-bold text-xl pt-10">Student Pilot Details</h2>
+    <!--Encompass name in one line-->
+    <div class="flex lg:flex-row flex-col w-full lg:gap-5">
+      <div class="my-2 lg:mb-0 lg:w-1/2">
+        <%= form.label :first_name, class: "text-slate-700" %>
+        <%= form.text_field :first_name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
+      </div>
+
+      <div class="my-2 lg:mb-0 lg:w-1/2">
+        <%= form.label :last_name, class: "text-slate-700" %>
+        <%= form.text_field :last_name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
+      </div>
+    </div>
+
+    <!--Encompass email and phone in one line-->
+    <div class="flex lg:flex-row flex-col w-full lg:gap-5">
+      <div class="my-2 lg:mb-0 lg:w-1/2">
+        <%= form.label :phone, class: "text-slate-700" %>
+        <%= form.text_field :phone, placeholder: "###-###-####", class: "placeholder:text-slate-300 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
+      </div>
+      
+      <div class="my-2 lg:mb-0 lg:w-1/2">
+        <%= form.label :email, class: "text-slate-700" %>
+        <%= form.email_field :email, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
+      </div>
+    </div>
+
+    <div class="my-2 lg:mb-0">
+      <%= form.label :street_address, class: "text-slate-700" %>
+      <%= form.text_field :street, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
+    </div>
+
+    <!--Encompass address in one line-->
+    <div class="flex lg:flex-row flex-col w-full lg:gap-5">
+      <div class="my-2 lg:mb-0 lg:w-1/2">
+        <%= form.label :city, class: "text-slate-700" %>
+        <%= form.text_field :city, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
+      </div>
+
+      <!--put in one line for mobile-->
+      <div class="flex gap-5">
+        <div class="my-2 lg:mb-0 w-1/2 lg:w-1/8">
+          <%= form.label :state, class: "text-slate-700" %>
+          <%= form.select :state, [
+            '', 'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut',
+            'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas',
+            'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
+            'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey',
+            'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon',
+            'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas',
+            'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+          ], {}, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
+        </div>
+
+
+        <div class="my-2 lg:mb-0 w-1/2 lg:w-3/8">
+          <%= form.label :zip, class: "text-slate-700" %>
+          <%= form.text_field :zip, placeholder: "#####", class: "placeholder:text-slate-300 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="font-header uppercase font-bold text-xl pt-5">Emergency Contact Details</h2>
+
+    <div class="my-2">
+      <%= form.label :emergency_full_name, class: "text-slate-700" %>
+      <%= form.text_field :emergency_name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
+    </div>
+
+    <!--Encompass email and phone in one line-->
+    <div class="flex lg:flex-row flex-col w-full lg:gap-5">
+      <div class="my-2 lg:mb-0 lg:w-1/2">
+        <%= form.label :emergency_phone, class: "text-slate-700" %>
+        <%= form.text_field :emergency_phone, placeholder: "###-###-####", class: "placeholder:text-slate-300 block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
+      </div>
+
+      <div class="my-2 lg:mb-0 lg:w-1/2">
+        <%= form.label :emergency_email, class: "text-slate-700" %>
+        <%= form.email_field :emergency_email, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
+      </div>
+    </div>
+
+    <h2 class="font-header uppercase font-bold text-xl pt-5">Flight Training Details</h2>
+
+    <div class="my-2">
+      <%= form.label :training_option, class: "text-slate-700" %>
+      <%= form.select :training_option, ['', 'Accelerated Pilot Training', 'Flexible Pilot Training'], { }, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500", "x-model" => "selectedTrainingOption" %>
+    </div>
+
+
+    <div class="my-2">
+      <%= form.label :hours_planned_to_dedicate_each_week_to_flight_training, class: "text-slate-700" %>
+      <%= form.number_field :hours_planned, min: 0, max: 100, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-24 focus:border-sky-500 focus:ring-sky-500" %>
+    </div>
+
+    <div class="my-2">
+      <%= form.label :what_are_your_goals, class: "text-slate-700" %>
+      <%= form.text_area :goal, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
+    </div>
+
+    <div class="my-2">
+      <%= form.label :How_are_you_paying_for_training, class: "text-slate-700" %>
+      <%= form.select :financed, ['', 'Self funded', 'Financed'], {}, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
+    </div>
+
+    <h2 class="font-header uppercase font-bold text-xl pt-5">Prior Flight Experience</h2>
+
+    <div class="my-2">
+      <%= form.label :total_flying_time_accrued, class: "text-slate-700" %>
+      <%= form.number_field :total_time, min: 0, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-24 focus:border-sky-500 focus:ring-sky-500" %>
+    </div>
+
+    <div x-data="{ certificatesHeld: [] }">
+      <div class="my-2">
+        <%= form.label :certificates_and_ratings_held, class: "text-slate-700" %>
+        <div class="block outline-none pb-2 w-full">
+          <% ['Student pilot', 'Private pilot', 'Instrument rating', 'Commercial certificate', 'Multi engine rating', 'CFI', 'CFII', 'MEI'].each do |certificate| %>
+            <label class="block mt-2">
+              <input type="checkbox" x-model="certificatesHeld" value="<%= certificate %>" class="text-sky-500 rounded-sm">
+              <span class="text-slate-700"><%= certificate %></span>
+            </label>
+          <% end %>
+        </div>
+      </div>
+      <%= form.hidden_field :certificates_held, 'x-bind:value' => "certificatesHeld.join(', ')" %>
+    </div>
+
+    <div class="mt-5">
+
+      <div class="flex">
+        
+        <div class="" x-show="selectedTrainingOption === 'Accelerated Pilot Training' || selectedTrainingOption === 'Flexible Pilot Training'">
+          <%= form.check_box :committed, class: "block mt-2 h-5 w-5 text-sky-500 mr-5 rounded-sm" %>
+        </div>
+
+
+        <!-- Conditionally show "Text 1" if Accelerated Pilot Training is selected -->
+        <div class="text-slate-700" x-show="selectedTrainingOption === 'Accelerated Pilot Training'">
+          By clicking this box you agree to commit 40+ hours per week to flight training in the form of flight time, ground school, and at home study.
+        </div>
+
+        <!-- Conditionally show "Text 2" if Flexible Pilot Training is selected -->
+        <div class="text-slate-700" x-show="selectedTrainingOption === 'Flexible Pilot Training'">
+          By clicking this box you agree to commit 20+ hours per week to flight training in the form of flight time, ground school, and at home study.
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="inline">
+      <%= form.submit "REGISTER AT SIMPLIFLY", class: "btn-primary my-10" %>
     </div>
   <% end %>
-
-  <div class="my-5">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :email %>
-    <%= form.text_field :email, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :phone %>
-    <%= form.text_field :phone, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :street %>
-    <%= form.text_field :street, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :city %>
-    <%= form.text_field :city, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :state %>
-    <%= form.text_field :state, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :zip %>
-    <%= form.text_field :zip, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :emergency_name %>
-    <%= form.text_field :emergency_name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :emergency_phone %>
-    <%= form.text_field :emergency_phone, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :emergency_email %>
-    <%= form.text_field :emergency_email, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :course %>
-    <%= form.text_field :course, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :hours_planned %>
-    <%= form.number_field :hours_planned, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :goal %>
-    <%= form.text_area :goal, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :financed %>
-    <%= form.text_field :financed, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :total_time %>
-    <%= form.text_field :total_time, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :certificates_held %>
-    <%= form.text_field :certificates_held, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :committed %>
-    <%= form.check_box :committed, class: "block mt-2 h-5 w-5 text-sky-500" %>
-  </div>
-
-  <div class="inline">
-    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
-  </div>
-<% end %>
+</div>
