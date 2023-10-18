@@ -128,10 +128,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <% end %>
       <%= yield %>
     </main>
-    <script type="text/javascript" src="//cdn.callrail.com/companies/400810513/51d2a7c293b47e7f67d2/12/swap.js"></script> 
+    
 
-    <%# GOOGLE TAG ONLY SHOW DURING PRODUCTION ENVIRONMENT%>
+    <%# GOOGLE TAG and CallRail ONLY SHOW DURING PRODUCTION ENVIRONMENT%>
     <% if Rails.env.production? %>
+      <script type="text/javascript" src="//cdn.callrail.com/companies/400810513/51d2a7c293b47e7f67d2/12/swap.js"></script> 
+
       <!-- Google Tag Manager (noscript) WORKHORSE-->
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2FPMTG"
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
