@@ -10,7 +10,7 @@ class RegistrationFormsMailer < ApplicationMailer
       )
     )
 
-    attachments['registration_form.pdf'] = pdf
+    attachments["#{registration_form.first_name} #{registration_form.last_name} Registration Form.pdf"] = pdf
     mail(to: registration_form.email, subject: 'Your Registration Form PDF')
   end
 end
