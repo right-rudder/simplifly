@@ -123,30 +123,33 @@
       <%= form.select :financed, ['', 'Self funded', 'Financed'], {}, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-64 focus:border-sky-500 focus:ring-sky-500" %>
     </div>
 
-    <h2 class="font-header uppercase font-bold text-xl pt-2">Availability</h2>
-    <div class="text-slate-700 my-2">
-      Select which days and times your available for flight training.  Click all that apply.
+
+    <div x-data="{ selectedTimeSlots: [] }">
+      <h2 class="font-header uppercase font-bold text-xl pt-2">Availability</h2>
+      <div class="text-slate-700 my-2">
+        Select which days and times you're available for flight training. Click all that apply.
+      </div>
+      <div class="grid grid-cols-3 gap-5 lg:max-w-xl">
+        <template x-for="timeSlot in ['Monday Morning', 'Monday Afternoon', 'Monday Evening', 'Tuesday Morning', 'Tuesday Afternoon', 'Tuesday Evening', 'Wednesday Morning', 'Wednesday Afternoon', 'Wednesday Evening', 'Thursday Morning', 'Thursday Afternoon', 'Thursday Evening', 'Friday Morning', 'Friday Afternoon', 'Friday Evening', 'Saturday Morning', 'Saturday Afternoon', 'Saturday Evening']" :key="timeSlot">
+          <div
+            class="btn-registration cursor-pointer"
+            @click="
+              if (selectedTimeSlots.includes(timeSlot)) {
+                selectedTimeSlots = selectedTimeSlots.filter(slot => slot !== timeSlot);
+              } else {
+                selectedTimeSlots.push(timeSlot);
+              }
+            "
+            :class="{ 'bg-sky-500 text-white': selectedTimeSlots.includes(timeSlot) }"
+          >
+            <span x-text="timeSlot"></span>
+          </div>
+        </template>
+      </div>
+      <%= form.hidden_field :availability, 'x-bind:value' => "selectedTimeSlots.join(', ')" %>
     </div>
-    <div class="grid grid-cols-3 gap-5 lg:max-w-xl">
-      <div class="btn-registration">Monday Morning</div>
-      <div class="btn-registration">Monday Afternoon</div>
-      <div class="btn-registration">Monday Evening</div>
-      <div class="btn-registration">Tuesday Morning</div>
-      <div class="btn-registration">Tuesday Afternoon</div>
-      <div class="btn-registration">Tuesday Evening</div>
-      <div class="btn-registration">Wednesday Morning</div>
-      <div class="btn-registration">Wednesday Afternoon</div>
-      <div class="btn-registration">Wednesday Evening</div>
-      <div class="btn-registration">Thursday Morning</div>
-      <div class="btn-registration">Thursday Afternoon</div>
-      <div class="btn-registration">Thursday Evening</div>
-      <div class="btn-registration">Friday Morning</div>
-      <div class="btn-registration">Friday Afternoon</div>
-      <div class="btn-registration">Friday Evening</div>
-      <div class="btn-registration">Saturday Morning</div>
-      <div class="btn-registration">Saturday Afternoon</div>
-      <div class="btn-registration">Saturday Evening</div>
-    </div>
+    
+
 
     <h2 class="font-header uppercase font-bold text-xl pt-5">Prior Flight Experience</h2>
 
