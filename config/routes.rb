@@ -30,7 +30,7 @@ Rails.application.routes.draw do
 
   # Registration form
   get 'registration', to: 'registration_forms#new'
-  get 'registration-confirmation', to: 'registration_forms#confirmation'
+  get 'registration-confirmation', to: 'registration_forms#confirmation', as: :registration_confirmation
 
   # Enrollment form
   get 'enroll-at-simplifly', to: 'enrollments#new', as: :enroll

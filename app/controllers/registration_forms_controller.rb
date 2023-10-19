@@ -1,5 +1,7 @@
 class RegistrationFormsController < ApplicationController
   before_action :set_registration_form, only: %i[ show edit update destroy ]
+  #before_action :authenticate_admin!, except: [:create, :new, :confirmation]
+  invisible_captcha only: [:create], honeypot: :confirm_email
 
   # GET /registration_forms or /registration_forms.json
   def index
@@ -25,7 +27,7 @@ class RegistrationFormsController < ApplicationController
 
     respond_to do |format|
       if @registration_form.save
-        format.html { redirect_to registration_form_url(@registration_form), notice: "Registration form was successfully created." }
+        format.html { redirect_to registration_confirmation_path }
         format.json { render :show, status: :created, location: @registration_form }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -35,17 +37,17 @@ class RegistrationFormsController < ApplicationController
   end
 
   # PATCH/PUT /registration_forms/1 or /registration_forms/1.json
-  def update
-    respond_to do |format|
-      if @registration_form.update(registration_form_params)
-        format.html { redirect_to registration_form_url(@registration_form), notice: "Registration form was successfully updated." }
-        format.json { render :show, status: :ok, location: @registration_form }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @registration_form.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  #def update
+  #  respond_to do |format|
+  #    if @registration_form.update(registration_form_params)
+  #      format.html { redirect_to registration_form_url(@registration_form), notice: "Registration form was successfully updated." }
+  #      format.json { render :show, status: :ok, location: @registration_form }
+  #    else
+  #      format.html { render :edit, status: :unprocessable_entity }
+  #      format.json { render json: @registration_form.errors, status: :unprocessable_entity }
+  #    end
+  #  end
+  #end
 
   # DELETE /registration_forms/1 or /registration_forms/1.json
   def destroy
