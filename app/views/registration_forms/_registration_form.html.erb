@@ -1,102 +1,152 @@
-<div id="<%= dom_id registration_form %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">First name:</strong>
-    <%= registration_form.first_name %>
-  </p>
+<% title("#{registration_form.first_name} #{registration_form.last_name} Registration") %>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Last name:</strong>
-    <%= registration_form.last_name %>
-  </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Email:</strong>
-    <%= registration_form.email %>
-  </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Phone:</strong>
-    <%= registration_form.phone %>
-  </p>
+<h2 class="font-header uppercase font-bold text-xl pt-10">Student Pilot Details</h2>
+<!-- Encompass name in one line -->
+<div class="flex lg:flex-row flex-col w-full lg:gap-5">
+  <div class="my-2 lg:mb-0 lg:w-1/2">
+    First Name
+    <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.first_name %></div>
+  </div>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Street:</strong>
-    <%= registration_form.street %>
-  </p>
+  <div class="my-2 lg:mb-0 lg:w-1/2">
+    Last Name
+    <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.last_name %></div>
+  </div>
+</div>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">City:</strong>
-    <%= registration_form.city %>
-  </p>
+<!-- Encompass email and phone in one line -->
+<div class="flex lg:flex-row flex-col w-full lg:gap-5">
+  <div class="my-2 lg:mb-0 lg:w-1/2">
+    Phone
+    <div class="placeholder:text-slate-300 block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.phone %></div>
+  </div>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">State:</strong>
-    <%= registration_form.state %>
-  </p>
+  <div class="my-2 lg:mb-0 lg:w-1/2">
+    Email
+    <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.email %></div>
+  </div>
+</div>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Zip:</strong>
-    <%= registration_form.zip %>
-  </p>
+<div class="my-2 lg:mb-0">
+  Street Address
+  <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.street %></div>
+</div>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Emergency name:</strong>
-    <%= registration_form.emergency_name %>
-  </p>
+<!-- Encompass address in one line -->
+<div class="flex lg:flex-row flex-col w-full lg:gap-5">
+  <div class="my-2 lg:mb-0 lg:w-1/2">
+    City
+    <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.city %></div>
+  </div>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Emergency phone:</strong>
-    <%= registration_form.emergency_phone %>
-  </p>
+  <!-- Put in one line for mobile -->
+  <div class="flex gap-5">
+    <div class="my-2 lg:mb-0 w-1/2 lg:w-1/8">
+      State
+      <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.state %></div>
+    </div>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Emergency email:</strong>
-    <%= registration_form.emergency_email %>
-  </p>
+    <div class="my-2 lg:mb-0 w-1/2 lg:w-3/8">
+      Zip Code
+      <div class="placeholder:text-slate-300 block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.zip %></div>
+    </div>
+  </div>
+</div>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Course:</strong>
-    <%= registration_form.course %>
-  </p>
+<h2 class="font-header uppercase font-bold text-xl pt-5">Emergency Contact Details</h2>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Hours planned:</strong>
-    <%= registration_form.hours_planned %>
-  </p>
+<div class="my-2">
+  Emergency Contact Full Name
+  <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.emergency_name %></div>
+</div>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Goal:</strong>
-    <%= registration_form.goal %>
-  </p>
+<!-- Encompass email and phone in one line -->
+<div class="flex lg:flex-row flex-col w-full lg:gap-5">
+  <div class="my-2 lg:mb-0 lg:w-1/2">
+    Emergency Contact Phone
+    <div class="placeholder:text-slate-300 block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.emergency_phone %></div>
+  </div>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Financed:</strong>
-    <%= registration_form.financed %>
-  </p>
+  <div class="my-2 lg:mb-0 lg:w-1/2">
+    Emergency Contact Email
+    <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.emergency_email %></div>
+  </div>
+</div>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Availability:</strong>
-    <%= registration_form.availability %>
-  </p>
+<h2 class="font-header uppercase font-bold text-xl pt-5">Flight Training Details</h2>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Total time:</strong>
-    <%= registration_form.total_time %>
-  </p>
+<div class="my-2">
+  Training Option
+  <div class="block outline-none px-3 py-2 mt-2 w-64 text-slate-500 bg-slate-100 rounded-md"><%= registration_form.course %></div>
+</div>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Certificates held:</strong>
-    <%= registration_form.certificates_held %>
-  </p>
+<div class="my-2">
+  Hours Planned to Dedicate Each Week to Flight Training
+  <div class="block outline-none px-3 py-2 mt-2 w-24 text-slate-500 bg-slate-100 rounded-md"><%= registration_form.hours_planned %></div>
+</div>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Committed:</strong>
-    <%= registration_form.committed %>
-  </p>
+<div class="my-2">
+  What Are Your Goals
+  <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.goal %></div>
+</div>
 
-  <% if action_name != "show" %>
-    <%= link_to "Show this registration form", registration_form, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this registration form', edit_registration_form_path(registration_form), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-    <hr class="mt-6">
-  <% end %>
+<div class="my-2">
+  How Are You Paying for Training
+  <div class="block outline-none px-3 py-2 mt-2 w-64 text-slate-500 bg-slate-100 rounded-md"><%= registration_form.financed %></div>
+</div>
+
+
+<h2 class="font-header uppercase font-bold text-xl pt-2">Availability</h2>
+  <div class="block outline-none px-3 py-2 mt-2 text-slate-500 bg-slate-100 rounded-md">
+    <%= registration_form.availability%>
+  </div>
+
+
+
+<h2 class="font-header uppercase font-bold text-xl pt-5">Prior Flight Experience</h2>
+
+<div class="my-2">
+  Total Flying Time Accrued
+  <div class="block outline-none px-3 py-2 mt-2 w-24 text-slate-500 bg-slate-100 rounded-md"><%= registration_form.total_time %></div>
+</div>
+
+<div x-data="{ certificatesHeld: [] }">
+  <div class="my-2">
+    Certificates and Ratings Held
+    <br>
+    <span class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md">
+      <%= registration_form.certificates_held%>
+    </span>
+  </div>
+</div>
+
+<div class="mt-5 mb-10">
+    
+  <h2 class="font-header uppercase font-bold text-xl ">Commitment</h2>
+  <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md" >
+    <% if registration_form.course = "Accelerated Pilot Training" %>
+    I commit 40+ hours per week to pilot training in the form of flight time, ground school, and at-home study.
+    <% elsif registration_form.course = "Flexible Pilot Training" %>
+    I commit 20+ hours per week to pilot training in the form of flight time, ground school, and at-home study.
+    <%end%>
+  </div>
+</div>
+
+
+<h2 class="font-header uppercase font-bold text-xl mb-20">Signatures</h2>
+<div class="flex flex-row w-full gap-20">
+  <div class="border-t border-black w-1/2 text-slate-700"><%= registration_form.first_name%> <%= registration_form.last_name%> Signature</div>
+  <div class="border-t border-black w-1/2 text-slate-700">Date</div>
+</div>
+
+<div class="flex flex-row w-full gap-20 mt-20">
+  <div class="border-t border-black w-1/2 text-slate-700">SimpliFly CFI Name</div>
+  <div class="w-1/2"></div>
+</div>
+
+<div class="flex flex-row w-full gap-20 mt-20">
+  <div class="border-t border-black w-1/2 text-slate-700">SimpliFly CFI Signature</div>
+  <div class="border-t border-black w-1/2 text-slate-700">Date</div>
 </div>
