@@ -1,10 +1,14 @@
 <% title("New Pilot Registration | SimpliFly") %>
 
 <div class="" x-data="{ selectedTrainingOption: '' }">
+  <div class="pt-5">
+    Congratulations on starting your journey to become a pilot at SimpliFly.  We're dedicated to providing the best service and training to help you reach your aviation goals.  Please fill out the form below completely.  All fields are required and incomplete submissions will not be accepted.  After the filling out the form, a SimpliFly team member will reach out to you and go over your entries.
+  </div>
+
   <%= form_with(model: registration_form, class: "contents") do |form| %>
     <% if registration_form.errors.any? %>
       <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-        <h2><%= pluralize(registration_form.errors.count, "error") %> prohibited this form from being sent:</h2>
+        <h2><%= pluralize(registration_form.errors.count, "error") %> prohibited this from being completed:</h2>
 
         <ul>
           <% registration_form.errors.each do |error| %>
@@ -100,7 +104,7 @@
 
     <div class="my-2">
       <%= form.label :training_option, class: "text-slate-700" %>
-      <%= form.select :training_option, ['', 'Accelerated Pilot Training', 'Flexible Pilot Training'], { }, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500", "x-model" => "selectedTrainingOption" %>
+      <%= form.select :course, ['', 'Accelerated Pilot Training', 'Flexible Pilot Training'], { }, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-64 focus:border-sky-500 focus:ring-sky-500", "x-model" => "selectedTrainingOption" %>
     </div>
 
 
@@ -116,7 +120,7 @@
 
     <div class="my-2">
       <%= form.label :How_are_you_paying_for_training, class: "text-slate-700" %>
-      <%= form.select :financed, ['', 'Self funded', 'Financed'], {}, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
+      <%= form.select :financed, ['', 'Self funded', 'Financed'], {}, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-64 focus:border-sky-500 focus:ring-sky-500" %>
     </div>
 
     <h2 class="font-header uppercase font-bold text-xl pt-5">Prior Flight Experience</h2>
