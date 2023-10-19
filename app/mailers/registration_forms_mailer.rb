@@ -11,6 +11,11 @@ class RegistrationFormsMailer < ApplicationMailer
     )
 
     attachments["#{registration_form.first_name} #{registration_form.last_name} Registration Form.pdf"] = pdf
-    mail(to: registration_form.email, subject: 'Your Registration Form PDF')
+    
+    if Rails.env.production?
+      mail(to: registration_form.email, bcc: ["no-reply@simplifly-co.com", "info@simpliflyco.com"], subject: 'SimpliFly Registration form Received')
+    else
+      mail(to: registration_form.email, bcc: ["no-reply@simplifly-co.com"], subject: 'SimpliFly Registration form Received')
+    end
   end
 end

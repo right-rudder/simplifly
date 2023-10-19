@@ -27,8 +27,9 @@ class RegistrationFormsController < ApplicationController
 
     respond_to do |format|
       if @registration_form.save
+        RegistrationFormsMailer.send_registration_form_pdf(@registration_form).deliver_later
         format.html { redirect_to registration_confirmation_path }
-        format.json { render :show, status: :created, location: @registration_form }
+        #format.json { render :show, status: :created, location: @registration_form }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @registration_form.errors, status: :unprocessable_entity }
