@@ -3,5 +3,10 @@
 
 User-agent: *
 Disallow: /admins
+Disallow: /registration_forms/
+Disallow: /discover_flights/
+Disallow: /messages/
+Disallow: /enrollments/
+Disallow: /book_downloads/
 
 Sitemap: https://simpliflyco.com/sitemap.xml.gz

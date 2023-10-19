@@ -28,6 +28,10 @@ Rails.application.routes.draw do
   #resources :checkouts
   #resources :quiz_results
 
+  # Registration form
+  get 'registration', to: 'registration_forms#new'
+  get 'registration-confirmation', to: 'registration_forms#confirmation'
+
   # Enrollment form
   get 'enroll-at-simplifly', to: 'enrollments#new', as: :enroll
   get 'enrollment-confirmation', to: 'enrollments#confirmation', as: :enroll_confirmation
