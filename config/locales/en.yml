@@ -31,3 +31,9 @@
 
 en:
   hello: "Hello world"
+
+en:
+  activerecord:
+    attributes:
+      registration_form:
+        committed: "You must agree to commit time each week to training"
