@@ -37,3 +37,4 @@ en:
     attributes:
       registration_form:
         committed: "You must agree to commit time each week to training"
+        financed: "Please let us know how you plan to pay for training"
