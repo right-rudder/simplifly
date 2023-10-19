@@ -1,0 +1,40 @@
+Dear <%= @registration_form.first_name %>,
+
+Thank you for your commitment to begin training at SimpliFly and for taking the time to complete the registration form. We appreciate your interest in our flight training programs. 
+
+Please find the details of your registration form submission below.
+
+If you have any further questions or need assistance, please feel free to contact us at 1-480-256-8355 or via email at info@simpliflyco.com.
+
+Best regards,
+The SimpliFly Team
+1-480-256-8355
+info@simpliflyco.com
+
+--------- Form Entry Details ---------
+- First Name: <%= @registration_form.first_name %>
+- Last Name: <%= @registration_form.last_name %>
+- Email: <%= @registration_form.email %>
+- Phone: <%= @registration_form.phone %>
+- Street Address: <%= @registration_form.street %>
+- City: <%= @registration_form.city %>
+- State: <%= @registration_form.state %>
+- Zip Code: <%= @registration_form.zip %>
+
+- Emergency Contact Information:
+  - Name: <%= @registration_form.emergency_name %>
+  - Phone: <%= @registration_form.emergency_phone %>
+  - Email: <%= @registration_form.emergency_email %>
+
+- Flight Training Details:
+  - Course: <%= @registration_form.course %>
+  - Planned Weekly Hours for Training: <%= @registration_form.hours_planned %> hours
+  - Goals: <%= @registration_form.goal %>
+  - Financed Training: <%= @registration_form.financed %>
+
+- Availability for Flight Training:
+  - <%= @registration_form.availability %>
+
+- Prior Flight Experience:
+  - Total Flying Time Accrued: <%= @registration_form.total_time %> hours
+  - Certificates and Ratings Held: <%= @registration_form.certificates_held %>

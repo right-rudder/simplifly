@@ -1,0 +1,50 @@
+<p>Dear <%= @registration_form.first_name %>,</p>
+
+<p>Thank you for your commitment to begin training at SimpliFly and for taking the time to complete the registration form. We appreciate your interest in our flight training programs.</p>
+
+<p>Please find the details of your registration form submission below.</p>
+
+<p>If you have any further questions or need assistance, please feel free to contact us at <a href="tel:1-480-256-8355">1-480-256-8355</a> or via email at <a href="mailto:info@simpliflyco.com">info@simpliflyco.com</a>.</p>
+
+<p>Best regards,</p>
+<p>The SimpliFly Team</p>
+<a href="tel:1-480-256-8355">1-480-256-8355</a><br>
+<a href="mailto:info@simpliflyco.com">info@simpliflyco.com</a><br><br>
+
+
+<p><strong>--------- Form Entry Details ---------</strong></p>
+<ul>
+  <li><strong>First Name:</strong> <%= @registration_form.first_name %></li>
+  <li><strong>Last Name:</strong> <%= @registration_form.last_name %></li>
+  <li><strong>Email:</strong> <%= @registration_form.email %></li>
+  <li><strong>Phone:</strong> <%= @registration_form.phone %></li>
+  <li><strong>Street Address:</strong> <%= @registration_form.street %></li>
+  <li><strong>City:</strong> <%= @registration_form.city %></li>
+  <li><strong>State:</strong> <%= @registration_form.state %></li>
+  <li><strong>Zip Code:</strong> <%= @registration_form.zip %></li>
+</ul>
+
+<p><strong>Emergency Contact Information:</strong></p>
+<ul>
+  <li><strong>Name:</strong> <%= @registration_form.emergency_name %></li>
+  <li><strong>Phone:</strong> <%= @registration_form.emergency_phone %></li>
+  <li><strong>Email:</strong> <%= @registration_form.emergency_email %></li>
+</ul>
+
+<p><strong>Flight Training Details:</strong></p>
+<ul>
+  <li><strong>Course:</strong> <%= @registration_form.course %></li>
+  <li><strong>Planned Weekly Hours for Training:</strong> <%= @registration_form.hours_planned %> hours</li>
+  <li><strong>Goals:</strong> <%= @registration_form.goal %></li>
+  <li><strong>Financed Training:</strong> <%= @registration_form.financed %></li>
+</ul>
+
+<p><strong>Availability for Flight Training:</strong></p>
+<p><%= @registration_form.availability %></p>
+
+<p><strong>Prior Flight Experience:</strong></p>
+<ul>
+  <li><strong>Total Flying Time Accrued:</strong> <%= @registration_form.total_time %> hours</li>
+  <li><strong>Certificates and Ratings Held:</strong> <%= @registration_form.certificates_held %></li>
+</ul>
+
