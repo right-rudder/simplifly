@@ -1,6 +1,6 @@
 class RegistrationFormsController < ApplicationController
   before_action :set_registration_form, only: %i[ show edit update destroy ]
-  #before_action :authenticate_admin!, except: [:create, :new, :confirmation]
+  before_action :authenticate_admin!, except: [:create, :new, :confirmation]
   invisible_captcha only: [:create], honeypot: :confirm_email
 
   # GET /registration_forms or /registration_forms.json
