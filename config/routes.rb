@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get 'blog', to: 'posts#index', as: :blog
   resources :posts
   
-  resources :registration_forms
+  #resources :registration_forms
   resources :discover_flights
   resources :messages
   resources :enrollments
@@ -29,8 +29,8 @@ Rails.application.routes.draw do
   #resources :quiz_results
 
   # Registration form
-  get 'registration', to: 'registration_forms#new'
-  get 'registration-confirmation', to: 'registration_forms#confirmation', as: :registration_confirmation
+  #get 'registration', to: 'registration_forms#new'
+  #get 'registration-confirmation', to: 'registration_forms#confirmation', as: :registration_confirmation
 
   # Enrollment form
   get 'enroll-at-simplifly', to: 'enrollments#new', as: :enroll
