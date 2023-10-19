@@ -1,0 +1,357 @@
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- async FONTs -->
+  <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,600;0,700;1,600;1,700&display=swap">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,600;0,700;1,600;1,700&display=swap">
+  
+  <!-- no-JS fallback -->
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,600;0,700;1,600;1,700&display=swap">
+  </noscript>
+
+
+<style>
+  .flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-10 {
+  gap: 2.5rem; /* You can adjust this value as needed */
+}
+
+.bg-gradient-to-t {
+  background: linear-gradient(to top, var(--color-sky-300), var(--color-slate-100));
+}
+
+.from-sky-300 {
+  --color-sky-300: /* Your sky-300 color value here */;
+}
+
+.to-slate-100 {
+  --color-slate-100: /* Your slate-100 color value here */;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.lg\:text-5xl {
+  font-size: 3.125rem; /* You can adjust this value as needed */
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+}
+
+.font-header {
+  font-family: 'Kanit', sans-serif;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-4xl {
+  max-width: 64rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.w-half {
+  width: 50%;
+}
+
+.block {
+  display: block;
+}
+
+.outline-none {
+  outline: none;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.text-slate-500 {
+  color: /* Your slate-500 color value here */;
+}
+
+.bg-slate-100 {
+  background-color: /* Your slate-100 color value here */;
+}
+
+.rounded-md {
+  border-radius: 0.375rem; /* You can adjust this value as needed */
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
+}
+
+.w-eighth {
+  width: 12.5%;
+}
+
+.w-threeeight {
+  width: 37.5%;
+}
+
+.w-64 {
+  width: 16rem; /* You can adjust this value as needed */
+}
+
+.w-24 {
+  width: 6rem; /* You can adjust this value as needed */
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
+.mt-20 {
+  margin-top: 5rem;
+}
+
+.w-half {
+  width: 50%;
+}
+
+.border-t {
+  border-top: 1px solid;
+}
+
+.border-black {
+  border-color: black;
+}
+
+.text-slate-700 {
+  color: /* Your slate-700 color value here */;
+}
+
+.w-32 {
+  width: 8rem; /* You can adjust this value as needed */
+}
+
+</style>
+
+
+
+<header class="flex flex-row items-center justify-center gap-10 bg-gradient-to-t from-sky-300 to-slate-100 px-3 py-5">
+  <%= image_tag "simplifly_250.webp", alt: "SimpliFly Logo", class: "w-32"%>
+  <h1 class="font-bold lg:text-5xl text-3xl font-header uppercase ">New Pilot Registration</h1>
+</header>
+
+<div class="flex flex-col w-full items-center bg-white">
+  <div class="max-w-4xl w-full px-5 pb-5">
+
+    <h2 class="font-header uppercase font-bold text-xl pt-10">Student Pilot Details</h2>
+    <!-- Encompass name in one line -->
+    <div class="flex flex-row w-full gap-5">
+      <div class="my-2 w-half">
+        First Name
+        <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.first_name %></div>
+      </div>
+
+      <div class="my-2 w-half">
+        Last Name
+        <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.last_name %></div>
+      </div>
+    </div>
+
+    <!-- Encompass email and phone in one line -->
+    <div class="flex flex-row w-full gap-5">
+      <div class="my-2 w-half">
+        Phone
+        <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.phone %></div>
+      </div>
+
+      <div class="my-2 w-half">
+        Email
+        <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.email %></div>
+      </div>
+    </div>
+
+    <div class="my-2">
+      Street Address
+      <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.street %></div>
+    </div>
+
+    <!-- Encompass address in one line -->
+    <div class="flex flex-row w-full gap-5">
+      <div class="my-2 w-half">
+        City
+        <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.city %></div>
+      </div>
+
+      <!-- Put in one line for mobile -->
+      <div class="flex gap-5">
+        <div class="my-2 w-eighth">
+          State
+          <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.state %></div>
+        </div>
+
+        <div class="my-2 w-threeeight">
+          Zip Code
+          <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.zip %></div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="font-header uppercase font-bold text-xl pt-5">Emergency Contact Details</h2>
+
+    <div class="my-2">
+      Emergency Contact Full Name
+      <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.emergency_name %></div>
+    </div>
+
+    <!-- Encompass email and phone in one line -->
+    <div class="flex flex-row w-full gap-5">
+      <div class="my-2 w-half">
+        Emergency Contact Phone
+        <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.emergency_phone %></div>
+      </div>
+
+      <div class="my-2 w-half">
+        Emergency Contact Email
+        <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.emergency_email %></div>
+      </div>
+    </div>
+
+    <h2 class="font-header uppercase font-bold text-xl pt-5">Flight Training Details</h2>
+
+    <div class="my-2">
+      Training Option
+      <div class="block outline-none px-3 py-2 mt-2 w-64 text-slate-500 bg-slate-100 rounded-md"><%= registration_form.course %></div>
+    </div>
+
+    <div class="my-2">
+      Hours Planned to Dedicate Each Week to Flight Training
+      <div class="block outline-none px-3 py-2 mt-2 w-24 text-slate-500 bg-slate-100 rounded-md"><%= registration_form.hours_planned %></div>
+    </div>
+
+    <div class="my-2">
+      What Are Your Goals
+      <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.goal %></div>
+    </div>
+
+    <div class="my-2">
+      How Are You Paying for Training
+      <div class="block outline-none px-3 py-2 mt-2 w-64 text-slate-500 bg-slate-100 rounded-md"><%= registration_form.financed %></div>
+    </div>
+
+    <h2 class="font-header uppercase font-bold text-xl pt-2">Availability</h2>
+      <div class="block outline-none px-3 py-2 mt-2 text-slate-500 bg-slate-100 rounded-md">
+        <%= registration_form.availability %>
+      </div>
+
+    <h2 class="font-header uppercase font-bold text-xl pt-5">Prior Flight Experience</h2>
+
+    <div class="my-2">
+      Total Flying Time Accrued
+      <div class="block outline-none px-3 py-2 mt-2 w-24 text-slate-500 bg-slate-100 rounded-md"><%= registration_form.total_time %></div>
+    </div>
+
+    <div>
+      <div class="my-2">
+        Certificates and Ratings Held
+        <br>
+        <span class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md">
+          <%= registration_form.certificates_held %>
+        </span>
+      </div>
+    </div>
+
+    <div class="mt-5 mb-10">
+      <h2 class="font-header uppercase font-bold text-xl">Commitment</h2>
+      <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md">
+        <% if registration_form.course = "Accelerated Pilot Training" %>
+        I commit 40+ hours per week to pilot training in the form of flight time, ground school, and at-home study.
+        <% elsif registration_form.course = "Flexible Pilot Training" %>
+        I commit 20+ hours per week to pilot training in the form of flight time, ground school, and at-home study.
+        <% end %>
+      </div>
+    </div>
+
+    <h2 class="font-header uppercase font-bold text-xl mb-20">Signatures</h2>
+    <div class="flex flex-row w-full gap-20">
+      <div class="border-t border-black w-half text-slate-700"><%= registration_form.first_name %> <%= registration_form.last_name %> Signature</div>
+      <div class="border-t border-black w-half text-slate-700">Date</div>
+    </div>
+
+    <div class="flex flex-row w-full gap-20 mt-20">
+      <div class="border-t border-black w-half text-slate-700">SimpliFly CFI Name</div>
+      <div class="w-half"></div>
+    </div>
+
+    <div class="flex flex-row w-full gap-20 mt-20">
+      <div class="border-t border-black w-half text-slate-700">SimpliFly CFI Signature</div>
+      <div class="border-t border-black w-half text-slate-700">Date</div>
+    </div>
+  </div>
+</div>
