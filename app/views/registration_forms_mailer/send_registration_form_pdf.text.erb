@@ -28,12 +28,13 @@ info@simpliflyco.com
 
 - Flight Training Details:
   - Course: <%= @registration_form.course %>
-  - Planned Weekly Hours for Training: <%= @registration_form.hours_planned %> hours
   - Goals: <%= @registration_form.goal %>
   - Financed Training: <%= @registration_form.financed %>
 
 - Availability for Flight Training:
   - <%= @registration_form.availability %>
+- Unavailable time/dates:
+  - <%= @registration_form.time_details %>
 
 - Prior Flight Experience:
   - Total Flying Time Accrued: <%= @registration_form.total_time %> hours

@@ -34,14 +34,14 @@
 <p><strong>Flight Training Details:</strong></p>
 <ul>
   <li><strong>Course:</strong> <%= @registration_form.course %></li>
-  <li><strong>Planned Weekly Hours for Training:</strong> <%= @registration_form.hours_planned %> hours</li>
   <li><strong>Goals:</strong> <%= @registration_form.goal %></li>
   <li><strong>Financed Training:</strong> <%= @registration_form.financed %></li>
 </ul>
 
 <p><strong>Availability for Flight Training:</strong></p>
 <p><%= @registration_form.availability %></p>
-
+<p><strong>Unavailable times/dates:</strong></p>
+<p><%= @registration_form.time_details %></p>
 <p><strong>Prior Flight Experience:</strong></p>
 <ul>
   <li><strong>Total Flying Time Accrued:</strong> <%= @registration_form.total_time %> hours</li>

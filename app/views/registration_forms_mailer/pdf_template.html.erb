@@ -94,11 +94,6 @@
     </div>
 
     <div class="my-2">
-      Hours Planned to Dedicate Each Week to Flight Training
-      <div class="block outline-none px-3 py-2 mt-2 w-24 text-slate-500 bg-slate-100 rounded-md"><%= registration_form.hours_planned %></div>
-    </div>
-
-    <div class="my-2">
       What Are Your Goals
       <div class="block outline-none px-3 py-2 mt-2 w-full text-slate-500 bg-slate-100 rounded-md"><%= registration_form.goal %></div>
     </div>
@@ -112,6 +107,11 @@
       <div class="block outline-none px-3 py-2 mt-2 text-slate-500 bg-slate-100 rounded-md">
         <%= registration_form.availability %>
       </div>
+    <h2 class="font-header uppercase font-bold text-xl pt-2">Unavailable Time/Dates</h2>
+      <div class="block outline-none px-3 py-2 mt-2 text-slate-500 bg-slate-100 rounded-md">
+        <%= registration_form.time_details %>
+      </div>
+
 
     <h2 class="font-header uppercase font-bold text-xl pt-5">Prior Flight Experience</h2>
 

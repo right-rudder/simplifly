@@ -111,11 +111,6 @@
 
 
     <div class="my-2">
-      <%= form.label :hours_planned_to_dedicate_each_week_to_flight_training, class: "text-slate-700" %>
-      <%= form.number_field :hours_planned, min: 0, max: 100, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-24 focus:border-sky-500 focus:ring-sky-500" %>
-    </div>
-
-    <div class="my-2">
       <%= form.label :what_are_your_goals, class: "text-slate-700" %>
       <%= form.text_area :goal, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
     </div>
@@ -151,7 +146,11 @@
       <%= form.hidden_field :availability, 'x-bind:value' => "selectedTimeSlots.join(', ')" %>
     </div>
     
-
+    <div class="my-2 mt-4">
+      <%= form.label "In the days/times you selected, are there any specific times that you are not available?", class: "text-slate-700" %>
+      <p class="text-slate-500 text-sm italic">Type N/A if not applicable.</p>
+      <%= form.text_area :time_details, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
+    </div>
 
     <h2 class="font-header uppercase font-bold text-xl pt-5">Prior Flight Experience</h2>
 

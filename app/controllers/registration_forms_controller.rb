@@ -68,6 +68,6 @@ class RegistrationFormsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def registration_form_params
-      params.require(:registration_form).permit(:first_name, :last_name, :email, :phone, :street, :city, :state, :zip, :emergency_name, :emergency_phone, :emergency_email, :course, :hours_planned, :goal, :financed, :total_time, :certificates_held, :committed, :availability)
+      params.require(:registration_form).permit(:first_name, :last_name, :email, :phone, :street, :city, :state, :zip, :emergency_name, :emergency_phone, :emergency_email, :course, :hours_planned, :goal, :financed, :total_time, :certificates_held, :committed, :availability, :time_details)
     end
 end

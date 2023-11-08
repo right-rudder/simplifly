@@ -14,7 +14,7 @@ class RegistrationForm < ApplicationRecord
   validates :emergency_phone, presence: true, format: { with: /\A\d{10}\z/, message: "must be a valid 10-digit phone number" }
   validates :emergency_email, presence: true
   validates :course, presence: true
-  validates :hours_planned, presence: true, numericality: { greater_than: 0 }
+  #validates :hours_planned, presence: true, numericality: { greater_than: 0 }
   validates :goal, presence: true
   validates :financed, presence: { message: "" }
   validates :availability, presence: true
