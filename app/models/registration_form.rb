@@ -18,6 +18,7 @@ class RegistrationForm < ApplicationRecord
   validates :goal, presence: true
   validates :financed, presence: { message: "" }
   validates :availability, presence: true
+  validates :time_details, presence: true
   validates :committed, inclusion: { in: [true], message: "" }
 
   def strip_phone_number
