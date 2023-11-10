@@ -46,8 +46,9 @@ Rails.application.routes.draw do
   get 'book-download-confirmation', to: 'book_downloads#confirmation', as: :book_download_confirmation
 
   # Discovery flight form
-  get 'discovery-flight', to: 'discover_flights#new', as: :discovery_flight
-  get 'df-test', to: 'discover_flights#flightcircle'
+  get 'discovery-flight', to: 'discover_flights#flightcircle', as: :discovery_flight
+  #get 'discovery-flight', to: 'discover_flights#new', as: :discovery_flight
+  #get 'df-test', to: 'discover_flights#flightcircle'
   #get 'discovery-flight-confirmation', to: 'discover_flights#confirmation', as: :discovery_confirmation
 
   # Check out form
