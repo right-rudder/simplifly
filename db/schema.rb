@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_08_182258) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_16_170424) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -218,6 +218,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_08_182258) do
     t.datetime "updated_at", null: false
     t.text "availability"
     t.text "time_details"
+  end
+
+  create_table "reimbursements", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.date "entry_date"
+    t.decimal "amount"
+    t.string "preferred_payment"
+    t.string "username"
+    t.string "upload"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
