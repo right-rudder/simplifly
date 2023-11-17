@@ -66,6 +66,8 @@ gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 #gem 'carrierwave', '~> 3.0' #uploader
 #gem 'carrierwave-aws' #adapter for uploader
+gem 'mini_magick'
+gem 'rmagick'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
