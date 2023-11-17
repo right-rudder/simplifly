@@ -98,16 +98,6 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
-    carrierwave (3.0.4)
-      activemodel (>= 6.0.0)
-      activesupport (>= 6.0.0)
-      addressable (~> 2.6)
-      image_processing (~> 1.1)
-      marcel (~> 1.0.0)
-      ssrf_filter (~> 1.0)
-    carrierwave-aws (1.6.0)
-      aws-sdk-s3 (~> 1.0)
-      carrierwave (>= 2.0, < 4)
     childprocess (4.1.0)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
@@ -242,7 +232,6 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    ssrf_filter (1.1.2)
     stimulus-rails (1.1.0)
       railties (>= 6.0.0)
     strscan (3.0.4)
@@ -290,8 +279,6 @@ DEPENDENCIES
   aws-sdk-s3
   bootsnap
   capybara
-  carrierwave (~> 3.0)
-  carrierwave-aws
   debug
   devise (~> 4.9)
   figaro
