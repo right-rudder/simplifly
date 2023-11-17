@@ -1,33 +1,44 @@
 <div id="<%= dom_id reimbursement %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">First name:</strong>
-    <%= reimbursement.first_name %>
-  </p>
+  <div class="flex gap-5">
+    <p class="mt-5">
+      <strong class="block font-medium mb-1">Name</strong>
+      <span class="text-slate-600"><%= reimbursement.first_name %> <%= reimbursement.last_name %></span>
+      
+    </p>
+    <p class="mt-5">
+      <strong class="block font-medium mb-1">Date</strong>
+      <span class="text-slate-600"><%= reimbursement.entry_date.strftime("%B %d, %Y") %></span>
+    </p>
+    <p class="mt-5">
+      <strong class="block font-medium mb-1">Amount</strong>
+      <span class="text-slate-600">$ <%= reimbursement.amount %></span>
+    </p>
+  </div>
+  
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Last name:</strong>
-    <%= reimbursement.last_name %>
-  </p>
+  <div class="flex gap-5">
+    <p class="mt-5">
+      <strong class="block font-medium mb-1">Preferred payment</strong>
+      <span class="text-slate-600"><%= reimbursement.preferred_payment %></span>
+    </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Entry date:</strong>
-    <%= reimbursement.entry_date %>
-  </p>
+    <p class="mt-5">
+      <strong class="block font-medium mb-1">Username</strong>
+      <span class="text-slate-600">
+        <% if !reimbursement.username.blank?  %>
+        <%= reimbursement.username %>
+        <% else %>
+        No username entered
+        <%end%>
+      </span>
+    </p>
+  </div>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Amount:</strong>
-    <%= reimbursement.amount %>
+  <p class="mt-5">
+    <strong class="block font-medium mb-1">Status</strong>
+    <span class="text-slate-600">Entered</span>
   </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Preferred payment:</strong>
-    <%= reimbursement.preferred_payment %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Username:</strong>
-    <%= reimbursement.username %>
-  </p>
+  
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Upload:</strong>
@@ -38,9 +49,4 @@
     <%end%>
   </p>
 
-  <% if action_name != "show" %>
-    <%= link_to "Show this reimbursement", reimbursement, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this reimbursement', edit_reimbursement_path(reimbursement), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-    <hr class="mt-6">
-  <% end %>
 </div>
