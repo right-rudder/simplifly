@@ -65,6 +65,6 @@ class ReimbursementsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def reimbursement_params
-      params.require(:reimbursement).permit(:first_name, :last_name, :entry_date, :amount, :preferred_payment, :username, :upload, :receipt )
+      params.require(:reimbursement).permit(:first_name, :last_name, :entry_date, :amount, :preferred_payment, :username, :upload, :receipt, :status )
     end
 end
