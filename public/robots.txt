@@ -3,6 +3,7 @@
 
 User-agent: *
 Disallow: /admins
+Disallow: /reimbursements/
 Disallow: /registration_forms/
 Disallow: /discover_flights/
 Disallow: /messages/
