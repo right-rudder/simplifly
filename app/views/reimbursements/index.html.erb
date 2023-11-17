@@ -1,53 +1,56 @@
 <%= render "header"%>
 
+<main class="bg-gradient-to-t from-sky-50 to-slate-50 min-h-screen">
 
-<div class="w-full flex flex-col items-center py-20">
-  <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-  <% end %>
+  <div class="w-full flex flex-col items-center py-20">
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
 
-  <h1 class="text-xl font-header font-semibold text-center uppercase pb-10">Reimbursement Form Submissions</h1>
+    <h1 class="text-xl font-header font-semibold text-center uppercase pb-10">Reimbursement Form Submissions</h1>
 
 
-  <div class="flex flex-col">
-    <div class="overflow-x-auto">
-      <div class="inline-block min-w-full">
-        <div class="">
-          <table class="min-w-full divide-y divide-neutral-200">
-            <thead>
-                <tr class="text-neutral-500">
-                    <th class="px-2 lg:px-5 py-2 lg:py-3 text-xs font-medium text-left uppercase">Name</th>
-                    <th class="px-2 lg:px-5 py-2 lg:py-3 text-xs font-medium text-left uppercase">Date</th>
-                    <th class="px-2 lg:px-5 py-2 lg:py-3 text-xs font-medium text-left uppercase">Amount</th>
-                    <th class="px-2 lg:px-5 py-2 lg:py-3 text-xs font-medium text-center uppercase">Status</th>
-                    <th class="px-2 lg:px-5 py-2 lg:py-3 text-xs font-medium text-center uppercase">Action</th>
-                </tr>
-            </thead>
-            <tbody class="divide-y divide-neutral-200">
-              <% @reimbursements.sort_by(&:entry_date).reverse_each do |entry| %>
-                <tr class="text-neutral-800 <%#= cycle('bg-white', 'bg-slate-100', name: 'row_color') ##COMMENT OUT ALTERNATING BG COLOR%>">
-                  <td class="px-2 lg:px-5 py-2 lg:py-4 text-sm font-medium whitespace-nowrap"><%= entry.first_name%> <%= entry.last_name%></td>
-                  <td class="px-2 lg:px-5 py-2 lg:py-4 text-sm whitespace-nowrap"><%= entry.entry_date.strftime("%m-%d-%y") %></td>
-                  <td class="px-2 lg:px-5 py-2 lg:py-4 text-sm whitespace-nowrap">$<%= entry.amount %></td>
-                  <td class="px-2 lg:px-5 py-2 lg:py-4 text-sm whitespace-nowrap">Entered</td>
-                  <td class="px-2 lg:px-5 py-2 lg:py-4 text-sm font-medium text-right whitespace-nowrap">
-                    <div class="flex gap-1 lg:gap-2 py-1">
-                      <!--Desktop buttons-->
-                      <div class="hidden lg:block btn-primary text-xs py-1 px-2 cursor-pointer">Pay</div>
-                      <%= button_to 'View', reimbursement_path(entry), method: :get, class: "hidden lg:block btn-primary text-xs py-1 px-2 cursor-pointer"%>
-                      <%= button_to 'Delete', reimbursement_path(entry), method: :delete, class: "hidden lg:block btn-primary hover:bg-red-800 hover:border-red-800 bg-red-700 border-red-700 text-xs py-1 px-2 cursor-pointer" %>
-                      <!--Mobile buttons-->
-                      <div class="lg:hidden cursor-pointer">💰</div>
-                      <%= button_to '🔎', reimbursement_path(entry), method: :get, class: "lg:hidden cursor-pointer"%>
-                      <%= button_to '🗑️', reimbursement_path(entry), method: :delete, class: "lg:hidden cursor-pointer" %>
-                    </div>
-                  </td>
-                </tr>
-              <%end%>
-            </tbody>
-          </table>
+    <div class="flex flex-col">
+      <div class="overflow-x-auto">
+        <div class="inline-block min-w-full">
+          <div class="">
+            <table class="min-w-full divide-y divide-neutral-200">
+              <thead>
+                  <tr class="text-neutral-500">
+                      <th class="px-2 lg:px-5 py-2 lg:py-3 text-xs font-medium text-left uppercase">Name</th>
+                      <th class="px-2 lg:px-5 py-2 lg:py-3 text-xs font-medium text-left uppercase">Date</th>
+                      <th class="px-2 lg:px-5 py-2 lg:py-3 text-xs font-medium text-left uppercase">Amount</th>
+                      <th class="px-2 lg:px-5 py-2 lg:py-3 text-xs font-medium text-center uppercase">Status</th>
+                      <th class="px-2 lg:px-5 py-2 lg:py-3 text-xs font-medium text-center uppercase">Action</th>
+                  </tr>
+              </thead>
+              <tbody class="divide-y divide-neutral-200">
+                <% @reimbursements.sort_by(&:entry_date).reverse_each do |entry| %>
+                  <tr class="text-neutral-800 <%#= cycle('bg-white', 'bg-slate-100', name: 'row_color') ##COMMENT OUT ALTERNATING BG COLOR%>">
+                    <td class="px-2 lg:px-5 py-2 lg:py-4 text-sm font-medium whitespace-nowrap"><%= entry.first_name%> <%= entry.last_name%></td>
+                    <td class="px-2 lg:px-5 py-2 lg:py-4 text-sm whitespace-nowrap"><%= entry.entry_date.strftime("%m-%d-%y") %></td>
+                    <td class="px-2 lg:px-5 py-2 lg:py-4 text-sm whitespace-nowrap">$<%= entry.amount %></td>
+                    <td class="px-2 lg:px-5 py-2 lg:py-4 text-sm whitespace-nowrap">Entered</td>
+                    <td class="px-2 lg:px-5 py-2 lg:py-4 text-sm font-medium text-right whitespace-nowrap">
+                      <div class="flex gap-1 lg:gap-2 py-1">
+                        <!--Desktop buttons-->
+                        <div class="hidden lg:block btn-primary text-xs py-1 px-2 cursor-pointer">Pay</div>
+                        <%= button_to 'View', reimbursement_path(entry), method: :get, class: "hidden lg:block btn-primary text-xs py-1 px-2 cursor-pointer"%>
+                        <%= button_to 'Delete', reimbursement_path(entry), method: :delete, class: "hidden lg:block btn-primary hover:bg-red-800 hover:border-red-800 bg-red-700 border-red-700 text-xs py-1 px-2 cursor-pointer" %>
+                        <!--Mobile buttons-->
+                        <div class="lg:hidden cursor-pointer">💰</div>
+                        <%= button_to '🔎', reimbursement_path(entry), method: :get, class: "lg:hidden cursor-pointer"%>
+                        <%= button_to '🗑️', reimbursement_path(entry), method: :delete, class: "lg:hidden cursor-pointer" %>
+                      </div>
+                    </td>
+                  </tr>
+                <%end%>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+
+</main>
