@@ -9,13 +9,17 @@
       <strong class="block font-medium mb-1">Date</strong>
       <span class="text-slate-600"><%= reimbursement.entry_date.strftime("%B %d, %Y") %></span>
     </p>
-    <p class="mt-5">
+    <p class="mt-5 hidden lg:block">
       <strong class="block font-medium mb-1">Email</strong>
       <span class="text-slate-600"><%= reimbursement.email %></span>
     </p>
     
   </div>
   
+  <p class="mt-5 lg:hidden">
+      <strong class="block font-medium mb-1">Email</strong>
+      <span class="text-slate-600"><%= reimbursement.email %></span>
+    </p>
 
   <div class="flex gap-5">
     <p class="mt-5">
