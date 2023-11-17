@@ -3,33 +3,7 @@ class ReimbursementsController < ApplicationController
   before_action :authenticate_admin!, except: [:create, :new, :confirmation]
   invisible_captcha only: [:create], honeypot: :confirm_email
 
-  # Mark as paid in the show view
-  def mark_as_paid_view
-    @reimbursement = Reimbursement.find(params[:id])
-    @reimbursement.update(status: 'Paid')
-    redirect_to reimbursement_url(@reimbursement), notice: 'Reimbursement marked as paid.'
-  end
 
-  # Mark as view in the show view
-  def mark_as_viewed_view
-    @reimbursement = Reimbursement.find(params[:id])
-    @reimbursement.update(status: 'Viewed')
-    redirect_to reimbursement_url(@reimbursement), notice: 'Reimbursement marked as viewed.'
-  end
-
-  # Mark as paid in the index view
-  def mark_as_paid_index
-    @reimbursement = Reimbursement.find(params[:id])
-    @reimbursement.update(status: 'Paid')
-    redirect_to reimbursement_index_path, notice: 'Reimbursement marked as paid.'
-  end
-
-  # Mark as view in the index view
-  def mark_as_viewed_index
-    @reimbursement = Reimbursement.find(params[:id])
-    @reimbursement.update(status: 'Viewed')
-    redirect_to reimbursement_index_path, notice: 'Reimbursement marked as viewed.'
-  end
 
   # GET /reimbursements or /reimbursements.json
   def index
@@ -48,6 +22,34 @@ class ReimbursementsController < ApplicationController
   # GET /reimbursements/1/edit
   def edit
   end
+
+    # Mark as paid in the show view
+    def mark_as_paid_view
+      @reimbursement = Reimbursement.find(params[:id])
+      @reimbursement.update(status: 'Paid')
+      redirect_to reimbursement_url(@reimbursement), notice: 'Reimbursement marked as paid.'
+    end
+  
+    # Mark as view in the show view
+    def mark_as_viewed_view
+      @reimbursement = Reimbursement.find(params[:id])
+      @reimbursement.update(status: 'Viewed')
+      redirect_to reimbursement_url(@reimbursement), notice: 'Reimbursement marked as viewed.'
+    end
+  
+    # Mark as paid in the index view
+    def mark_as_paid_index
+      @reimbursement = Reimbursement.find(params[:id])
+      @reimbursement.update(status: 'Paid')
+      redirect_to reimbursement_index_path, notice: 'Reimbursement marked as paid.'
+    end
+  
+    # Mark as view in the index view
+    def mark_as_viewed_index
+      @reimbursement = Reimbursement.find(params[:id])
+      @reimbursement.update(status: 'Viewed')
+      redirect_to reimbursement_index_path, notice: 'Reimbursement marked as viewed.'
+    end
 
   # POST /reimbursements or /reimbursements.json
   def create
@@ -82,7 +84,7 @@ class ReimbursementsController < ApplicationController
     @reimbursement.destroy
 
     respond_to do |format|
-      format.html { redirect_to reimbursements_url, notice: "Reimbursement was successfully destroyed." }
+      format.html { redirect_to reimbursement_index_url, notice: "Reimbursement was successfully destroyed." }
       format.json { head :no_content }
     end
   end
@@ -95,6 +97,6 @@ class ReimbursementsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def reimbursement_params
-      params.require(:reimbursement).permit(:first_name, :last_name, :entry_date, :amount, :preferred_payment, :username, :upload, :receipt, :status )
+      params.require(:reimbursement).permit(:first_name, :last_name, :entry_date, :amount, :preferred_payment, :username, :upload, :receipt, :status, :email )
     end
 end

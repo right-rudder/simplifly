@@ -10,13 +10,18 @@
       <span class="text-slate-600"><%= reimbursement.entry_date.strftime("%B %d, %Y") %></span>
     </p>
     <p class="mt-5">
-      <strong class="block font-medium mb-1">Amount</strong>
-      <span class="text-slate-600">$ <%= reimbursement.amount %></span>
+      <strong class="block font-medium mb-1">Email</strong>
+      <span class="text-slate-600"><%= reimbursement.email %></span>
     </p>
+    
   </div>
   
 
   <div class="flex gap-5">
+    <p class="mt-5">
+      <strong class="block font-medium mb-1">Amount</strong>
+      <span class="text-slate-600">$ <%= reimbursement.amount %></span>
+    </p>
     <p class="mt-5">
       <strong class="block font-medium mb-1">Preferred payment</strong>
       <span class="text-slate-600"><%= reimbursement.preferred_payment %></span>
