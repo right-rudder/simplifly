@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :reimbursements
+  
   
 
     # 404/500 pages
@@ -21,6 +21,10 @@ Rails.application.routes.draw do
   get 'blog', to: 'posts#index', as: :blog
   resources :posts
   
+  post 'uploader/receipt', to: 'uploader#receipt' #add upload receipt to reimbursements
+  resources :reimbursements
+
+
   resources :registration_forms
   resources :discover_flights
   resources :messages
