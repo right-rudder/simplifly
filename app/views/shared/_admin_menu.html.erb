@@ -22,6 +22,7 @@
     <div x-cloak x-show="usermenu" x-transition.duration.200ms class="bg-slate-700 flex flex-col justify-start items-center pb-10 z-50">
       <!--Spacer-->
       <div class="h-12"></div>
+      <%= link_to 'Reimbursements', reimbursement_index_path, data: { turbo: false }, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
       <%= button_to 'New Post', new_post_path, method: :get, data: { turbo: false }, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
       <%= button_to 'Sign Out', destroy_admin_session_path, method: :delete, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
 
