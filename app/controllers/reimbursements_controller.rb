@@ -25,11 +25,11 @@ class ReimbursementsController < ApplicationController
 
     respond_to do |format|
       if @reimbursement.save
-        format.html { redirect_to reimbursement_url(@reimbursement), notice: "Reimbursement was successfully created." }
-        format.json { render :show, status: :created, location: @reimbursement }
+        format.html { redirect_to reimbursement_confirmation_path }
+        #format.json { render :show, status: :created, location: @reimbursement }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @reimbursement.errors, status: :unprocessable_entity }
+        #format.json { render json: @reimbursement.errors, status: :unprocessable_entity }
       end
     end
   end

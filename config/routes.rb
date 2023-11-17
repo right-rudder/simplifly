@@ -22,6 +22,9 @@ Rails.application.routes.draw do
   resources :posts
   
   post 'uploader/receipt', to: 'uploader#receipt' #add upload receipt to reimbursements
+  get 'reimbursement-confirmation', to: 'reimbursements#confirmation', as: :reimbursement_confirmation
+  get 'reimbursements', to: 'reimbursements#new'
+  get 'reimbursements-admin', to: 'reimbursements#index', as: :reimbursement_index
   resources :reimbursements
 
 

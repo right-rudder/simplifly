@@ -45,7 +45,7 @@
     <% if !reimbursement.receipt.blank?%>
       <a href="<%= rails_storage_proxy_url(reimbursement.receipt)%>" target="blank"><img src="<%= rails_storage_proxy_url(reimbursement.receipt)  %>" class="w-52"></a>
     <%else%>
-      No image attached
+      <span class="text-slate-600">No image attached</span>
     <%end%>
   </p>
 

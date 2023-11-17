@@ -1,0 +1,31 @@
+<%= render "header"%>
+
+<div class="flex flex-col w-full items-center bg-gradient-to-b from-sky-50 to-slate-50">
+  <div class="max-w-4xl w-full lg:h-screen-4/5 px-5 pb-5 flex flex-col items-center justify-between">
+    <div class="flex flex-col items-center">
+      <h1 class="font-bold text-4xl py-10 text-center">Your reimbursement form has been received!</h1>
+      
+      <!--Container for check-->
+      <div class="flex flex-row justify-center">
+        <!--circle of check-->
+        <div class="bg-blue-200 rounded-full py-3 px-4 mb-10">
+          <!--check itself-->
+          <div class="text-sky-500 text-5xl">✓</div>
+        </div>
+      </div>
+      
+      
+    
+      
+      <p class="p-text text-center">
+      We will review your form submission details as soon as possible.  <br><br>
+      You can also call us at <%=link_to "1-480-256-8355", "tel:1-480-256-8355" %> or email us at <%= mail_to 'info@simpliflyco.com', class: "text-slate-800 hover:underline"%> if you'd like to speak to a SimpliFly team member.
+      </p>
+
+      <%= link_to "HOME", root_path, class: "btn-primary mt-10"%>
+    </div>
+    <div class="w-full mt-10">
+      <%= render "shared/bottom_footer"%>
+    </div>
+  </div>
+</div>
