@@ -57,7 +57,7 @@ class ReimbursementsController < ApplicationController
 
     respond_to do |format|
       if @reimbursement.save
-        ReimbursementMailer.reimbursement_email(@reimbursement).deliver_later
+        ReimbursementMailer.reimbursement_mailer(@reimbursement).deliver_later
         format.html { redirect_to reimbursement_confirmation_path }
         #format.json { render :show, status: :created, location: @reimbursement }
       else
