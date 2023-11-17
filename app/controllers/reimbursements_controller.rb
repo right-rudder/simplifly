@@ -1,7 +1,7 @@
 class ReimbursementsController < ApplicationController
   before_action :set_reimbursement, only: %i[ show edit update destroy ]
   before_action :authenticate_admin!, except: [:create, :new, :confirmation]
-  invisible_captcha only: [:create], honeypot: :confirm_email
+  #invisible_captcha only: [:create], honeypot: :confirm_email
 
 
 
