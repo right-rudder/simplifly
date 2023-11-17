@@ -1,0 +1,21 @@
+<p>Dear <%= @reimbursement.first_name %>,</p>
+
+<p>Your reimbursement form has been submitted.  We will review your form submission details shortly.</p>
+
+<p>If you have any further questions or need assistance, please feel free to contact us at <a href="tel:1-480-256-8355">1-480-256-8355</a> or via email at <a href="mailto:info@simpliflyco.com">info@simpliflyco.com</a>.</p>
+
+<p>Best regards,</p>
+<p>The SimpliFly Team</p>
+<a href="tel:1-480-256-8355">1-480-256-8355</a><br>
+<a href="mailto:info@simpliflyco.com">info@simpliflyco.com</a><br><br>
+
+
+<p><strong>--------- Form Entry Details ---------</strong></p>
+<ul>
+  <li><strong>First Name:</strong> <%= @reimbursement.first_name %></li>
+  <li><strong>Last Name:</strong> <%= @reimbursement.last_name %></li>
+  <li><strong>Email:</strong> <%= @reimbursement.email %></li>
+  <li><strong>Amount:</strong> $<%= @reimbursement.amount %></li>
+  <li><strong>Preferred Payment Method:</strong> <%= @reimbursement.preferred_payment %></li>
+  <li><strong>Username:</strong> <%= @reimbursement.username %></li>
+</ul>

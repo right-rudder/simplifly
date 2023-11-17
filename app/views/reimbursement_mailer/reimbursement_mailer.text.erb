@@ -1,0 +1,18 @@
+Dear <%= @reimbursement.first_name %>,
+
+Your reimbursement form has been submitted.  We will review your form submission details shortly.
+
+If you have any further questions or need assistance, please feel free to contact us at 1-480-256-8355 or via email at info@simpliflyco.com.
+
+Best regards,
+The SimpliFly Team
+1-480-256-8355
+info@simpliflyco.com
+
+--------- Form Entry Details ---------
+- First Name: <%= @reimbursement.first_name %>
+- Last Name: <%= @reimbursement.last_name %>
+- Email: <%= @reimbursement.email %>
+- Amount: $<%= @reimbursement.amount %>
+- Preferred Payment Method: <%= @reimbursement.preferred_payment %>
+- Username: <%= @reimbursement.username %>
