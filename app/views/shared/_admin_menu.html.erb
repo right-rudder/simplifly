@@ -12,6 +12,7 @@
     <!--desktop menu-->
     <div class="hidden lg:flex lg:flex-row lg:pr-10 xl:pr-5">
       <!--Button-->
+      <%= link_to 'Reimbursements', reimbursement_index_path,  data: { turbo: false }, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
       <%= button_to 'New Post', new_post_path, method: :get, data: { turbo: false }, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
       <%= button_to 'Sign Out', destroy_admin_session_path, method: :delete, class: "text-center block mr-5 text-slate-200 rounded-lg hover:underline" %>
     </div>
