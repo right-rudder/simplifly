@@ -26,18 +26,20 @@
     <%= form.date_field :entry_date, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
   </div>
 
-  <div class="my-5">
+<div class="my-5">
     <%= form.label :amount %>
-    <%= form.text_field :amount, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
-  </div>
+    <div class="relative">
+        <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-500">$</span>
+        <%= form.text_field :amount, class: "block shadow rounded-md border border-gray-200 outline-none pl-8 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
+    </div>
+</div>
 
+<div class="my-5">
+  <%= form.label :preferred_payment_method %>
+  <%= form.select :preferred_payment, ['','Credit on flight circle', 'Zelle', 'Check', 'Venmo'], {}, { class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" } %>
+</div>
   <div class="my-5">
-    <%= form.label :preferred_payment %>
-    <%= form.text_field :preferred_payment, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
-  </div>
-
-  <div class="my-5">
-    <%= form.label :username %>
+    <%= form.label "If Zelle or Venmo selected: Zelle number/email - venmo username" %>
     <%= form.text_field :username, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
   </div>
 

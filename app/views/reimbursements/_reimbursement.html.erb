@@ -31,8 +31,11 @@
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Upload:</strong>
-    <a href="<%= rails_storage_proxy_url(reimbursement.receipt)%>" target="blank"><img src="<%= rails_storage_proxy_url(reimbursement.receipt)  %>" class="w-52"></a>
-    
+    <% if !reimbursement.receipt.blank?%>
+      <a href="<%= rails_storage_proxy_url(reimbursement.receipt)%>" target="blank"><img src="<%= rails_storage_proxy_url(reimbursement.receipt)  %>" class="w-52"></a>
+    <%else%>
+      No image attached
+    <%end%>
   </p>
 
   <% if action_name != "show" %>
