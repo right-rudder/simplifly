@@ -25,7 +25,14 @@ Rails.application.routes.draw do
   get 'reimbursement-confirmation', to: 'reimbursements#confirmation', as: :reimbursement_confirmation
   get 'reimbursements', to: 'reimbursements#new'
   get 'reimbursements-admin', to: 'reimbursements#index', as: :reimbursement_index
-  resources :reimbursements
+  resources :reimbursements do
+    member do
+      patch :mark_as_paid_view
+      patch :mark_as_viewed_view
+      patch :mark_as_paid_index
+      patch :mark_as_viewed_index
+    end
+  end
 
 
   resources :registration_forms
