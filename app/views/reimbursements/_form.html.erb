@@ -54,7 +54,7 @@
     <%#= form.label :upload %>
     <%#= form.text_field :upload, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-sky-500 focus:ring-sky-500" %>
 
-    <%= form.file_field :receipt, class: "text-sm text-grey-500
+    <%= form.file_field :receipt, accept: 'image/png image/gif image/jpeg image/jpg', class: "text-sm text-grey-500
             file:py-2 file:px-6
             file:rounded-lg file:border-0
             file:text-sm file:font-medium
@@ -64,7 +64,7 @@
   </div>
 
   <%= form.hidden_field :status, value: "Entered" %>
-  
+
   <div class="inline">
     <%= form.submit "Submit", class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
   </div>
