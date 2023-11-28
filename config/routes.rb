@@ -43,6 +43,8 @@ Rails.application.routes.draw do
   #resources :checkouts
   #resources :quiz_results
 
+  get 'feedback', to: 'pages#feedback'
+
   # Registration form
   get 'registration', to: 'registration_forms#new'
   get 'registration-confirmation', to: 'registration_forms#confirmation', as: :registration_confirmation
