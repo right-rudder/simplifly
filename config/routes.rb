@@ -43,7 +43,9 @@ Rails.application.routes.draw do
   #resources :checkouts
   #resources :quiz_results
 
+  # Iframe forms
   get 'feedback', to: 'pages#feedback'
+  get 'incident-report', to: 'pages#irregular_ops'
 
   # Registration form
   get 'registration', to: 'registration_forms#new'
