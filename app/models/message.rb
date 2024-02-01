@@ -1,6 +1,6 @@
 class Message < ApplicationRecord
   before_validation :strip_phone_number
-  #after_save :to_lacrm
+  after_save :to_lacrm if Rails.env.production?
   after_save :to_basin
   
   validates :name, presence: true
