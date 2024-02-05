@@ -19,11 +19,9 @@ class Message < ApplicationRecord
       "email" => "#{self.email}",
       "phone" => "#{self.phone}",
       "body" => "#{self.body}",
-}     
-
-  HTTParty.post(ghl_url, body: ghl_payload.to_json, headers: { "Content-Type" => "application/json" })
-  
-end
+    }     
+    HTTParty.post(ghl_url, body: ghl_payload.to_json, headers: { "Content-Type" => "application/json" })
+  end
 
 
   def to_lacrm

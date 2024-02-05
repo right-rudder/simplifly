@@ -1,6 +1,8 @@
 class Enrollment < ApplicationRecord
   before_validation :strip_phone_number
-  after_save :to_lacrm
+  after_save :to_lacrm if Rails.env.production?
+  after_save :to_ghl
+  
 
   validates :first_name, presence: true
   validates :last_name, presence: true
@@ -9,6 +11,26 @@ class Enrollment < ApplicationRecord
 
   def strip_phone_number
     self.phone = phone.to_s.gsub(/[-() ]/, "")
+  end
+
+  def to_ghl
+    ghl_url = ENV['ghl_enroll']
+    ghl_payload = {
+      "Name" => "#{self.first_name} #{self.last_name}",
+      "email" => "#{self.email}",
+      "phone" => "#{self.phone}",
+      "body" => "
+        Previous Training: #{self.previous_training}
+        Goals: #{self.goals}
+        Comments: #{self.comments}
+
+        Selected Date: #{self.preferred_date}
+        Selected Time: #{self.preferred_availability}
+        Alternate Date: #{self.alternate_date}
+        Alternate Time: #{self.alternate_availability}
+        ",
+    }     
+    HTTParty.post(ghl_url, body: ghl_payload.to_json, headers: { "Content-Type" => "application/json" })
   end
 
   def to_lacrm
