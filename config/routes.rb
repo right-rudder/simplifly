@@ -35,11 +35,11 @@ Rails.application.routes.draw do
   end
 
 
-  resources :registration_forms
-  resources :discover_flights
-  resources :messages
-  resources :enrollments
-  resources :book_downloads
+  resources :registration_forms #ghl integration completed 2/5/2023 t
+  resources :discover_flights #Did NOT do ghl integration
+  resources :messages #ghl integration completed 2/5/2023 ts
+  resources :enrollments #ghl integration completed 2/5/2023 ts
+  resources :book_downloads #ghl integration completed 2/5/2023 ts
   #resources :checkouts
   #resources :quiz_results
 
