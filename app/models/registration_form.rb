@@ -1,5 +1,6 @@
 class RegistrationForm < ApplicationRecord
   before_validation :strip_phone_number
+  after_save :to_ghl
 
 
   validates :first_name, presence: true
@@ -24,6 +25,32 @@ class RegistrationForm < ApplicationRecord
   def strip_phone_number
     self.phone = phone.to_s.gsub(/[-() ]/, "")
     self.emergency_phone = emergency_phone.to_s.gsub(/[-() ]/, "")
+  end
+
+  def to_ghl
+    ghl_url = ENV['ghl_registration']
+    ghl_payload = {
+      "first_name" => "#{self.first_name}",
+      "last_name" => "#{self.last_name}",
+      "email" => "#{self.email}",
+      "phone" => "#{self.phone}",
+      "street" => "#{self.street}",
+      "city" => "#{self.city}",
+      "state" => "#{self.state}",
+      "zip" => "#{self.zip}",
+      "emergency_name" => "#{self.emergency_name}",
+      "emergency_phone" => "#{self.emergency_phone}",
+      "course" => "#{self.course}",
+      "hours_planned" => "#{self.hours_planned}",
+      "goal" => "#{self.goal}",
+      "financed" => "#{self.financed}",
+      "total_time" => "#{self.total_time}",
+      "certificates_held" => "#{self.certificates_held}",
+      "committed" => "#{self.committed}",
+      "availability" => "#{self.availability}",
+      "time_details" => "#{self.time_details}",
+    }     
+    HTTParty.post(ghl_url, body: ghl_payload.to_json, headers: { "Content-Type" => "application/json" })
   end
 
 end

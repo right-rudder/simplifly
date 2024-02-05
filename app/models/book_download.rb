@@ -1,6 +1,7 @@
 class BookDownload < ApplicationRecord
   before_validation :strip_phone_number
-  after_save :to_lacrm
+  after_save :to_lacrm if Rails.env.production?
+  after_save :to_ghl
   
   validates :name, presence: true
   validates :phone, presence: true, format: { with: /\A\d{10}\z/, message: "must be a valid 10-digit phone number" }
@@ -8,6 +9,16 @@ class BookDownload < ApplicationRecord
 
   def strip_phone_number
     self.phone = phone.to_s.gsub(/[-() ]/, "")
+  end
+
+  def to_ghl
+    ghl_url = ENV['ghl_book']
+    ghl_payload = {
+      "Name" =>  "#{self.name}",
+      "email" => "#{self.email}",
+      "phone" => "#{self.phone}",
+    }     
+    HTTParty.post(ghl_url, body: ghl_payload.to_json, headers: { "Content-Type" => "application/json" })
   end
 
   def to_lacrm
