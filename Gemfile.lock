@@ -178,7 +178,6 @@ GEM
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.4.3)
-    pkg-config (1.5.5)
     public_suffix (5.0.0)
     puma (5.6.5)
       nio4r (~> 2.0)
@@ -221,8 +220,6 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     rexml (3.2.5)
-    rmagick (5.3.0)
-      pkg-config (~> 1.4)
     ruby-vips (2.1.4)
       ffi (~> 1.12)
     rubyzip (2.3.2)
@@ -303,7 +300,6 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.4)
   recaptcha
-  rmagick
   selenium-webdriver
   sitemap_generator (~> 5.1)
   sprockets-rails
