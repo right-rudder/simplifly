@@ -67,7 +67,7 @@ gem 'wkhtmltopdf-binary'
 #gem 'carrierwave', '~> 3.0' #uploader
 #gem 'carrierwave-aws' #adapter for uploader
 gem 'mini_magick'
-#gem 'rmagick'
+gem 'rmagick'
 gem 'active_storage_validations'
 
 group :development, :test do
