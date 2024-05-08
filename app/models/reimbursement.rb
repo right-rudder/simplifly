@@ -9,7 +9,7 @@ class Reimbursement < ApplicationRecord
   validates :entry_date, presence: true
   validates :amount, presence: true
   validates :preferred_payment, presence: true
-  validates :receipt, content_type: ['image/png', 'image/gif', 'image/jpeg', 'image/jpg'],
+  validates :receipt, content_type: ['image/png', 'image/gif', 'image/jpeg', 'image/jpg', 'image/heic'],
   size: { less_than: 2.megabytes, message: 'File size must be less than 2MB' }
 
   before_save :resize_image, if: -> { receipt.attached? }
