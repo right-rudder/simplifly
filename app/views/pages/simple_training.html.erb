@@ -1,0 +1,465 @@
+<%# Head / Meta Data %>
+<% title("Pilot Training Made Simple | SimpliFly Flight School") %>
+<% meta_description("Simplifly offers Flexible Pilot Training Programs.  Go from Zero to Hero (PPL to CFII) on your own schedule. Our pilot training center is in Mesa, AZ at Falcon Field KFFZ.  Many of our students come from Mesa, Gilbert, Scottsdale, Apache Junction, Chandler, Tempe, Queen Creek, Fountain Hills, Paradise Valley, Phoenix") %>
+<% meta_keywords(" Flexible Pilot Training, Part-Time Pilot Training, Full-Time Pilot Training, Mesa Flight School, Phoenix Flight School, Scottsdale Flight School") %>
+<%= render "shared/checkbox_css"%>
+
+<%# Declare variables %>
+<% airplane_rental = "165" %>
+<% multi_rental = "400" %>
+<% instruction = "70" %>
+<% simulator = "130" %>
+<%# Declare variables//new pricing components %>
+<% zero_to_hero = "78250" %>
+<% ppl_to_hero = "59750" %>
+<% mei_addon = "10500" %>
+<% checkride_addon = "7000" %>
+<% written_addon = "1050" %>
+<% online_addon = "1000" %>
+<% headset_addon = "1200" %>
+
+
+<%= render "shared/header"%>
+<header
+    class="relative top-0 h-screen bg-cover bg-center bg-black flex flex-col items-center justify-center"
+  >
+    <!-- bg-overlay to darken -->
+    <div
+      class="absolute w-full h-screen overflow-hidden"
+    >
+        <%= image_tag "thumbs-up-in-front-of-cessna.webp" , alt: "A SimpliFly pilot in flexible training flying cessna 172", class: "w-full h-full bg-cover bg-center filter brightness-75"%>
+    </div>
+    <!-- Text -->
+    <div
+      class="text-white text-center lg:text-left z-10 flex flex-col items-center gap-4 px-5 h-auto lg:pt-28 justify-center"
+    >
+      <h1 class="text-5xl text-sky-400/90 font-header uppercase font-semibold">
+        Pilot Training–Made Simple
+      </h1>
+      <h2 class="text-3xl italic py-5">
+        How Simplifly Works 
+      </h2>
+    </div>
+    <!-- <Partners /> -->
+  </header>
+
+
+<section class="flex flex-col items-center pb-10">
+  <div class="max-w-4xl flex flex-col pt-10 px-5">
+    <h3 class="text-5xl font-header uppercase font-semibold">Where Do I Start?</h3>
+    <h4 class="text-3xl text-slate-600 italic py-5">Find out how to enroll in our pilot training</h4>
+    <p class="text-lg">Pilot training can seem like an insurmountable task for those just getting started. Learning to fly is like learning a new language, and the path to success may not always seem as clear as we’d like. That’s why we’ve revolutionized the way we conduct flight training at Simplifly Flight School.</p>
+    <p class="text-lg mt-3">At Simplifly, we’ve structured our training regimen to be efficient and easily digestible for our incoming students. Keep reading to understand our flight training schedules, training program progression, and expectations for our career track students.</p>
+    <div class="pt-10 flex">
+      <%= link_to "BOOK DISCOVERY FLIGHT", discovery_flight_path,  target: "blank", data: { turbo: false }, class: "btn-primary my-3" %>
+    </div>
+  </div>
+</section>
+
+<section
+    id="first-time-pilots"
+    class="py-24 px-5 w-full bg-white flex flex-col items-center mx-auto scroll-my-20"
+  >
+    <h2 class="uppercase text-sky-400 font-bold tracking-widest">
+      Pilot Training Made Simple
+    </h2>
+    <h3
+      class="text-5xl font-header uppercase font-semibold text-center"
+    >
+      Simplifly’s Training Structure
+    </h3>
+    <p class="text-gray-600 text-center max-w-5xl my-10 leading-loose">
+      Simplifly Flight School offers career-track pilot training (Zero to Hero) for students in the greater Phoenix area at Falcon Field Airport (KFFZ) in Mesa, Arizona. Our goal is for students to fly 3-4 times per week with additional ground school and personal study.
+    </p>
+    <div class="grid lg:grid-cols-3 mx-auto gap-10">
+      <div
+        class="border border-slate-500/50 rounded py-8 px-12 flex flex-col gap-5 justify-between bg-sky-50 hover:bg-sky-400/20 duration-700 group"
+      >
+      <a href="#daily-training">
+        <div class="flex justify-center align-middle items-center">
+          <h3
+            class="text-lg text-slate-800 uppercase font-semibold tracking-widest duration-700"
+          >
+            Daily Training Schedule
+          </h3>
+          <%= image_tag "flight-training.png" , alt: "A SimpliFly pilot in flexible training flying cessna 172", class: "w-20 h-20"%>
+        </div>
+      </a>
+      </div>
+
+      <div
+        class="border border-slate-500/50 rounded py-8 px-12 flex flex-col gap-5 justify-between bg-sky-50 hover:bg-sky-400/20 duration-700 group"
+      >
+      <a href="#enroll">
+        <div class="flex justify-center align-middle items-center">
+          <h3
+            class="text-lg text-slate-800 uppercase font-semibold tracking-widest duration-700"
+          >
+            Student Expectations
+          </h3>
+          <%= image_tag "flights.png" , alt: "A SimpliFly pilot in flexible training flying cessna 172", class: "w-20 h-20"%>
+        </div>
+      </a>
+      </div>
+
+      <div
+        class="border border-slate-500/50 rounded py-8 px-12 flex flex-col gap-5 justify-between bg-sky-50 hover:bg-sky-400/20 duration-700 group"
+      >
+      <a href="#enroll">
+        <div class="flex justify-center align-middle items-center">
+          <h3
+            class="text-lg text-slate-800 uppercase font-semibold tracking-widest duration-700"
+          >
+            Training Cost Estimator
+          </h3>
+          <%= image_tag "budget.png" , alt: "A SimpliFly pilot in flexible training flying cessna 172", class: "w-20 h-20"%>
+        </div>
+      </a>
+      </div>
+
+    </div>
+  </section>
+
+
+<%= render "shared/daily_training_schedule"%>
+
+  <section class="bg-slate-100 flex flex-col items-center px-5">
+    <h3 class="font-header uppercase text-4xl lg:text-5xl font-semibold pt-20 pb-10 text-center">Simplifly Student Expectations</h3>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 max-w-4xl lg:gap-10">
+      <!--Care about students instead of profit-->
+      <div class="flex flex-row">
+        <div class="pr-6">
+          <%=image_tag "calendar.png", alt: "handshake icon", class: "border-2 p-1 border-sky-500 rounded-full bg-white"%>
+        </div>
+        <div class="flex flex-col">
+          <h4 class="font-header uppercase font-semibold text-xl">Training Frequency</h4>
+          <p>We expect all students to fly 3-4 times each week. This generally means a minimum of 25 hours of flight training per week with additional time allocated for ground school and personal study.</p>
+        </div>
+      </div>
+      <!--Family Environment-->
+      <div class="flex flex-row pt-10 lg:pt-0">
+        <div class="pr-6">
+          <%=image_tag "wall-clock.png", alt: "family icon", class: "border-2 p-1 border-sky-500 rounded-full bg-white"%>
+        </div>
+        <div class="flex flex-col">
+          <h4 class="font-header uppercase font-semibold text-xl">Time Commitment</h4>
+          <p>We ask all students to commit to the 6-hour training window indicated by their training stage. We recommend that you come in during that window even when between flight or ground sessions for additional study support.</p>
+        </div>
+      </div>
+    </div>
+    <!--2nd row on desktop-->
+    <div class="py-10">
+      <!--Affordable-->
+      <div class="lg:max-w-md  flex flex-row ">
+        <div class="pr-6">
+          <%=image_tag "direction.png", alt: "affordable icon", class: "border-2 p-1 border-sky-500 rounded-full bg-white"%>
+        </div>
+        <div class="flex flex-col">
+          <h4 class="font-header uppercase font-semibold text-xl">Flexible Schedule</h4>
+          <p>We consider all our students as “full-time”, but understand that some work part-time outside pilot training. As long as your part-time employment is flexible enough to accommodate the changes in training times per certification, we encourage you to join.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section>
+  <div class="bg-gradient-to-r from-slate-200 to-sky-100 px-3">
+  <!--Pilot Training Programs-->
+  <div class="container m-auto px-6 py-20 md:px-12 lg:px-20">
+    <div class="m-auto text-center lg:w-10/12 xl:w-9/12">
+      <h2 class="uppercase text-sky-700 font-bold tracking-widest">
+      Find out how much your training will cost
+    </h2>
+    <h3
+      class="text-5xl font-header uppercase font-semibold text-center"
+    >
+      Simplifly’s Flight Training Estimator
+    </h3>
+    </div>
+    <div 
+    x-data="{ totalCost: <%=zero_to_hero%>, checkbox1: false, checkbox2: false, checkbox3: false, checkbox4: false, checkbox5: false, checkboxClick: 0 }" 
+    class="mt-12 m-auto -space-y-4 items-center justify-center md:flex md:space-y-0 md:-space-x-4 xl:w-10/12"
+    >
+      <div class="relative z-10 -mx-4 group md:w-6/12 md:mx-0 lg:w-5/12">
+        <div aria-hidden="true" class="absolute top-0 w-full h-full rounded-2xl bg-white shadow-xl transition duration-500 group-hover:scale-105 transform-gpu"></div>
+        <div class="relative p-6 space-y-6 lg:p-8">
+          <h3 class="text-3xl text-gray-700 font-semibold text-center">Zero to Hero</h3>
+          <div class="relative flex justify-around">
+            <div class="flex items-center">
+              <div class="">
+                <span class="block text-3xl text-gray-800 font-bold">$</span>
+              </div>
+              <span class="text-4xl text-gray-700 font-bold leading-0" x-text="totalCost.toLocaleString()"></span>
+            </div>
+          </div>
+          <p class="italic text-center">Go from no experience to <br>career ready in less than a year</p>
+          <ul role="list" class="w-max space-y-4 pb-6 m-auto text-gray-600">
+            <li class="space-x-2">
+              <span class="text-sky-500 font-semibold">&check;</span>
+              <span>Private Pilot</span>
+            </li>
+            <li class="space-x-2">
+              <span class="text-sky-500 font-semibold">&check;</span>
+              <span>Instrument Rating</span>
+            </li>
+            <li class="space-x-2">
+              <span class="text-sky-500 font-semibold">&check;</span>
+              <span>Commercial Certificate</span>
+            </li>
+            <li class="space-x-2">
+              <span class="text-sky-500 font-semibold">&check;</span>
+              <span>Multi Engine Rating</span>
+            </li>
+            <li class="space-x-2">
+              <span class="text-sky-500 font-semibold">&check;</span>
+              <span>CFI Certificate</span>
+            </li>
+            <li class="space-x-2">
+              <span class="text-sky-500 font-semibold">&check;</span>
+              <span>CFII Instrument</span>
+            </li>
+          </ul>
+          <p class="flex items-center justify-center space-x-4 text-lg text-gray-600 text-center">
+            <span>Call us</span>
+            <a href="tel:1-480-256-8355" class="flex space-x-2 items-center text-sky-600">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6" viewBox="0 0 16 16">
+                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+              </svg>
+              <span class="font-semibold">(480) 256-8355</span>
+            </a>
+            <span>or</span>
+          </p>
+          <%= link_to "Contact Us Today", contact_path, data: { turbo: false }, class: "block w-full py-3 px-6 text-center rounded-xl transition bg-sky-600 hover:bg-sky-700 active:bg-sky-800 focus:bg-sky-600 text-white font-semibold" %>
+        </div>
+      </div>
+
+      <div class="relative group md:w-6/12 lg:w-7/12">
+        <div aria-hidden="true" class="absolute top-0 w-full h-full rounded-2xl bg-white shadow-lg transition duration-500 group-hover:scale-105 transform-gpu"></div>
+        <div class="relative p-5 pt-12 md:p-8 md:pl-8 md:rounded-r-2xl lg:pl-16 lg:p-12">
+          <ul role="list" class="space-y-4 pb-6 text-gray-600">
+            <li class="space-x-2">
+              <span class="text-sky-500 font-semibold">&check;</span>
+              <span>Accelerated full-time programs</span>
+            </li>
+            <li class="space-x-2">
+              <span class="text-sky-500 font-semibold">&check;</span>
+              <span>Instructor and aircraft availability</span>
+            </li>
+            <li class="space-x-2">
+              <span class="text-sky-500 font-semibold">&check;</span>
+              <span>Complete within a year</span>
+            </li>
+          </ul>
+          <p class="text-gray-700 font-semibold text-2xl">Add ons</p>
+
+          <div class="mt-6 flex justify-between gap-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+              <!-- Define the Checkmark -->
+              <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+                <symbol id="checkmark" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-miterlimit="10" fill="none"  d="M22.9 3.7l-15.2 16.6-6.6-7.1">
+                  </path>
+                </symbol>
+              </svg>
+
+              <!-- Grid of add ons items -->
+              <div class="flex items-center">
+                <div class="promoted-checkbox">
+                  <input id="checkbox1" type="checkbox" class="promoted-input-checkbox" x-model="checkbox1" x-on:change="totalCost = checkbox1 ? totalCost + <%= mei_addon%> : totalCost - <%= mei_addon%>; checkboxClick = checkbox1 ? checkboxClick + 1 : checkboxClick - 1">
+                  <label for="checkbox1">
+                    <svg><use xlink:href="#checkmark" /></svg>
+                  </label>
+                </div>
+                <span class="text-gray-600">MEI</span>
+              </div>
+              <div class="flex items-center">
+                <div class="promoted-checkbox">
+                  <input id="checkbox2" type="checkbox" class="promoted-input-checkbox" x-model="checkbox2" x-on:change="totalCost = checkbox2 ? totalCost + <%= checkride_addon %> : totalCost - <%= checkride_addon %>; checkboxClick = checkbox2 ? checkboxClick + 1 : checkboxClick - 1">
+                  <label for="checkbox2">
+                    <svg><use xlink:href="#checkmark" /></svg>
+                  </label>
+                </div>
+                <span class="text-gray-600">Checkride fees</span>
+              </div>
+              <div class="flex items-center">
+                <div class="promoted-checkbox">
+                  <input id="checkbox3" type="checkbox" class="promoted-input-checkbox" x-model="checkbox3" x-on:change="totalCost = checkbox3 ? totalCost + <%= written_addon %> : totalCost - <%= written_addon %>; checkboxClick = checkbox3 ? checkboxClick + 1 : checkboxClick - 1">
+                  <label for="checkbox3">
+                    <svg><use xlink:href="#checkmark" /></svg>
+                  </label>
+                </div>
+                <span class="text-gray-600">Written test fees</span>
+              </div>
+              <div class="flex items-center">
+                <div class="promoted-checkbox">
+                  <input id="checkbox4" type="checkbox" class="promoted-input-checkbox" x-model="checkbox4" x-on:change="totalCost = checkbox4 ? totalCost + <%= online_addon%> : totalCost - <%= online_addon%>; checkboxClick = checkbox4 ? checkboxClick + 1 : checkboxClick - 1">
+                  <label for="checkbox4">
+                    <svg><use xlink:href="#checkmark" /></svg>
+                  </label>
+                </div>
+                <span class="text-gray-600">Starter bundle and online courses</span>
+              </div>
+              <div class="flex items-center">
+                <div class="promoted-checkbox">
+                  <input id="checkbox5" type="checkbox" class="promoted-input-checkbox" x-model="checkbox5" x-on:change="totalCost = checkbox5 ? totalCost + <%= headset_addon%> : totalCost - <%= headset_addon%>; checkboxClick = checkbox5 ? checkboxClick + 1 : checkboxClick - 1">
+                  <label for="checkbox5">
+                    <svg><use xlink:href="#checkmark" /></svg>
+                  </label>
+                </div>
+                <span class="text-gray-600">Aviation headset</span>
+              </div>
+            </div>
+          </div>
+          <div x-show="checkboxClick > 0" class="text-gray-500 pt-5 italic lg:hidden">
+            Updated Cost: $<span x-text="totalCost.toLocaleString()"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div 
+    x-data="{ totalCost: <%=ppl_to_hero%>, checkbox6: false, checkbox7: false, checkbox8: false, checkbox9: false, checkbox10: false, checkboxClick: 0 }" 
+    class="mt-12 m-auto -space-y-4 items-center justify-center md:flex md:space-y-0 md:-space-x-4 xl:w-10/12"
+    >
+      <div class="relative z-10 -mx-4 group md:w-6/12 md:mx-0 lg:w-5/12">
+        <div aria-hidden="true" class="absolute top-0 w-full h-full rounded-2xl bg-white shadow-xl transition duration-500 group-hover:scale-105 transform-gpu"></div>
+        <div class="relative p-6 space-y-6 lg:p-8">
+          <h3 class="text-3xl text-gray-700 font-semibold text-center">PPL to Hero</h3>
+          <div class="relative flex justify-around">
+            <div class="flex items-center">
+              <div class="">
+                <span class="block text-3xl text-gray-800 font-bold">$</span>
+              </div>
+              <span class="text-4xl text-gray-700 font-bold leading-0" x-text="totalCost.toLocaleString()"></span>
+            </div>
+          </div>
+          <p class="italic text-center">Continue your training after your private pilot certificate and get career ready</p>
+          <ul role="list" class="w-max space-y-4 pb-6 m-auto text-gray-600">
+            <li class="space-x-2">
+              <span class="text-sky-500 font-semibold">&check;</span>
+              <span>Instrument Rating</span>
+            </li>
+            <li class="space-x-2">
+              <span class="text-sky-500 font-semibold">&check;</span>
+              <span>Commercial Certificate</span>
+            </li>
+            <li class="space-x-2">
+              <span class="text-sky-500 font-semibold">&check;</span>
+              <span>Multi Engine Rating</span>
+            </li>
+            <li class="space-x-2">
+              <span class="text-sky-500 font-semibold">&check;</span>
+              <span>CFI Certificate</span>
+            </li>
+            <li class="space-x-2">
+              <span class="text-sky-500 font-semibold">&check;</span>
+              <span>CFII Instrument</span>
+            </li>
+          </ul>
+          <p class="flex items-center justify-center space-x-4 text-lg text-gray-600 text-center">
+            <span>Call us</span>
+            <a href="tel:1-480-256-8355" class="flex space-x-2 items-center text-sky-600">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6" viewBox="0 0 16 16">
+                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+              </svg>
+              <span class="font-semibold">(480) 256-8355</span>
+            </a>
+            <span>or</span>
+          </p>
+          <%= link_to "Contact Us Today", contact_path, data: { turbo: false }, class: "block w-full py-3 px-6 text-center rounded-xl transition bg-sky-600 hover:bg-sky-700 active:bg-sky-800 focus:bg-sky-600 text-white font-semibold" %>
+        </div>
+      </div>
+
+      <div class="relative group md:w-6/12 lg:w-7/12">
+        <div aria-hidden="true" class="absolute top-0 w-full h-full rounded-2xl bg-white shadow-lg transition duration-500 group-hover:scale-105 transform-gpu"></div>
+        <div class="relative p-5 pt-12 md:p-8 md:pl-8 md:rounded-r-2xl lg:pl-16 lg:p-12">
+          <ul role="list" class="space-y-4 pb-6 text-gray-600">
+            <li class="space-x-2">
+              <span class="text-sky-500 font-semibold">&check;</span>
+              <span>Accelerated full-time programs</span>
+            </li>
+            <li class="space-x-2">
+              <span class="text-sky-500 font-semibold">&check;</span>
+              <span>Instructor and aircraft availability</span>
+            </li>
+            <li class="space-x-2">
+              <span class="text-sky-500 font-semibold">&check;</span>
+              <span>Complete within a year</span>
+            </li>
+          </ul>
+          <p class="text-gray-700 font-semibold text-2xl">Add ons</p>
+
+          <div class="mt-6 flex justify-between gap-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+              <!-- Define the Checkmark -->
+              <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+                <symbol id="checkmark" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-miterlimit="10" fill="none"  d="M22.9 3.7l-15.2 16.6-6.6-7.1">
+                  </path>
+                </symbol>
+              </svg>
+
+              <!-- Grid of add ons items -->
+              <div class="flex items-center">
+                <div class="promoted-checkbox">
+                  <input id="checkbox6" type="checkbox" class="promoted-input-checkbox" x-model="checkbox6" x-on:change="totalCost = checkbox6 ? totalCost + <%= mei_addon%> : totalCost - <%= mei_addon%>; checkboxClick = checkbox6 ? checkboxClick + 1 : checkboxClick - 1">
+                  <label for="checkbox6">
+                    <svg><use xlink:href="#checkmark" /></svg>
+                  </label>
+                </div>
+                <span class="text-gray-600">MEI</span>
+              </div>
+              <div class="flex items-center">
+                <div class="promoted-checkbox">
+                  <input id="checkbox7" type="checkbox" class="promoted-input-checkbox" x-model="checkbox7" x-on:change="totalCost = checkbox7 ? totalCost + <%= checkride_addon %> : totalCost - <%= checkride_addon %>; checkboxClick = checkbox7 ? checkboxClick + 1 : checkboxClick - 1">
+                  <label for="checkbox7">
+                    <svg><use xlink:href="#checkmark" /></svg>
+                  </label>
+                </div>
+                <span class="text-gray-600">Checkride fees</span>
+              </div>
+              <div class="flex items-center">
+                <div class="promoted-checkbox">
+                  <input id="checkbox8" type="checkbox" class="promoted-input-checkbox" x-model="checkbox8" x-on:change="totalCost = checkbox8 ? totalCost + <%= written_addon %> : totalCost - <%= written_addon %>; checkboxClick = checkbox8 ? checkboxClick + 1 : checkboxClick - 1">
+                  <label for="checkbox8">
+                    <svg><use xlink:href="#checkmark" /></svg>
+                  </label>
+                </div>
+                <span class="text-gray-600">Written test fees</span>
+              </div>
+              <div class="flex items-center">
+                <div class="promoted-checkbox">
+                  <input id="checkbox9" type="checkbox" class="promoted-input-checkbox" x-model="checkbox9" x-on:change="totalCost = checkbox9 ? totalCost + <%= online_addon%> : totalCost - <%= online_addon%>; checkboxClick = checkbox9 ? checkboxClick + 1 : checkboxClick - 1">
+                  <label for="checkbox9">
+                    <svg><use xlink:href="#checkmark" /></svg>
+                  </label>
+                </div>
+                <span class="text-gray-600">Starter bundle and online courses</span>
+              </div>
+              <div class="flex items-center">
+                <div class="promoted-checkbox">
+                  <input id="checkbox10" type="checkbox" class="promoted-input-checkbox" x-model="checkbox10" x-on:change="totalCost = checkbox10 ? totalCost + <%= headset_addon%> : totalCost - <%= headset_addon%>; checkboxClick = checkbox10 ? checkboxClick + 1 : checkboxClick - 1">
+                  <label for="checkbox10">
+                    <svg><use xlink:href="#checkmark" /></svg>
+                  </label>
+                </div>
+                <span class="text-gray-600">Aviation headset</span>
+              </div>
+            </div>
+          </div>
+          <div x-show="checkboxClick > 0" class="text-gray-500 pt-5 italic lg:hidden">
+            Updated Cost: $<span x-text="totalCost.toLocaleString()"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<%= render "shared/guarantee"%>
+
+<%= render "shared/cta_fly_with"%>
+<%= render "shared/cta_next_steps"%>
+<%= render "shared/footer"%>
