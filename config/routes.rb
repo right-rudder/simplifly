@@ -81,8 +81,8 @@ Rails.application.routes.draw do
   # Static Pages
   get 'stratus-finance', to: 'pages#stratus', as: :stratus
   get 'meritize', to: 'pages#meritize', as: :meritize
-  get 'accelerated-pilot-training', to: 'pages#accelerated', as: :accelerated
-  get 'flexible-pilot-training', to: 'pages#flexible', as: :flexible
+  #get 'accelerated-pilot-training', to: 'pages#accelerated', as: :accelerated
+  #get 'flexible-pilot-training', to: 'pages#flexible', as: :flexible
   get 'why-simplifly', to: 'pages#why_simplifly', as: :why_simplifly
   get 'financing', to: 'pages#financing', as: :financing
   get 'pilot-training-pricing-calculator', to: 'pages#cost'
