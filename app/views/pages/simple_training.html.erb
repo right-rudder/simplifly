@@ -21,13 +21,13 @@
 
 <%= render "shared/header"%>
 <header
-    class="relative top-0 h-screen bg-cover bg-center bg-black flex flex-col items-center justify-center"
+    class="relative top-0 h-screen flex flex-col items-center justify-center"
   >
     <!-- bg-overlay to darken -->
     <div
       class="absolute w-full h-screen overflow-hidden"
     >
-        <%= image_tag "thumbs-up-in-front-of-cessna.webp" , alt: "A SimpliFly pilot in flexible training flying cessna 172", class: "w-full h-full bg-cover bg-center filter brightness-75"%>
+        <%= image_tag "thumbs-up-in-front-of-cessna.webp" , alt: "A SimpliFly pilot in flexible training flying cessna 172", class: "h-full w-full object-cover object-center filter brightness-75"%>
     </div>
     <!-- Text -->
     <div
@@ -457,8 +457,6 @@
   </div>
 </div>
 </section>
-
-<%= render "shared/guarantee"%>
 
 <%= render "shared/cta_fly_with"%>
 <%= render "shared/cta_next_steps"%>
