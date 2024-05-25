@@ -37,7 +37,7 @@
       <li><%= link_to "DISCOVERY FLIGHT", discovery_flight_path, target: "blank", data: { turbo: false }%></li>
       <li>
         <div class="flex flex-row justify-between" >
-          <div class=""><%= link_to "HOW TO BECOME A PILOT", root_path, data: { turbo: false }%></div>
+          <div class=""><%= link_to "HOW TO BECOME A PILOT", simple_training_path, data: { turbo: false }%></div>
           <div class="px-5 py-1" x-on:click="mobile_resources_drop = ! mobile_resources_drop">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="transition-transform duration-500 ease-in-out" viewBox="0 0 16 16" x-bind:class="{ 'rotate-[90deg]': mobile_resources_drop }">
               <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
