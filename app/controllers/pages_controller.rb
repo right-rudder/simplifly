@@ -16,14 +16,17 @@ class PagesController < ApplicationController
 
   def flexible
   end
-  
+
   def cost
+  end
+
+  def simple_training
   end
 
   def timeline
     @book_download = BookDownload.new
   end
-  
+
   def private_pilot
     @book_download = BookDownload.new
   end
@@ -33,11 +36,11 @@ class PagesController < ApplicationController
 
   def commercial
   end
-  
+
   def pilot_training
     @book_download = BookDownload.new
   end
-  
+
   def airline_pilot_courses
     @book_download = BookDownload.new
   end
@@ -47,7 +50,7 @@ class PagesController < ApplicationController
 
   def aircraft_rental
   end
-  
+
   def fixed_wing
   end
 
