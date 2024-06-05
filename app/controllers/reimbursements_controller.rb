@@ -59,6 +59,16 @@ class ReimbursementsController < ApplicationController
       puts receipt
       mini_image = MiniMagick::Image.new(receipt.tempfile.path)
       mini_image.resize "800x800"
+
+      # Create a new ActiveStorage::Blob with the resized image data
+      resized_image_blob = ActiveStorage::Blob.create_and_upload!(
+        io: StringIO.new(mini_image.to_blob),
+        filename: receipt.filename,
+        content_type: mini_image.mime_type
+      )
+
+      # Replace the original attachment with the resized image
+      receipt.attach(resized_image_blob)
     end
 
     respond_to do |format|
