@@ -2,7 +2,7 @@ class ReimbursementsController < ApplicationController
   before_action :set_reimbursement, only: %i[ show edit update destroy ]
   before_action :authenticate_admin!, except: [:create, :new, :confirmation]
   invisible_captcha only: [:create], honeypot: :confirm_email
-
+  require 'mini_magick'
 
 
   # GET /reimbursements or /reimbursements.json
@@ -29,21 +29,21 @@ class ReimbursementsController < ApplicationController
       @reimbursement.update(status: 'Paid')
       redirect_to reimbursement_url(@reimbursement), notice: 'Reimbursement marked as paid.'
     end
-  
+
     # Mark as view in the show view
     def mark_as_viewed_view
       @reimbursement = Reimbursement.find(params[:id])
       @reimbursement.update(status: 'Viewed')
       redirect_to reimbursement_url(@reimbursement), notice: 'Reimbursement marked as viewed.'
     end
-  
+
     # Mark as paid in the index view
     def mark_as_paid_index
       @reimbursement = Reimbursement.find(params[:id])
       @reimbursement.update(status: 'Paid')
       redirect_to reimbursement_index_path, notice: 'Reimbursement marked as paid.'
     end
-  
+
     # Mark as view in the index view
     def mark_as_viewed_index
       @reimbursement = Reimbursement.find(params[:id])
@@ -55,9 +55,25 @@ class ReimbursementsController < ApplicationController
   def create
     @reimbursement = Reimbursement.new(reimbursement_params)
 
+    params[:reimbursement][:receipt] do |receipt|
+      puts receipt
+      mini_image = MiniMagick::Image.new(receipt.tempfile.path)
+      mini_image.resize "800x800"
+
+      # Create a new ActiveStorage::Blob with the resized image data
+      resized_image_blob = ActiveStorage::Blob.create_and_upload!(
+        io: StringIO.new(mini_image.to_blob),
+        filename: receipt.filename,
+        content_type: mini_image.mime_type
+      )
+
+      # Replace the original attachment with the resized image
+      receipt.attach(resized_image_blob)
+    end
+
     respond_to do |format|
       if @reimbursement.save
-        ReimbursementMailer.reimbursement_mailer(@reimbursement).deliver_later
+        #ReimbursementMailer.reimbursement_mailer(@reimbursement).deliver_later
         format.html { redirect_to reimbursement_confirmation_path }
         #format.json { render :show, status: :created, location: @reimbursement }
       else
