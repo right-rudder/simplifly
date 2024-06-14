@@ -18,57 +18,57 @@
 </header>
 
 <section id="home-menu" class="py-12 bg-sky-400 px-5 scroll-my-20">
-    <div class="grid lg:grid-cols-4 sm:grid-cols-2 max-w-7xl mx-auto gap-10">
-      <a
-        href="/pilot-training-made-simple"
-        class="border border-white/50 bg-sky-500 py-8 px-12 flex flex-col group gap-5 hover:bg-sky-100 duration-500 group cursor-pointer"
+  <div class="grid lg:grid-cols-4 sm:grid-cols-2 max-w-7xl mx-auto gap-10">
+    <a
+      href="/pilot-training-made-simple"
+      class="border border-white/50 bg-sky-500 py-8 px-12 flex flex-col group gap-5 hover:bg-sky-100 duration-500 group cursor-pointer"
+    >
+      <%=image_tag "headphone2.png", alt: "flying plane icon", class: "h-20 w-20 filter invert group-hover:invert-0 duration-500"%>
+      <p
+        class="text-lg text-white font-header leading-tight group-hover:text-slate-800 uppercase font-semibold tracking-widest duration-500"
       >
-        <%=image_tag "headphone2.png", alt: "flying plane icon", class: "h-20 w-20 filter invert group-hover:invert-0 duration-500"%>
-        <p
-          class="text-lg text-white font-header leading-tight group-hover:text-slate-800 uppercase font-semibold tracking-widest duration-500"
-        >
-          Pilot Training Made Simple
-        </p>
-      </a>
-      
-      <a
-        href="category/pilot"
-        class="border border-white/50 bg-sky-500 py-8 px-12 flex flex-col group gap-5 hover:bg-sky-100 duration-500 group cursor-pointer"
+        Pilot Training Made Simple
+      </p>
+    </a>
+    
+    <a
+      href="category/pilot"
+      class="border border-white/50 bg-sky-500 py-8 px-12 flex flex-col group gap-5 hover:bg-sky-100 duration-500 group cursor-pointer"
+    >
+      <%=image_tag "fly.png", alt: "pilot headset icon", class: "h-20 w-20 filter invert group-hover:invert-0 duration-500"%>
+      <p
+        class="text-lg text-white font-header leading-tight group-hover:text-slate-800 uppercase font-semibold tracking-widest duration-500"
       >
-        <%=image_tag "fly.png", alt: "pilot headset icon", class: "h-20 w-20 filter invert group-hover:invert-0 duration-500"%>
-        <p
-          class="text-lg text-white font-header leading-tight group-hover:text-slate-800 uppercase font-semibold tracking-widest duration-500"
-        >
-          Our Programs
-        </p>
-      </a>
-      
-      <a
-        href="/approximate-pilot-training-costs"
-        class="border border-white/50 bg-sky-500 py-8 px-12 flex flex-col group gap-5 hover:bg-sky-100 duration-500 group cursor-pointer"
+        Our Programs
+      </p>
+    </a>
+    
+    <a
+      href="/approximate-pilot-training-costs"
+      class="border border-white/50 bg-sky-500 py-8 px-12 flex flex-col group gap-5 hover:bg-sky-100 duration-500 group cursor-pointer"
+    >
+      <%=image_tag "finance.png", alt: "calculator budget icon", class: "h-20 w-20 filter invert group-hover:invert-0 duration-500"%>
+      <p
+        class="text-lg text-white font-header leading-tight group-hover:text-slate-800 uppercase font-semibold tracking-widest duration-500"
       >
-        <%=image_tag "finance.png", alt: "calculator budget icon", class: "h-20 w-20 filter invert group-hover:invert-0 duration-500"%>
-        <p
-          class="text-lg text-white font-header leading-tight group-hover:text-slate-800 uppercase font-semibold tracking-widest duration-500"
-        >
-          Simplifly’s Cost Estimator
-        </p>
-      </a>
-      
-      <a
-        href="#testimonials"
-        class="border border-white/50 bg-sky-500 py-8 px-12 flex flex-col group gap-5 hover:bg-sky-100 duration-500 group cursor-pointer"
+        Simplifly’s Cost Estimator
+      </p>
+    </a>
+    
+    <a
+      href="#testimonials"
+      class="border border-white/50 bg-sky-500 py-8 px-12 flex flex-col group gap-5 hover:bg-sky-100 duration-500 group cursor-pointer"
+    >
+      <%=image_tag "feedback.png", alt: "review stars icon", class: "h-20 w-20 filter invert group-hover:invert-0 duration-500"%>
+      <p
+        class="text-lg text-white font-header leading-tight group-hover:text-slate-800 uppercase font-semibold tracking-widest duration-500"
       >
-        <%=image_tag "feedback.png", alt: "review stars icon", class: "h-20 w-20 filter invert group-hover:invert-0 duration-500"%>
-        <p
-          class="text-lg text-white font-header leading-tight group-hover:text-slate-800 uppercase font-semibold tracking-widest duration-500"
-        >
-          Student Reviews
-        </p>
-      </a>
-      
-    </div>
-  </section>
+        Student Reviews
+      </p>
+    </a>
+    
+  </div>
+</section>
 
 <section class="flex flex-col lg:flex-row-reverse pt-10 pb-0 lg:py-10 bg-white">
   <div class="flex flex-col items-center lg:w-1/2 p-text">
@@ -198,7 +198,7 @@
         </button>
         <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container3" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''">
           <div class="p-6 p-text">
-            <p>The total cost of flight training varies depending on how many hours you need, certificate sought, and airplane chosen.  For a private pilot certificate plan to budget between $10,000 to $15,000.  For more information, check out our cost estimator page.</p>
+            <p>The total cost of flight training varies depending on how many hours you need, certificate sought, and airplane chosen. To gauge how much flight training might cost you, check out our <a class="text-sky-600 hover:underline" href="/approximate-pilot-training-costs">cost estimator page</a>.</p>
           </div>
         </div>
       </li>
