@@ -21,13 +21,13 @@
 
 <%= render "shared/header"%>
 <header
-    class="relative top-0 h-screen bg-cover bg-center bg-black flex flex-col items-center justify-center"
+    class="relative top-0 h-screen flex flex-col items-center justify-center"
   >
     <!-- bg-overlay to darken -->
     <div
       class="absolute w-full h-screen overflow-hidden"
     >
-        <%= image_tag "thumbs-up-in-front-of-cessna.webp" , alt: "A SimpliFly pilot in flexible training flying cessna 172", class: "w-full h-full bg-cover bg-center filter brightness-75"%>
+        <%= image_tag "thumbs-up-in-front-of-cessna.webp" , alt: "A SimpliFly pilot in flexible training flying cessna 172", class: "h-full w-full object-cover object-center filter brightness-75"%>
     </div>
     <!-- Text -->
     <div
@@ -54,6 +54,40 @@
       <%= link_to "BOOK DISCOVERY FLIGHT", discovery_flight_path,  target: "blank", data: { turbo: false }, class: "btn-primary my-3" %>
     </div>
   </div>
+</section>
+
+<section id="home-menu" class="py-12 bg-sky-400 px-5 scroll-my-20">
+  <div class="bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:text-center">
+      <h2 class="uppercase text-sky-500 font-bold text-center tracking-widest">Timeline</h2>
+      <p class="mt-2 text-5xl font-header uppercase font-semibold text-center">Student Journey Overview</p>
+    </div>
+    <div class="mx-auto mt-8 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+      <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+        <div class="flex flex-col bg-sky-100 p-6 rounded hover:bg-sky-50 transition duration-300">
+          <dt class="flex flex-wrap justify-center items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
+            <%=image_tag "take-off.png", alt: "review stars icon", class: "h-32 w-36"%>
+            <p class="mt-6 w-full text-center px-2 text-xl uppercase leading-tight">Enroll at <strong>SimpliFly</strong></p>
+          </dt>
+        </div>
+        <div class="flex flex-col bg-sky-100 p-6 rounded hover:bg-sky-50 transition duration-300">
+          <dt class="flex flex-wrap justify-center items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
+            <%=image_tag "plane.png", alt: "review stars icon", class: "h-32 w-36"%>
+            <p class="mt-6 w-full text-center px-2 text-xl uppercase leading-tight">Train in our <strong>Zero to Hero</strong> program</p>
+          </dt>
+        </div>
+        <div class="flex flex-col bg-sky-100 p-6 rounded hover:bg-sky-50 transition duration-300">
+          <dt class="flex flex-wrap justify-center items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
+            <%=image_tag "landing.png", alt: "review stars icon", class: "h-32 w-36"%>
+            <p class="mt-6 w-full text-center px-2 text-xl uppercase leading-tight">Graduate <strong>SimpliFly</strong> and head to the <strong>airlines</strong></p>
+          </dt>
+        </div>
+      </dl>
+    </div>
+  </div>
+</div>
+
 </section>
 
 <section
@@ -90,7 +124,7 @@
       <div
         class="border border-slate-500/50 rounded py-8 px-12 flex flex-col gap-5 justify-between bg-sky-50 hover:bg-sky-400/20 duration-700 group"
       >
-      <a href="#enroll">
+      <a href="#expectations">
         <div class="flex justify-center align-middle items-center">
           <h3
             class="text-lg text-slate-800 uppercase font-semibold tracking-widest duration-700"
@@ -105,7 +139,7 @@
       <div
         class="border border-slate-500/50 rounded py-8 px-12 flex flex-col gap-5 justify-between bg-sky-50 hover:bg-sky-400/20 duration-700 group"
       >
-      <a href="#enroll">
+      <a href="#cost-calc">
         <div class="flex justify-center align-middle items-center">
           <h3
             class="text-lg text-slate-800 uppercase font-semibold tracking-widest duration-700"
@@ -123,7 +157,7 @@
 
 <%= render "shared/daily_training_schedule"%>
 
-  <section class="bg-slate-100 flex flex-col items-center px-5">
+  <section id="expectations" class="bg-slate-100 flex flex-col items-center px-5">
     <h3 class="font-header uppercase text-4xl lg:text-5xl font-semibold pt-20 pb-10 text-center">Simplifly Student Expectations</h3>
     
     <div class="grid grid-cols-1 lg:grid-cols-2 max-w-4xl lg:gap-10">
@@ -134,7 +168,7 @@
         </div>
         <div class="flex flex-col">
           <h4 class="font-header uppercase font-semibold text-xl">Training Frequency</h4>
-          <p>We expect all students to fly 3-4 times each week. This generally means a minimum of 25 hours of flight training per week with additional time allocated for ground school and personal study.</p>
+          <p>We expect all students to fly 3-4 times each week. This means a minimum of 25 hours per week dedicated for flight training, ground training and personal study.</p>
         </div>
       </div>
       <!--Family Environment-->
@@ -163,7 +197,7 @@
     </div>
   </section>
 
-<section>
+<section id="cost-calc">
   <div class="bg-gradient-to-r from-slate-200 to-sky-100 px-3">
   <!--Pilot Training Programs-->
   <div class="container m-auto px-6 py-20 md:px-12 lg:px-20">
@@ -457,8 +491,6 @@
   </div>
 </div>
 </section>
-
-<%= render "shared/guarantee"%>
 
 <%= render "shared/cta_fly_with"%>
 <%= render "shared/cta_next_steps"%>

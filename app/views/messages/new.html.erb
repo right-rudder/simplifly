@@ -5,6 +5,43 @@
 
 <%= render "shared/header"%>
 <div class="bg-gradient-to-l from-slate-200 to-blue-50">
+  
+  <div class="w-full flex justify-center align-middle items-center gap-7 flex-col md:flex-row">
+    <div
+      class="bg-sky-200 rounded my-10 py-3 max-w-sm h-32 px-5 flex gap-5 items-center group hover:bg-slate-400 duration-500"
+    >
+      <%=image_tag "settings.png", class: "h-20 w-20", alt: "The team at SimpliFly"%>
+      <div>
+        <p
+          class="text-slate-900 font-bold text-xl leading-tight group-hover:text-gray-100 duration-500"
+        >
+          Maintenance Personnel!
+        </p>
+        <p
+          class="text-sm group-hover:text-gray-200 font-semibold leading-tight"
+        >
+          Now Hiring
+        </p>
+      </div>
+    </div>
+    <div
+      class="bg-gray-400 rounded my-10 py-3 max-w-sm h-32 px-5 flex gap-5 items-center group hover:bg-slate-500 duration-500"
+    >
+      <%=image_tag "headphone2.png", class: "h-20 w-20", alt: "The team at SimpliFly"%>
+      <div>
+        <p
+          class="text-slate-900 font-bold text-xl leading-tight group-hover:text-gray-100 duration-500"
+        >
+          Not Currently Hiring CFIs
+        </p>
+        <p
+          class="text-sm group-hover:text-gray-200 font-semibold leading-tight"
+        >
+        </p>
+      </div>
+    </div>
+  </div>
+
   <h1 class="font-bold text-4xl pt-10 text-center">Contact Us</h1>
   <div class="lg:flex lg:flex-row-reverse items-center lg:items-start">
   

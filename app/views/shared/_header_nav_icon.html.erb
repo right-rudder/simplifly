@@ -29,7 +29,7 @@
 
     <!--HOW TO-->
     <div class="" x-on:mouseover="fly_drop = true">
-      <%= link_to "HOW TO BECOME A PILOT", root_path, data: { turbo: false }, class: "hover:text-white link-underline" %>
+      <%= link_to "HOW TO BECOME A PILOT", simple_training_path, data: { turbo: false }, class: "hover:text-white link-underline" %>
       <div class="dropshadow-xl bg-sky-600/90 rounded-b-xl absolute z-50 pb-5 pt-5 mt-6 right-[40.25rem]" x-cloak x-show="fly_drop"
         x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0 transform scale-90"
@@ -91,47 +91,6 @@
               </div>
             <% end %>
           </div>
-        </div>
-      </div>
-    </div>
-    <!--AIRLINE PILOT COURSES-->
-    <div class="" x-on:mouseover="pilot_drop = true">
-      <%= link_to "AIRLINE PILOT COURSES" , airline_pilot_courses_path, data: { turbo: false }, class: "hover:text-white link-underline"%>
-      <div class="dropshadow-xl bg-sky-600/90 rounded-b-xl absolute z-50 pb-5 pt-5 mt-6 right-[18.5rem]" x-cloak x-show="pilot_drop"
-        x-transition:enter="transition ease-out duration-300"
-        x-transition:enter-start="opacity-0 transform scale-90"
-        x-transition:enter-end="opacity-100 transform scale-100"
-        x-transition:leave="transition ease-in duration-300"
-        x-transition:leave-start="opacity-100 transform scale-100"
-        x-transition:leave-end="opacity-0 transform scale-90" >
-        <!--Drop down Menu-->
-        <div class="flex flex-col gap-3 mx-5 items-start">
-          <div class="items-center hover:text-white">
-            <%= link_to accelerated_path, data: { turbo: false }, class: "hover:text-white" do %>
-              <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
-                ACCELERATED TRAINING
-                <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-white h-4 ml-3 opacity-0" 
-                  :class="{'animate-plane-enter': isHovered, 'animate-plane-leave': isOut}"
-                  x-transition:leave="() => { isOut = false }"
-                >
-                  <path d="M19 8.562c0 .434-1.155 1.463-2.978 1.463h-4a.089.089 0 0 1-.023.034l-4.221 5.567-.005.006-1.023 1.355a.35.35 0 0 1-.269.131H5.115a.331.331 0 0 1-.28-.154.356.356 0 0 1-.051-.183.291.291 0 0 1 .028-.137l1.029-2.235c.188-.366.36-.737.514-1.12l1.5-3.264H4.018a9.281 9.281 0 0 1-1.029-.1l-1.6 2.343a.163.163 0 0 1-.138.075H.171a.162.162 0 0 1-.131-.063.165.165 0 0 1-.04-.1v-.04l1.526-3.578L0 4.978a.162.162 0 0 1 .04-.143.161.161 0 0 1 .131-.062h1.08a.162.162 0 0 1 .138.074l1.6 2.353c.251-.029.851-.1 1.029-.1h3.835L6.287 3.681l-.36-.781L4.812.475a.3.3 0 0 1-.028-.138.359.359 0 0 1 .051-.183.331.331 0 0 1 .28-.154h1.366a.351.351 0 0 1 .269.132l.994 1.308L12 7.059a.1.1 0 0 1 .023.034h4c1.82 0 2.977 1.029 2.977 1.469"></path>
-                </svg>
-              </div>
-            <% end %>
-          </div>
-          <div class="items-center hover:text-white">
-            <%= link_to flexible_path, data: { turbo: false }, class: "hover:text-white" do %>
-              <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
-                FLEXIBLE TRAINING
-                <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-white h-4 ml-3 opacity-0" 
-                  :class="{'animate-plane-enter': isHovered, 'animate-plane-leave': isOut}"
-                  x-transition:leave="() => { isOut = false }"
-                >
-                  <path d="M19 8.562c0 .434-1.155 1.463-2.978 1.463h-4a.089.089 0 0 1-.023.034l-4.221 5.567-.005.006-1.023 1.355a.35.35 0 0 1-.269.131H5.115a.331.331 0 0 1-.28-.154.356.356 0 0 1-.051-.183.291.291 0 0 1 .028-.137l1.029-2.235c.188-.366.36-.737.514-1.12l1.5-3.264H4.018a9.281 9.281 0 0 1-1.029-.1l-1.6 2.343a.163.163 0 0 1-.138.075H.171a.162.162 0 0 1-.131-.063.165.165 0 0 1-.04-.1v-.04l1.526-3.578L0 4.978a.162.162 0 0 1 .04-.143.161.161 0 0 1 .131-.062h1.08a.162.162 0 0 1 .138.074l1.6 2.353c.251-.029.851-.1 1.029-.1h3.835L6.287 3.681l-.36-.781L4.812.475a.3.3 0 0 1-.028-.138.359.359 0 0 1 .051-.183.331.331 0 0 1 .28-.154h1.366a.351.351 0 0 1 .269.132l.994 1.308L12 7.059a.1.1 0 0 1 .023.034h4c1.82 0 2.977 1.029 2.977 1.469"></path>
-                </svg>
-              </div>
-            <% end %>
-          </div>
           <div class="items-center hover:text-white">
             <%= link_to timeline_path, class: "hover:text-white", data: { turbo: false } do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
@@ -158,6 +117,91 @@
               </div>
             <% end %>
           </div>
+        </div>
+      </div>
+    </div>
+    <!--AIRLINE PILOT COURSES-->
+    <div class="" x-on:mouseover="pilot_drop = true">
+      <%= link_to "AIRLINE PILOT COURSES" , airline_pilot_courses_path, data: { turbo: false }, class: "hover:text-white link-underline"%>
+      <div class="dropshadow-xl bg-sky-600/90 rounded-b-xl absolute z-50 pb-5 pt-5 mt-6 right-[20rem]" x-cloak x-show="pilot_drop"
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 transform scale-90"
+        x-transition:enter-end="opacity-100 transform scale-100"
+        x-transition:leave="transition ease-in duration-300"
+        x-transition:leave-start="opacity-100 transform scale-100"
+        x-transition:leave-end="opacity-0 transform scale-90" >
+        <!--Drop down Menu-->
+        <div class="flex flex-col gap-3 mx-5 items-start">
+          <div class="items-center hover:text-white">
+            <%= link_to private_pilot_path, class: "hover:text-white", data: { turbo: false } do %>
+              <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
+                PRIVATE PILOT
+                <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-white h-4 ml-3 opacity-0" 
+                  :class="{'animate-plane-enter': isHovered, 'animate-plane-leave': isOut}"
+                  x-transition:leave="() => { isOut = false }"
+                >
+                  <path d="M19 8.562c0 .434-1.155 1.463-2.978 1.463h-4a.089.089 0 0 1-.023.034l-4.221 5.567-.005.006-1.023 1.355a.35.35 0 0 1-.269.131H5.115a.331.331 0 0 1-.28-.154.356.356 0 0 1-.051-.183.291.291 0 0 1 .028-.137l1.029-2.235c.188-.366.36-.737.514-1.12l1.5-3.264H4.018a9.281 9.281 0 0 1-1.029-.1l-1.6 2.343a.163.163 0 0 1-.138.075H.171a.162.162 0 0 1-.131-.063.165.165 0 0 1-.04-.1v-.04l1.526-3.578L0 4.978a.162.162 0 0 1 .04-.143.161.161 0 0 1 .131-.062h1.08a.162.162 0 0 1 .138.074l1.6 2.353c.251-.029.851-.1 1.029-.1h3.835L6.287 3.681l-.36-.781L4.812.475a.3.3 0 0 1-.028-.138.359.359 0 0 1 .051-.183.331.331 0 0 1 .28-.154h1.366a.351.351 0 0 1 .269.132l.994 1.308L12 7.059a.1.1 0 0 1 .023.034h4c1.82 0 2.977 1.029 2.977 1.469"></path>
+                </svg>
+              </div>
+            <% end %>
+          </div>
+
+          <div class="items-center hover:text-white">
+            <%= link_to instrument_path, class: "hover:text-white", data: { turbo: false } do %>
+              <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
+                INSTRUMENT RATING
+                <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-white h-4 ml-3 opacity-0" 
+                  :class="{'animate-plane-enter': isHovered, 'animate-plane-leave': isOut}"
+                  x-transition:leave="() => { isOut = false }"
+                >
+                  <path d="M19 8.562c0 .434-1.155 1.463-2.978 1.463h-4a.089.089 0 0 1-.023.034l-4.221 5.567-.005.006-1.023 1.355a.35.35 0 0 1-.269.131H5.115a.331.331 0 0 1-.28-.154.356.356 0 0 1-.051-.183.291.291 0 0 1 .028-.137l1.029-2.235c.188-.366.36-.737.514-1.12l1.5-3.264H4.018a9.281 9.281 0 0 1-1.029-.1l-1.6 2.343a.163.163 0 0 1-.138.075H.171a.162.162 0 0 1-.131-.063.165.165 0 0 1-.04-.1v-.04l1.526-3.578L0 4.978a.162.162 0 0 1 .04-.143.161.161 0 0 1 .131-.062h1.08a.162.162 0 0 1 .138.074l1.6 2.353c.251-.029.851-.1 1.029-.1h3.835L6.287 3.681l-.36-.781L4.812.475a.3.3 0 0 1-.028-.138.359.359 0 0 1 .051-.183.331.331 0 0 1 .28-.154h1.366a.351.351 0 0 1 .269.132l.994 1.308L12 7.059a.1.1 0 0 1 .023.034h4c1.82 0 2.977 1.029 2.977 1.469"></path>
+                </svg>
+              </div>
+            <% end %>
+          </div>
+
+          <div class="items-center hover:text-white">
+            <%= link_to commercial_path, class: "hover:text-white", data: { turbo: false } do %>
+              <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
+                COMMERCIAL PILOT
+                <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-white h-4 ml-3 opacity-0" 
+                  :class="{'animate-plane-enter': isHovered, 'animate-plane-leave': isOut}"
+                  x-transition:leave="() => { isOut = false }"
+                >
+                  <path d="M19 8.562c0 .434-1.155 1.463-2.978 1.463h-4a.089.089 0 0 1-.023.034l-4.221 5.567-.005.006-1.023 1.355a.35.35 0 0 1-.269.131H5.115a.331.331 0 0 1-.28-.154.356.356 0 0 1-.051-.183.291.291 0 0 1 .028-.137l1.029-2.235c.188-.366.36-.737.514-1.12l1.5-3.264H4.018a9.281 9.281 0 0 1-1.029-.1l-1.6 2.343a.163.163 0 0 1-.138.075H.171a.162.162 0 0 1-.131-.063.165.165 0 0 1-.04-.1v-.04l1.526-3.578L0 4.978a.162.162 0 0 1 .04-.143.161.161 0 0 1 .131-.062h1.08a.162.162 0 0 1 .138.074l1.6 2.353c.251-.029.851-.1 1.029-.1h3.835L6.287 3.681l-.36-.781L4.812.475a.3.3 0 0 1-.028-.138.359.359 0 0 1 .051-.183.331.331 0 0 1 .28-.154h1.366a.351.351 0 0 1 .269.132l.994 1.308L12 7.059a.1.1 0 0 1 .023.034h4c1.82 0 2.977 1.029 2.977 1.469"></path>
+                </svg>
+              </div>
+            <% end %>
+          </div>
+
+          <div class="items-center hover:text-white">
+            <%= link_to multi_path, class: "hover:text-white", data: { turbo: false } do %>
+              <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
+                MULTI ENGINE RATING
+                <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-white h-4 ml-3 opacity-0" 
+                  :class="{'animate-plane-enter': isHovered, 'animate-plane-leave': isOut}"
+                  x-transition:leave="() => { isOut = false }"
+                >
+                  <path d="M19 8.562c0 .434-1.155 1.463-2.978 1.463h-4a.089.089 0 0 1-.023.034l-4.221 5.567-.005.006-1.023 1.355a.35.35 0 0 1-.269.131H5.115a.331.331 0 0 1-.28-.154.356.356 0 0 1-.051-.183.291.291 0 0 1 .028-.137l1.029-2.235c.188-.366.36-.737.514-1.12l1.5-3.264H4.018a9.281 9.281 0 0 1-1.029-.1l-1.6 2.343a.163.163 0 0 1-.138.075H.171a.162.162 0 0 1-.131-.063.165.165 0 0 1-.04-.1v-.04l1.526-3.578L0 4.978a.162.162 0 0 1 .04-.143.161.161 0 0 1 .131-.062h1.08a.162.162 0 0 1 .138.074l1.6 2.353c.251-.029.851-.1 1.029-.1h3.835L6.287 3.681l-.36-.781L4.812.475a.3.3 0 0 1-.028-.138.359.359 0 0 1 .051-.183.331.331 0 0 1 .28-.154h1.366a.351.351 0 0 1 .269.132l.994 1.308L12 7.059a.1.1 0 0 1 .023.034h4c1.82 0 2.977 1.029 2.977 1.469"></path>
+                </svg>
+              </div>
+            <% end %>
+          </div>
+
+          <div class="items-center hover:text-white">
+            <%= link_to cfi_path, class: "hover:text-white", data: { turbo: false } do %>
+              <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
+                FLIGH INSTRUCTOR
+                <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-white h-4 ml-3 opacity-0" 
+                  :class="{'animate-plane-enter': isHovered, 'animate-plane-leave': isOut}"
+                  x-transition:leave="() => { isOut = false }"
+                >
+                  <path d="M19 8.562c0 .434-1.155 1.463-2.978 1.463h-4a.089.089 0 0 1-.023.034l-4.221 5.567-.005.006-1.023 1.355a.35.35 0 0 1-.269.131H5.115a.331.331 0 0 1-.28-.154.356.356 0 0 1-.051-.183.291.291 0 0 1 .028-.137l1.029-2.235c.188-.366.36-.737.514-1.12l1.5-3.264H4.018a9.281 9.281 0 0 1-1.029-.1l-1.6 2.343a.163.163 0 0 1-.138.075H.171a.162.162 0 0 1-.131-.063.165.165 0 0 1-.04-.1v-.04l1.526-3.578L0 4.978a.162.162 0 0 1 .04-.143.161.161 0 0 1 .131-.062h1.08a.162.162 0 0 1 .138.074l1.6 2.353c.251-.029.851-.1 1.029-.1h3.835L6.287 3.681l-.36-.781L4.812.475a.3.3 0 0 1-.028-.138.359.359 0 0 1 .051-.183.331.331 0 0 1 .28-.154h1.366a.351.351 0 0 1 .269.132l.994 1.308L12 7.059a.1.1 0 0 1 .023.034h4c1.82 0 2.977 1.029 2.977 1.469"></path>
+                </svg>
+              </div>
+            <% end %>
+          </div>
+          
         </div>
         
       </div>

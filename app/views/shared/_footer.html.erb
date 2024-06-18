@@ -8,7 +8,7 @@
       <li class="relative " x-data="{ selected: false }" @mouseenter="selected = true" @mouseleave="selected = false">
         <div class="flex-row flex w-full justify-between" x-on:mouseover="open = true" x-on:mouseout="open = false">
           <div class="font-header text-2xl font-semibold w-1/4 hover:text-sky-500 duration-500" >
-            <%= link_to "HOW TO BECOME A PILOT", root_path, data: { turbo: false }, class: ""%>
+            <%= link_to "HOW TO BECOME A PILOT", simple_training_path, data: { turbo: false }, class: ""%>
           </div>
           <div class="font-header text-2xl font-semibold w-1/4 pl-10 hover:text-sky-500 duration-500" >
             <%= link_to "AIRLINE PILOT COURSES", airline_pilot_courses_path, data: { turbo: false }, class: ""%>
@@ -28,15 +28,19 @@
                 <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "DISCOVERY FLIGHT", discovery_flight_path, target: "blank", data: { turbo: false }%></li>
                 <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "ENROLL AT SIMPLIFLY", enroll_path, target: "blank", data: { turbo: false }%></li>
                 <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "PILOT TRAINING", pilot_training_path, data: { turbo: false }%></li>
-                <li class="hover:text-sky-500 duration-500 "><%= link_to "BEGIN PILOT CAREER", cfi_path, data: { turbo: false }%></li>
+                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "BEGIN PILOT CAREER", cfi_path, data: { turbo: false }%></li>
+                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "TIMELINE", timeline_path, data: { turbo: false }%></li>
+                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "COST", cost_path, data: { turbo: false }%></li>
               </ul>
             </div>
             <div class="font-header text-2xl font-semibold w-1/4 pl-12" >
               <ul>
-                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "ACCELERATED COURSE", accelerated_path, data: { turbo: false }%></li>
-                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "FLEXIBLE COURSE", flexible_path, data: { turbo: false }%></li>
-                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "TIMELINE", timeline_path, data: { turbo: false }%></li>
-                <li class="hover:text-sky-500 duration-500 "><%= link_to "COST", cost_path, data: { turbo: false }%></li>
+                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "PRIVATE PILOT", private_pilot_path, data: { turbo: false }%></li>
+                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "INSTRUMENT RATING", instrument_path, data: { turbo: false }%></li>
+                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "COMMERCIAL PILOT", commercial_path, data: { turbo: false }%></li>
+                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "MULTI ENGINE RATING", multi_path, data: { turbo: false }%></li>
+                <li class="hover:text-sky-500 duration-500 pb-3"><%= link_to "FLIGHT INSTRUCTOR", cfi_path, data: { turbo: false }%></li>
+                
               </ul>
             </div>
             <div class="font-header text-2xl font-semibold w-1/4 pl-24">
