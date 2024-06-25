@@ -7,11 +7,12 @@
 
 <%= render "shared/header"%>
 
-<header class="w-full bg-home bg-cover h-screen-3/4 lg:h-screen-4/5 bg-center flex justify-center items-center">
-  <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full">
+<header class="relative w-full bg-home bg-cover h-screen-3/4 lg:h-screen-4/5 bg-center lg:bg-top flex justify-center items-center">
+  <div class="absolute -z-0 inset-0 bg-white/40 w-full h-full"></div>
+  <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center w-full z-10">
       <h1 class="font-semibold font-header text-5xl lg:text-8xl lg:px-20 text-center">PILOT TRAINING. <br>MADE SIMPLE</h1>
 
-      <h2 class="font-bold text-xl lg:text-3xl italic text-center py-5 lg:py-10">Accelerated and Flexible Pilot Training Programs in Mesa, AZ</h2>
+      <h2 class="font-bold text-xl lg:text-3xl italic text-center py-5 lg:py-10">Career Track Pilot Training in Mesa, AZ</h2>
       <!--Hide button for now-->
       <%#= link_to "LEARN HOW TODAY", airline_pilot_courses_path, data: { turbo: false }, class: "btn-primary" %>
   </div>
@@ -70,7 +71,32 @@
   </div>
 </section>
 
-<section class="flex flex-col lg:flex-row-reverse pt-10 pb-0 lg:py-10 bg-white">
+<section>
+  <div class="bg-sky-100 py-24 sm:py-32">
+  <div class="mx-auto max-w-5xl px-6 lg:px-8">
+    <h3 class="text-5xl font-semibold font-header mx-5 text-center uppercase">Your Path From Student Pilot to First Officer</h3>
+    <h4 class="mx-auto mt-3 font-medium text-gray-600 text-2xl text-center">Our student pilots have gone on to fly with…</h4>
+    
+    <div class="mx-auto mt-16 grid max-w-lg grid-cols-4 items-center gap-x-12 gap-y-16 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+      <%=image_tag "southwest-airlines-logo.webp", alt: "Southwest Airlines Logo", class: "col-span-2 max-h-12 w-full object-contain lg:col-span-1"%>
+      <%=image_tag "allegiant-air-logo.webp", alt: "Elite Jets Logo", class: "col-span-2 max-h-12 w-full object-contain lg:col-span-1"%>
+      <%=image_tag "frontier-airlines-logo.webp", alt: "Frontier Airlines Logo", class: "col-span-2 max-h-12 w-full object-contain lg:col-span-1"%>
+      <%=image_tag "skywest-airlines-logo.webp", alt: "Skywest Airlines Logo", class: "col-span-2 max-h-12 w-full object-contain lg:col-span-1"%>
+      <%=image_tag "envoy-air-logo.webp", alt: "Envoy Air Logo", class: "col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"%>
+      <%=image_tag "endeavor-air-logo.webp", alt: "Envoy Air Logo", class: "col-span-2 max-h-12 w-full object-contain lg:col-span-1"%>
+      <%=image_tag "contour-airlines-logo.webp", alt: "Elite Jets Logo", class: "col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"%>
+      <%=image_tag "pinnacle-aviation-logo.webp", alt: "Pinnacle Aviation Logo", class: "col-span-2 max-h-12 w-full object-contain lg:col-span-1"%>
+      <%=image_tag "elite-jets-logo.webp", alt: "Elite Jets Logo", class: "col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"%>
+    </div>
+    <div class="w-full flex justify-center mt-8">
+    <%= link_to "Start Pilot Career Training", simple_training_path, data: { turbo: false }, class: "btn-primary uppercase" %>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<section id="steps" class="flex flex-col lg:flex-row-reverse pt-10 pb-0 lg:py-10 bg-white">
   <div class="flex flex-col items-center lg:w-1/2 p-text">
     <span class="text-3xl ">Step 1.</span>
     <h3 class="text-5xl font-semibold pb-10 font-header mx-5 text-center">YOUR DISCOVERY FLIGHT</h3>
@@ -131,7 +157,7 @@
     <%= link_to "APPLY TODAY", cfi_path, data: { turbo: false }, class: "btn-primary mb-10" %>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
-    <%=image_tag "student-pilot-after-solo-with-instructor.webp", alt: "Student pilot at SimpliFly after soloing pictured with instructor", class: "lg:w-4/5 lg:rounded-2xl lg:drop-shadow-2xl"%>
+    <%=image_tag "multi-engine-aircraft-over-phoenix-arizona-flight-training.webp", alt: "Student pilot at SimpliFly after soloing pictured with instructor", class: "lg:w-4/5 lg:rounded-2xl lg:drop-shadow-2xl"%>
   </div>
 </section>
 
