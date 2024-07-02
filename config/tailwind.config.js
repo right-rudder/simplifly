@@ -122,7 +122,7 @@ module.exports = {
         "slide-out-left5": "slide-out-left 0.7s ease-out",
       },
       backgroundImage: {
-        home: "url('visitors-to-falcon-field-airport-simplifly-flight-school-mesa-az.webp')",
+        home: "url('overfly_az.webp')",
         ctahead: "url('cessna-sunset.webp')",
         sunset: "url('sunset.webp')",
         "pilots-airliner": "url('pilots-in-airliner.webp')",
