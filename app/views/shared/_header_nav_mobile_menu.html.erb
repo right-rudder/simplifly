@@ -104,9 +104,7 @@
         <li class="ml-5 animate-slide-in-left" x-show="mobile_certification_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left2': !mobile_certification_drop}">
           <%=link_to "STRATUS FINANCIAL", stratus_path, data: { turbo: false }%>
         </li>
-        <li class="ml-5 animate-slide-in-left2" x-show="mobile_certification_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left': !mobile_certification_drop}">
-          <%=link_to "MERITIZE", meritize_path, data: { turbo: false }%>
-        </li>
+        
       <li>
         <div class="flex flex-row justify-between" >
           <div class=""><%= link_to "SIMPLIFLY", why_simplifly_path, data: { turbo: false }%></div>
