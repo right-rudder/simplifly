@@ -80,7 +80,7 @@ Rails.application.routes.draw do
 
   # Static Pages
   get 'stratus-finance', to: 'pages#stratus', as: :stratus
-  get 'meritize', to: 'pages#meritize', as: :meritize
+  #get 'meritize', to: 'pages#meritize', as: :meritize
   #get 'accelerated-pilot-training', to: 'pages#accelerated', as: :accelerated
   #get 'flexible-pilot-training', to: 'pages#flexible', as: :flexible
   get 'why-simplifly', to: 'pages#why_simplifly', as: :why_simplifly
