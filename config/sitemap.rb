@@ -25,6 +25,29 @@ SitemapGenerator::Sitemap.create do
   #     add article_path(article), :lastmod => article.updated_at
   #   end
 
+  # Locations dynamic routes
+  add '/pilot-training/downtown-arizona-flight-school', changefreq: 'weekly'
+  add '/pilot-training/superstition-springs-arizona-flight-school', changefreq: 'weekly'
+  add '/pilot-training/dobson-ranch-arizona-flight-school', changefreq: 'weekly'
+  add '/pilot-training/fiesta-district-arizona-flight-school', changefreq: 'weekly'
+  add '/pilot-training/las-sendas-arizona-flight-school', changefreq: 'weekly'
+  add '/pilot-training/eastmark-arizona-flight-school', changefreq: 'weekly'
+  add '/pilot-training/lehi-arizona-flight-school', changefreq: 'weekly'
+  add '/pilot-training/alta-arizona-flight-school', changefreq: 'weekly'
+  add '/pilot-training/red-mountain-ranch-arizona-flight-school', changefreq: 'weekly'
+  add '/pilot-training/sunland-village-arizona-flight-school', changefreq: 'weekly'
+  add '/pilot-training/apache-wells-arizona-flight-school', changefreq: 'weekly'
+  add '/pilot-training/mesa-grande-arizona-flight-school', changefreq: 'weekly'
+  add '/pilot-training/velda-rose-estates-arizona-flight-school', changefreq: 'weekly'
+  add '/pilot-training/northwest-arizona-flight-school', changefreq: 'weekly'
+  add '/pilot-training/west-arizona-flight-school', changefreq: 'weekly'
+  add '/pilot-training/mountain-view-arizona-flight-school', changefreq: 'weekly'
+  add '/pilot-training/greenfield-lakes-gilbert-arizona-flight-school', changefreq: 'weekly'
+  add '/pilot-training/adobe-hills-arizona-flight-school', changefreq: 'weekly'
+  add '/pilot-training/the-groves-arizona-flight-school', changefreq: 'weekly'
+  add '/pilot-training/tempe-arizona-flight-school', changefreq: 'weekly'
+
+
   #Static Pages
   add '/stratus-finance'
   add '/meritize'

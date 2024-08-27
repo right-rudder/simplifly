@@ -1,0 +1,179 @@
+downtown-arizona-flight-school:
+  city: "Downtown Mesa"
+  state: "Arizona"
+  state_short: "AZ"
+  point_of_interest_1: "Mesa Arts Center"
+  point_of_interest_2: "Arizona Museum of Natural History"
+  point_of_interest_3: "i.d.e.a. Museum"
+  point_of_interest_4: "Mesa Contemporary Arts Museum"
+
+superstition-springs-arizona-flight-school:
+  city: "Superstition Springs"
+  state: "Arizona"
+  state_short: "AZ"
+  point_of_interest_1: "Superstition Springs Center"
+  point_of_interest_2: "Superstition Springs Golf Club"
+  point_of_interest_3: "AMC Superstition East 12"
+  point_of_interest_4: "Desert Trails Park"
+
+dobson-ranch-arizona-flight-school:
+  city: "Dobson Ranch"
+  state: "Arizona"
+  state_short: "AZ"
+  point_of_interest_1: "Dobson Ranch Golf Course"
+  point_of_interest_2: "Dobson Ranch Library"
+  point_of_interest_3: "Dobson Ranch Lake"
+  point_of_interest_4: "Dobson Park"
+
+fiesta-district-arizona-flight-school:
+  city: "Fiesta District"
+  state: "Arizona"
+  state_short: "AZ"
+  point_of_interest_1: "Fiesta Mall"
+  point_of_interest_2: "Mesa Community College"
+  point_of_interest_3: "Fiesta Sports Park"
+  point_of_interest_4: "Golfland Sunsplash"
+
+las-sendas-arizona-flight-school:
+  city: "Las Sendas"
+  state: "Arizona"
+  state_short: "AZ"
+  point_of_interest_1: "Las Sendas Golf Club"
+  point_of_interest_2: "Usery Mountain Regional Park"
+  point_of_interest_3: "Las Sendas Trailhead"
+  point_of_interest_4: "Red Mountain Ranch Country Club"
+
+eastmark-arizona-flight-school:
+  city: "Eastmark"
+  state: "Arizona"
+  state_short: "AZ"
+  point_of_interest_1: "The Orange Monster"
+  point_of_interest_2: "Steadfast Farm"
+  point_of_interest_3: "Eastmark Community Center"
+  point_of_interest_4: "Eastmark Great Park"
+
+lehi-arizona-flight-school:
+  city: "Lehi"
+  state: "Arizona"
+  state_short: "AZ"
+  point_of_interest_1: "Lehi Crossing Trail"
+  point_of_interest_2: "Lehi Community Improvement Park"
+  point_of_interest_3: "Pioneer Park"
+  point_of_interest_4: "Riverview Park"
+
+alta-arizona-flight-school:
+  city: "Alta Mesa"
+  state: "Arizona"
+  state_short: "AZ"
+  point_of_interest_1: "Arizona Commemorative Air Force Museum"
+  point_of_interest_2: "Alta Mesa Golf Club"
+  point_of_interest_3: "Falcon Field Airport"
+  point_of_interest_4: "Alta Mesa Park"
+
+red-mountain-ranch-arizona-flight-school:
+  city: "Red Mountain Ranch"
+  state: "Arizona"
+  state_short: "AZ"
+  point_of_interest_1: "Red Mountain Park"
+  point_of_interest_2: "Painted Mountain Golf Club"
+  point_of_interest_3: "Red Mountain Ranch Trail"
+  point_of_interest_4: "Tonto National Forest"
+
+sunland-village-arizona-flight-school:
+  city: "Sunland Village"
+  state: "Arizona"
+  state_short: "AZ"
+  point_of_interest_1: "Sunland Village Golf Course"
+  point_of_interest_2: "Sunland Springs Village"
+  point_of_interest_3: "Dreamland Villa Retirement Community"
+  point_of_interest_4: "Sunland Springs Community Park"
+
+apache-wells-arizona-flight-school:
+  city: "Apache Wells"
+  state: "Arizona"
+  state_short: "AZ"
+  point_of_interest_1: "Apache Wells Country Club"
+  point_of_interest_2: "Fountain of the Sun Country Club"
+  point_of_interest_3: "Saguaro Lake Ranch Stables"
+  point_of_interest_4: "Lost Dutchman State Park"
+
+mesa-grande-arizona-flight-school:
+  city: "Mesa Grande"
+  state: "Arizona"
+  state_short: "AZ"
+  point_of_interest_1: "Mesa Grande Cultural Park"
+  point_of_interest_2: "Kino Junior High School Park"
+  point_of_interest_3: "Mesa Riverview"
+  point_of_interest_4: "Hohokam Stadium"
+
+velda-rose-estates-arizona-flight-school:
+  city: "Velda Rose Estates"
+  state: "Arizona"
+  state_short: "AZ"
+  point_of_interest_1: "Velda Rose Gardens"
+  point_of_interest_2: "Fountain East Shopping Plaza"
+  point_of_interest_3: "Sunland Village East Golf Course"
+  point_of_interest_4: "Park of the Canals"
+
+northwest-arizona-flight-school:
+  city: "Northwest Mesa"
+  state: "Arizona"
+  state_short: "AZ"
+  point_of_interest_1: "Mesa Riverview Shopping Center"
+  point_of_interest_2: "Chicago Cubs Spring Training Facility"
+  point_of_interest_3: "Bass Pro Shops"
+  point_of_interest_4: "Riverview Park"
+
+west-arizona-flight-school:
+  city: "West Mesa"
+  state: "Arizona"
+  state_short: "AZ"
+  point_of_interest_1: "Eagles Community Center"
+  point_of_interest_2: "Rose Garden at MCC"
+  point_of_interest_3: "Fiesta Sports Complex"
+  point_of_interest_4: "Mesa Historical Museum"
+
+mountain-view-arizona-flight-school:
+  city: "Mountain View"
+  state: "Arizona"
+  state_short: "AZ"
+  point_of_interest_1: "Mesa Public Library"
+  point_of_interest_2: "Mountain View High School"
+  point_of_interest_3: "Pioneer Park Water Wall"
+  point_of_interest_4: "Mountain View Park"
+
+greenfield-lakes-gilbert-arizona-flight-school:
+  city: "Greenfield Lakes"
+  state: "Arizona"
+  state_short: "AZ"
+  point_of_interest_1: "Greenfield Lakes Golf Course"
+  point_of_interest_2: "Riparian Preserve at Water Ranch"
+  point_of_interest_3: "Southeast Regional Library"
+  point_of_interest_4: "Freestone Park"
+
+adobe-hills-arizona-flight-school:
+  city: "Adobe Hills"
+  state: "Arizona"
+  state_short: "AZ"
+  point_of_interest_1: "Usery Mountain Shooting Range"
+  point_of_interest_2: "Usery Mountain Archery Range"
+  point_of_interest_3: "Boulder Mountain Park"
+  point_of_interest_4: "Apache Trail Scenic Byway"
+
+the-groves-arizona-flight-school:
+  city: "The Groves"
+  state: "Arizona"
+  state_short: "AZ"
+  point_of_interest_1: "The Groves Park"
+  point_of_interest_2: "Falcon Hill Elementary School"
+  point_of_interest_3: "Falcon Field Airport"
+  point_of_interest_4: "Hermosa Vista Park"
+
+tempe-arizona-flight-school:
+  city: "Tempe"
+  state: "Arizona"
+  state_short: "AZ"
+  point_of_interest_1: "Tempe Town Lake"
+  point_of_interest_2: "Arizona State University"
+  point_of_interest_3: "Tempe Marketplace"
+  point_of_interest_4: "Hayden Butte Preserve ('A' Mountain)"

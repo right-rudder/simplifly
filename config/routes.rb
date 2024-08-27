@@ -99,6 +99,9 @@ Rails.application.routes.draw do
   get 'terms-of-service-privacy-policy', to: 'pages#tos', as: :tos
   get 'pilot-training-made-simple', to: 'pages#simple_training', as: :simple_training
 
+  # Dynamic Location pages
+  get '/pilot-training/:location_slug', to: 'our_locations#show'
+
   #get 'aircraft-rental', to: 'pages#aircraft_rental', as: :aircraft_rental
   #get 'fixed-wing-airplane-fleet', to: 'pages#fixed_wing', as: :fixed_wing
   #get 'rotary-wing-helicopter-fleet', to: 'pages#rotary_wing', as: :rotary_wing
