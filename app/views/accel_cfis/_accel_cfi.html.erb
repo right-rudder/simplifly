@@ -1,0 +1,22 @@
+<div id="<%= dom_id accel_cfi %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= accel_cfi.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Phone:</strong>
+    <%= accel_cfi.phone %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Email:</strong>
+    <%= accel_cfi.email %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this accel cfi", accel_cfi, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this accel cfi', edit_accel_cfi_path(accel_cfi), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

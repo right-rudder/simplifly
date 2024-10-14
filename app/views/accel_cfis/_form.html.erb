@@ -1,0 +1,39 @@
+<h4 class="text-center text-2xl font-bold pb-5">
+  Interested in Joining the <span class="text-sky-400">Acceletated CFI/CFII Program</span>?
+</h4>
+<p class="text-center px-5 italic text-neutral-700">
+  Fill out the form below and we will get in contact with you shortly!
+</p>
+<p class="text-center mt-2 text-sm text-neutral-700">
+  * denotes required fields
+</p>
+
+<%= form_with(model: accel_cfi, class: "contents") do |form| %>
+  <% if accel_cfi.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%= pluralize(accel_cfi.errors.count, "error") %> prohibited this accel_cfi from being saved:</h2>
+
+      <ul>
+        <% accel_cfi.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class="w-full mt-8">
+    <div class="mb-5">
+      <%= form.text_field :name, placeholder: "Name", class: " shadow text-black rounded-md border border-gray-200 focus:border-sky-500 focus:ring-sky-500 px-3 py-2 w-full" %>
+    </div>
+    <div class="mb-5">
+      <%= form.text_field :phone, placeholder: "Phone", class: " shadow text-black rounded-md border border-gray-200 focus:border-sky-500 focus:ring-sky-500 px-3 py-2 w-full" %>
+    </div>
+    <div class="mb-5">
+      <%= form.email_field :email, placeholder: "Email", class: " shadow text-black rounded-md border border-gray-200 focus:border-sky-500 focus:ring-sky-500 px-3 py-2 w-full"  %>
+    </div>
+    <%= invisible_captcha :confirm_email, :accel_cfi %>
+    <div class="inline">
+      <%= form.submit "Send", class: "btn-primary uppercase" %>
+    </div>
+  </div>
+<% end %>

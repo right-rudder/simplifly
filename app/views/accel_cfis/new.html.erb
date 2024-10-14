@@ -1,0 +1,109 @@
+
+<%# Head / Meta Data %>
+<% title("Start Your Pilot Career | SimpliFly Flight School") %>
+<% meta_description(" Join the team of instructors at Simplifly in Mesa, Phoenix, Scottsdale. Share your passion for aviation and inspire future pilots as an instructor. Apply now.") %>
+<% meta_keywords("Flight Instructor Position, CFI Job, Instruct at Simplifly, Mesa Flight School, Phoenix Flight School, Scottsdale Flight School") %>
+
+<%= render "shared/header"%>
+
+
+<header
+    class="relative top-0 h-screen flex flex-col items-center justify-center"
+  >
+    <!-- bg-overlay to darken -->
+    <div
+      class="absolute w-full h-screen overflow-hidden"
+    >
+        <%= image_tag "pilot-career-flight-lessons-simplifly-arizona.webp" , alt: "pilot-career-flight-lessons-simplifly-arizona", class: "h-full w-full object-cover object-center lg:object-top brightness-75"%>
+    </div>
+    <!-- Text -->
+    <div
+      class="text-white text-center lg:text-left z-10 flex flex-col items-center px-5 h-auto justify-center"
+    >
+      <h1 class="text-7xl text-sky-100 font-header uppercase font-semibold">
+        Acceletated CFI/CFII
+      </h1>
+      <h2 class="text-3xl text-white font-medium italic mt-3">
+        How to become a CFI and start inspiring future pilots
+      </h2>
+    </div>
+    <!-- <Partners /> -->
+  </header>
+
+<section class="bg-gradient-to-b from-slate-50 to-sky-200 flex flex-col items-center">
+  <div class="max-w-4xl flex flex-col pt-10 px-5">
+    <h3 class="text-5xl font-header uppercase font-semibold">Get Started on Your Pilot Career</h3>
+    <h4 class="text-3xl text-slate-600 italic py-5">SimpliFly specializes in solely Career Track Pilot Training in Mesa, AZ</h4>
+    <p class="text-lg">Start your pilot career after getting your commercial certificate. Start flying now and build the necessary hours to become an airline pilot. One way SimpliFly can help is by becoming a certified flight instructor (CFI).  Being a CFI offers a valuable opportunity to rapidly accumulate flight experience for the minimum requirements of airlines and corporate aviation companies. It is a great opportunity that allows you to apply all the knowledge and skills acquired during your own flight training. Flight instructors play a crucial role as ambassadors of the aviation community, imparting their knowledge and experience to their students. For many, it serves as their first aviation job that not only is an invaluable experience but also provides compensation.</p>
+    
+    <h3 class="text-5xl font-header uppercase font-semibold pt-20 pb-5">How Long Will it Take?</h3>
+    <p class="text-lg">Becoming a flight instructor does not have a minimum time, but you do need a commercial pilot license along with an instrument rating. To qualify for a commercial pilot license, a pilot must accumulate a minimum of 250 flight hours. That being said, if the minimum requirements are met it can take a little over a week to complete training if you are studying full time (accelerated).  If studying part time when able (flexible), it can take from a few weeks to a few months to be prepared for the CFI checkride and receive your endorsement.</p>
+
+    <h3 class="text-5xl font-header uppercase font-semibold pt-20 pb-5">What are the Eligibility Requirements?</h3>
+    <ul class="list-disc text-lg pl-10 lg:pl-16">
+      <li>Be 18 years of age</li>
+      <li>Read, speak, write and understand the English language</li>
+      <li>Hold a commercial pilot certificate and an instrument rating</li>
+      <li>Have logged at least 250 hours of flight time</li>
+      <li>Hold a valid FAA 3rd Class Medical Cerificate (or higher)</li>
+      <li>Receive a logbook endorsement from an authorized instructor on the fundamentals of instructing</li>
+      <li>Pass a knowledge test on the aeronautical knowledge areas appropriate to the flight instructor rating sought</li>
+    </ul>
+    <p class="text-slate-600 italic pt-5">Reference 14 CFR §61.183 for the entire list of eligibility requirements.</p>
+
+    <h3 class="text-5xl font-header uppercase font-semibold pt-20 pb-5">The SimpliFly Guarantee</h3>
+    <p class="text-lg pb-20">If you have completed your <%= link_to "private", private_pilot_path, class: "text-sky-600 hover:underline", data: {turbo: false}%>, <%= link_to "instrument", instrument_path, class: "text-sky-600 hover:underline", data: {turbo: false}%>, <%= link_to "commercial", commercial_path, class: "text-sky-600 hover:underline", data: {turbo: false}%>, and CFI training at SimpliFly, we have an exciting opportunity for you. As a testament to our confidence in your abilities, we offer a guaranteed interview for a teaching position as a CFI within our flight school. This exclusive opportunity allows you to showcase the knowledge and skills you have acquired during your training journey with us. Join our team of dedicated instructors, inspire future aviators, and make a meaningful impact in the aviation community. Take the next step in your career as a CFI with SimpliFly and let your passion for aviation soar.</p>
+  </div>
+</section>
+
+<section class="bg-gradient-to-b from-sky-500 to-sky-200 lg:py-10 pt-10 pb-0">
+  <div class="flex flex-col lg:flex-row-reverse">
+    <div class="flex flex-col items-center lg:w-1/2 pb-10 lg:pb-0">
+      <h2 class="font-bold text-xl px-5 lg:text-3xl pt-5 text-center">Upcoming <span class="text-sky-100">Acceletated CFI</span> Dates</h2>
+      <p class="w-3/4 pb-10 lg:pb-20">
+        <div class="flex flex-col px-5 gap-3 text-base">
+          <div class="flex flex-row justify-start items-center align-middle">
+            <div class="text-custom-50 pr-1 text-3xl font-extrabold">✈</div>
+            <h3 class="lg:px-10 pl-1 text-xl text-left">Accelerated CFI - November 11</h3>
+          </div>
+          <div class="flex flex-row justify-start items-center align-middle">
+            <div class="text-custom-50 pr-1 text-3xl font-extrabold">✈</div>
+            <h3 class="lg:px-10 pl-1 text-xl text-left">Accelerated CFI - November 24</h3>
+          </div>
+        </div>
+      </p>
+    </div>
+    <div class="flex flex-col justify-center items-center lg:w-1/2">
+      <%= image_tag "visitors-to-falcon-field-airport-simplifly-flight-school-mesa-az.webp", alt: "Sun City Experience Aviation attendees looking at sectional chart (pilot map)", class: "lg:w-3/4 lg:rounded-xl"%>
+    </div>
+  </div>
+</section>
+
+<section class="flex flex-col items-center bg-gradient-to-b from-neutral-700 to-neutral-900 lg:py-10" id="camp_form">
+  <div class="max-w-4xl mx-auto lg:rounded-2xl lg:border-2 lg:border-custom-50 bg-white py-5">
+    <div class="px-5">
+      <%= turbo_frame_tag 'form-section', class: "h-full" do %>
+        <%= render "form", accel_cfi: @accel_cfi %>  
+      <% end %>
+    </div>
+  </div>
+</section>
+
+
+<%= render "shared/footer"%>
+
+
+<%# Sticky div %>
+</div>
+
+<script>
+function scrollToElement(elementId, offset) {
+  event.preventDefault();
+  var element = document.getElementById(elementId);
+  var elementPosition = element.getBoundingClientRect().top + window.scrollY;
+  window.scrollTo({
+      top: elementPosition - offset,
+      behavior: 'smooth'
+  });
+}
+</script>
