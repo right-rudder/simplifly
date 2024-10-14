@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-
-
-
     # 404/500 pages
     get 'errors/not_found'
     get 'errors/internal_server_error'
@@ -40,6 +37,8 @@ Rails.application.routes.draw do
   resources :messages #ghl integration completed 2/5/2023 ts
   resources :enrollments #ghl integration completed 2/5/2023 ts
   resources :book_downloads #ghl integration completed 2/5/2023 ts
+  resources :accel_cfis
+
   #resources :checkouts
   #resources :quiz_results
 
@@ -54,6 +53,10 @@ Rails.application.routes.draw do
   # Enrollment form
   get 'enroll-at-simplifly', to: 'enrollments#new', as: :enroll
   get 'enrollment-confirmation', to: 'enrollments#confirmation', as: :enroll_confirmation
+
+  # Accelerated CFI form
+  get 'accelerated-cfi', to: 'accel_cfis#new', as: :accelerated_cfi
+  get 'accelerated-cfi-confirmation', to: 'accel_cfis#confirmation', as: :accel_cfi_confirmation
 
   # Contact form
   get 'contact', to: 'messages#new', as: :contact
