@@ -55,8 +55,8 @@ Rails.application.routes.draw do
   get 'enrollment-confirmation', to: 'enrollments#confirmation', as: :enroll_confirmation
 
   # Accelerated CFI form
-  get 'accelerated-cfi', to: 'accel_cfis#new', as: :accelerated_cfi
-  get 'accelerated-cfi-confirmation', to: 'accel_cfis#confirmation', as: :accel_cfi_confirmation
+  get 'accelerated-30-day-cfi-program', to: 'accel_cfis#new', as: :accelerated_cfi
+  get 'accelerated-cfi-confirmation', to: 'accel_cfis#confirm', as: :accel_cfi_confirmation
 
   # Contact form
   get 'contact', to: 'messages#new', as: :contact

@@ -1,17 +1,14 @@
-<h4 class="text-center text-2xl font-bold pb-5">
-  Interested in Joining the <span class="text-sky-400">Acceletated CFI/CFII Program</span>?
-</h4>
-<p class="text-center px-5 italic text-neutral-700">
+<h3 class="text-center text-2xl font-bold pb-5 hidden lg:block">
+  Interested in Joining the <span class="text-sky-400">Accelerated CFI/CFII Program</span>?
+</h3>
+<p class="lg:text-center lg:px-5 italic text-neutral-700">
   Fill out the form below and we will get in contact with you shortly!
-</p>
-<p class="text-center mt-2 text-sm text-neutral-700">
-  * denotes required fields
 </p>
 
 <%= form_with(model: accel_cfi, class: "contents") do |form| %>
   <% if accel_cfi.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(accel_cfi.errors.count, "error") %> prohibited this accel_cfi from being saved:</h2>
+      <h2><%= pluralize(accel_cfi.errors.count, "error") %> prohibited this from being saved:</h2>
 
       <ul>
         <% accel_cfi.errors.each do |error| %>

@@ -62,6 +62,30 @@ ActiveRecord::Schema[7.0].define(version: 2024_10_14_165612) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
+  create_table "advance_trainings", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "phone"
+    t.text "comments"
+    t.string "certificate_sought"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "aviations", force: :cascade do |t|
+    t.string "attendee_first_name"
+    t.string "attendee_last_name"
+    t.integer "attendee_age"
+    t.string "phone"
+    t.string "email"
+    t.string "parent_first_name"
+    t.string "parent_last_name"
+    t.text "comments"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "book_downloads", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -153,6 +177,9 @@ ActiveRecord::Schema[7.0].define(version: 2024_10_14_165612) do
     t.string "lacrm_contact_id"
     t.string "lacrm_response_code"
     t.text "lacrm_response_body"
+    t.string "make"
+    t.string "model"
+    t.string "n_nummber"
   end
 
   create_table "posts", force: :cascade do |t|

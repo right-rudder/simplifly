@@ -1,5 +1,8 @@
 class AccelCfisController < ApplicationController
   before_action :set_accel_cfi, only: %i[ show edit update destroy ]
+  invisible_captcha only: [:create], honeypot: :confirm_email
+
+
   def confirmation
     render 'confirm'
   end
@@ -28,7 +31,7 @@ class AccelCfisController < ApplicationController
     respond_to do |format|
       if @accel_cfi.save
         AccelCfiMailer.mail_cfi(@accel_cfi).deliver_later
-        format.html { redirect_to accel_cfis_confirm_path, notice: @accel_cfi.name }
+        format.html { redirect_to accel_cfi_confirmation_path, notice: @accel_cfi.name }
         #format.json { render :show, status: :created, location: @accel_cfi }
       else
         format.html { render :new, status: :unprocessable_entity }
