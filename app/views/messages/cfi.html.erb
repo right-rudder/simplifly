@@ -53,6 +53,12 @@
     
     <h3 class="text-5xl font-header uppercase font-semibold pt-20 pb-5">How Long Will it Take?</h3>
     <p class="text-lg">Becoming a flight instructor does not have a minimum time, but you do need a commercial pilot license along with an instrument rating. To qualify for a commercial pilot license, a pilot must accumulate a minimum of 250 flight hours. That being said, if the minimum requirements are met it can take a little over a week to complete training if you are studying full time (accelerated).  If studying part time when able (flexible), it can take from a few weeks to a few months to be prepared for the CFI checkride and receive your endorsement.</p>
+    <p class="text-lg pt-10">
+      We now offer a 30 day CFI/CFII program which is our recommended route to getting your CFI certificates.  In this program, you will be working alongside pilots at a similar stage in their careers that are also working on their CFI certificates.  Click the button below to get more information and start the enrollment process.
+    </p>
+    <div class="pt-10">
+      <%= link_to "30 Day CFI Program", accelerated_cfi_path, class: "btn-primary mt-10" %>
+    </div>
 
     <h3 class="text-5xl font-header uppercase font-semibold pt-20 pb-5">What are the Eligibility Requirements?</h3>
     <ul class="list-disc text-lg pl-10 lg:pl-16">
@@ -68,7 +74,11 @@
 
     <h3 class="text-5xl font-header uppercase font-semibold pt-20 pb-5">The SimpliFly Guarantee</h3>
     <p class="text-lg pb-20">If you have completed your <%= link_to "private", private_pilot_path, class: "text-sky-600 hover:underline", data: {turbo: false}%>, <%= link_to "instrument", instrument_path, class: "text-sky-600 hover:underline", data: {turbo: false}%>, <%= link_to "commercial", commercial_path, class: "text-sky-600 hover:underline", data: {turbo: false}%>, and CFI training at SimpliFly, we have an exciting opportunity for you. As a testament to our confidence in your abilities, we offer a guaranteed interview for a teaching position as a CFI within our flight school. This exclusive opportunity allows you to showcase the knowledge and skills you have acquired during your training journey with us. Join our team of dedicated instructors, inspire future aviators, and make a meaningful impact in the aviation community. Take the next step in your career as a CFI with SimpliFly and let your passion for aviation soar.</p>
+    <div class="pb-10">
+      <%= link_to "ENROLL TODAY", accelerated_cfi_path, class: "btn-primary" %>
+    </div>
   </div>
+  
 </section>
 
 <%= render "shared/footer"%>
