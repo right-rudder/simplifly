@@ -1,5 +1,8 @@
 class AccelCfisController < ApplicationController
   before_action :set_accel_cfi, only: %i[ show edit update destroy ]
+  invisible_captcha only: [:create], honeypot: :confirm_email
+
+  
   def confirmation
     render 'confirm'
   end
