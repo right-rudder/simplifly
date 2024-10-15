@@ -8,27 +8,37 @@
 
 
 <header
-    class="relative top-0 h-screen flex flex-col items-center justify-center"
-  >
+  class="relative top-0 h-screen flex flex-col items-center justify-center"
+>
     <!-- bg-overlay to darken -->
     <div
       class="absolute w-full h-screen overflow-hidden"
     >
-        <%= image_tag "pilot-career-flight-lessons-simplifly-arizona.webp" , alt: "pilot-career-flight-lessons-simplifly-arizona", class: "h-full w-full object-cover object-center lg:object-top brightness-75"%>
+        <%= image_tag "pilot-career-flight-lessons-simplifly-arizona.webp" , alt: "pilot-career-flight-lessons-simplifly-arizona", class: "h-full w-full object-cover object-center lg:object-top brightness-75 opacity-40"%>
     </div>
-    <!-- Text -->
-    <div
-      class="text-white text-center lg:text-left z-10 flex flex-col items-center px-5 h-auto justify-center"
-    >
-      <h1 class="text-7xl text-sky-100 font-header uppercase font-semibold">
-        Accelerated CFI/CFII
-      </h1>
-      <h2 class="text-3xl text-white font-medium italic mt-3">
-        How to become a CFI and start inspiring future pilots
-      </h2>
+
+    <div class="flex flex-col lg:flex-row px-5 z-10">
+      <!-- Text -->
+      <div class="text-white flex flex-col items-start px-5 h-auto">
+        <h1 class="text-7xl text-sky-600 font-header uppercase font-semibold">
+          30 Day Accelerated <br class="hidden lg:block"> CFI & CFII Course
+        </h1>
+        <h2 class="text-3xl text-white font-medium italic mt-3">
+          How to become a CFI and start inspiring future pilots
+        </h2>
+      </div>
+
+      <%# Form %>
+      <div class="max-w-4xl mx-auto lg:rounded-2xl lg:border-2 lg:border-custom-50 bg-white py-5">
+        <div class="px-5">
+          <%= turbo_frame_tag 'form-section', class: "h-full" do %>
+            <%= render "form", accel_cfi: @accel_cfi %>  
+          <% end %>
+        </div>
+      </div>
     </div>
-    <!-- <Partners /> -->
-  </header>
+    
+</header>
 
 <section class="bg-gradient-to-b from-slate-50 to-sky-200 flex flex-col items-center">
   <div class="max-w-4xl flex flex-col pt-10 px-5">
@@ -80,13 +90,7 @@
 </section>
 
 <section class="flex flex-col items-center bg-gradient-to-b from-neutral-700 to-neutral-900 lg:py-10" id="camp_form">
-  <div class="max-w-4xl mx-auto lg:rounded-2xl lg:border-2 lg:border-custom-50 bg-white py-5">
-    <div class="px-5">
-      <%= turbo_frame_tag 'form-section', class: "h-full" do %>
-        <%= render "form", accel_cfi: @accel_cfi %>  
-      <% end %>
-    </div>
-  </div>
+  
 </section>
 
 
@@ -95,15 +99,3 @@
 
 <%# Sticky div %>
 </div>
-
-<script>
-function scrollToElement(elementId, offset) {
-  event.preventDefault();
-  var element = document.getElementById(elementId);
-  var elementPosition = element.getBoundingClientRect().top + window.scrollY;
-  window.scrollTo({
-      top: elementPosition - offset,
-      behavior: 'smooth'
-  });
-}
-</script>
