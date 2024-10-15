@@ -11,7 +11,7 @@
 <%= form_with(model: accel_cfi, class: "contents") do |form| %>
   <% if accel_cfi.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(accel_cfi.errors.count, "error") %> prohibited this accel_cfi from being saved:</h2>
+      <h2><%= pluralize(accel_cfi.errors.count, "error") %> prohibited this from being saved:</h2>
 
       <ul>
         <% accel_cfi.errors.each do |error| %>

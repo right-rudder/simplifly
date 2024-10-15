@@ -56,7 +56,7 @@ Rails.application.routes.draw do
 
   # Accelerated CFI form
   get 'accelerated-cfi', to: 'accel_cfis#new', as: :accelerated_cfi
-  get 'accelerated-cfi-confirmation', to: 'accel_cfis#confirmation', as: :accel_cfi_confirmation
+  get 'accelerated-cfi-confirmation', to: 'accel_cfis#confirm', as: :accel_cfi_confirmation
 
   # Contact form
   get 'contact', to: 'messages#new', as: :contact
