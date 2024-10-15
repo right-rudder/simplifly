@@ -12,7 +12,7 @@
 >
     <!-- bg-overlay to darken -->
     <div class="hidden lg:block absolute w-full h-screen overflow-hidden">
-        <%= image_tag "pilot-career-flight-lessons-simplifly-arizona.webp" , alt: "pilot-career-flight-lessons-simplifly-arizona", class: "h-full w-full object-cover object-center lg:object-top brightness-75 opacity-40"%>
+        <%= image_tag "simplifly-sunset-gilbert-cfi-training.webp" , alt: "Sunset over Gilbert Arizona during CFI CFII training at Falcon Field SimpliFly Flight School", class: "h-full w-full object-cover object-center lg:object-top brightness-75 opacity-80"%>
     </div>
 
     <div class="flex flex-col lg:flex-row lg:px-5 z-10">
@@ -41,11 +41,13 @@
 <section class="bg-gradient-to-b from-slate-50 to-sky-200 flex flex-col items-center">
   <div class="max-w-4xl flex flex-col pt-10 px-5">
     <h3 class="text-5xl font-header uppercase font-semibold">Get Started on Your Pilot Career</h3>
-    <h4 class="text-3xl text-slate-600 italic py-5">SimpliFly specializes in solely Career Track Pilot Training in Mesa, AZ</h4>
-    <p class="text-lg">Start your pilot career after getting your commercial certificate. Start flying now and build the necessary hours to become an airline pilot. One way SimpliFly can help is by becoming a certified flight instructor (CFI).  Being a CFI offers a valuable opportunity to rapidly accumulate flight experience for the minimum requirements of airlines and corporate aviation companies. It is a great opportunity that allows you to apply all the knowledge and skills acquired during your own flight training. Flight instructors play a crucial role as ambassadors of the aviation community, imparting their knowledge and experience to their students. For many, it serves as their first aviation job that not only is an invaluable experience but also provides compensation.</p>
+    <h4 class="text-3xl text-slate-600 italic py-5">Become a CFI/CFII in 30 days!</h4>
+    <p class="text-lg">Join SimpliFly's accelerated CFI/CFII program and become a certified flight instructor in just 30 days! With small class sizes and a personalized training approach, you'll gain the skills and experience needed to start your aviation career quickly. Our program boasts a 100% pass rate and is designed for aspiring pilots ready to take the next step, whether you're building hours or looking for your first paid flying job. Get started today and become a confident, certified instructor!</p>
     
     <h3 class="text-5xl font-header uppercase font-semibold pt-20 pb-5">How Long Will it Take?</h3>
-    <p class="text-lg">Becoming a flight instructor does not have a minimum time, but you do need a commercial pilot license along with an instrument rating. To qualify for a commercial pilot license, a pilot must accumulate a minimum of 250 flight hours. That being said, if the minimum requirements are met it can take a little over a week to complete training if you are studying full time (accelerated).  If studying part time when able (flexible), it can take from a few weeks to a few months to be prepared for the CFI checkride and receive your endorsement.</p>
+    <p class="text-lg">Becoming a flight instructor depends on meeting certain requirements, including a commercial pilot license and instrument rating, with at least 250 flight hours. Once those requirements are met, training can be completed in as little as a week for full-time students or over a few months for part-time learners.</p>
+
+    <p class="text-lg pt-10">Our Accelerated CFI/CFII program is designed to get you certified in just 30 days, with new classes starting every month.  If you are accepted into the program, you will be paired with an instructor and be surrounded with peers that are focused on the same goal you are: becoming a certified flight instructor.</p>
 
     <h3 class="text-5xl font-header uppercase font-semibold pt-20 pb-5">What are the Eligibility Requirements?</h3>
     <ul class="list-disc text-lg pl-10 lg:pl-16">
@@ -67,16 +69,24 @@
 <section class="bg-gradient-to-b from-sky-500 to-sky-200 lg:py-10 pt-10 pb-0">
   <div class="flex flex-col lg:flex-row-reverse">
     <div class="flex flex-col items-center lg:w-1/2 pb-10 lg:pb-0">
-      <h2 class="font-bold text-xl px-5 lg:text-3xl pt-5 text-center">Upcoming <span class="text-sky-100">Acceletated CFI</span> Dates</h2>
+      <h2 class="font-bold text-xl px-5 lg:text-3xl pt-5 text-center">How to Join the 30 Day CFI / CFII Program</h2>
       <p class="w-3/4 pb-10 lg:pb-20">
         <div class="flex flex-col px-5 gap-3 text-base">
           <div class="flex flex-row justify-start items-center align-middle">
-            <div class="text-custom-50 pr-1 text-3xl font-extrabold">✈</div>
-            <h3 class="lg:px-10 pl-1 text-xl text-left">Accelerated CFI - November 11</h3>
+            <div class="text-custom-50 pr-1 text-2xl font-extrabold">✈</div>
+            <h3 class="lg:px-10 pl-1 text-lg text-left">Complete your private, instrument, and commercial certificates</h3>
           </div>
           <div class="flex flex-row justify-start items-center align-middle">
-            <div class="text-custom-50 pr-1 text-3xl font-extrabold">✈</div>
-            <h3 class="lg:px-10 pl-1 text-xl text-left">Accelerated CFI - November 24</h3>
+            <div class="text-custom-50 pr-1 text-2xl font-extrabold">✈</div>
+            <h3 class="lg:px-10 pl-1 text-lg text-left">Fill out a form on this page</h3>
+          </div>
+          <div class="flex flex-row justify-start items-center align-middle">
+            <div class="text-custom-50 pr-1 text-2xl font-extrabold">✈</div>
+            <h3 class="lg:px-10 pl-1 text-lg text-left">Or reach us directly and give us a call at <%= link_to "(480) 256-8355", "tel:1-480-256-8355" %></h3>
+          </div>
+          <div class="flex flex-row justify-start items-center align-middle">
+            <div class="text-custom-50 pr-1 text-2xl font-extrabold">✈</div>
+            <h3 class="lg:px-10 pl-1 text-lg text-left">Meet with a SimpliFly team member and complete enrollment</h3>
           </div>
         </div>
       </p>
@@ -88,10 +98,16 @@
 </section>
 
 <section class="flex flex-col items-center bg-gradient-to-b from-neutral-700 to-neutral-900 lg:py-10" id="camp_form">
-  
+  <div class="max-w-4xl mx-auto lg:rounded-2xl lg:border-2 lg:border-custom-50 bg-white py-5">
+     <div class="px-5">
+       <%= turbo_frame_tag 'form-section', class: "h-full" do %>
+         <%= render "form", accel_cfi: @accel_cfi %>  
+       <% end %>
+     </div>
+   </div>
 </section>
 
-
+<%= render "shared/cta_pilot_simple"%>
 <%= render "shared/footer"%>
 
 
