@@ -188,18 +188,7 @@
 <%= render "shared/cta_pilot_simple"%>
 
 
-<h2>Recent Posts</h2>
-<ul>
-  <% @recent_posts.each do |post| %>
-    <li>
-      <h3><%= post.title %></h3>
-      <p><%= post.post_content.truncate(100) %></p>
-      <p><%= link_to 'Read More', post_path(post) %></p>
-    </li>
-  <% end %>
-</ul>
-
-
+<%= render "blog_feed" %>
 
 
 <%= render "shared/faq"%>
