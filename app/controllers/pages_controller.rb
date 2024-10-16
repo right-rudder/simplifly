@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    @recent_posts = Post.order(created_at: :desc).limit(3)
   end
 
   def stratus

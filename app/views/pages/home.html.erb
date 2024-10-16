@@ -187,6 +187,21 @@
 
 <%= render "shared/cta_pilot_simple"%>
 
+
+<h2>Recent Posts</h2>
+<ul>
+  <% @recent_posts.each do |post| %>
+    <li>
+      <h3><%= post.title %></h3>
+      <p><%= post.post_content.truncate(100) %></p>
+      <p><%= link_to 'Read More', post_path(post) %></p>
+    </li>
+  <% end %>
+</ul>
+
+
+
+
 <section class="bg-gradient-to-b from-sky-200 to-white">
   <h3 class="text-5xl font-semibold py-10 font-header mx-5 text-center">FREQUENTLY ASKED QUESTIONS</h3>
   <div class="bg-white max-w-xl mx-5 lg:mx-auto border border-gray-200 rounded-2xl mb-10">
