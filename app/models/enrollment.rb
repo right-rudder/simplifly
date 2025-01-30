@@ -2,10 +2,11 @@ class Enrollment < ApplicationRecord
   before_validation :strip_phone_number
   after_save :to_lacrm if Rails.env.production?
   after_save :to_ghl
-  
+
 
   validates :first_name, presence: true
   validates :last_name, presence: true
+  validates :interested_in, presence: true
   validates :phone, presence: true, format: { with: /\A\d{10}\z/, message: "must be a valid 10-digit phone number" }
   validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP, message: "must be a valid email address" }
 
@@ -19,6 +20,7 @@ class Enrollment < ApplicationRecord
       "Name" => "#{self.first_name} #{self.last_name}",
       "email" => "#{self.email}",
       "phone" => "#{self.phone}",
+      "interested_in" => "#{self.interested_in}",
       "body" => "
         Previous Training: #{self.previous_training}
         Goals: #{self.goals}
@@ -29,7 +31,7 @@ class Enrollment < ApplicationRecord
         Alternate Date: #{self.alternate_date}
         Alternate Time: #{self.alternate_availability}
         ",
-    }     
+    }
     HTTParty.post(ghl_url, body: ghl_payload.to_json, headers: { "Content-Type" => "application/json" })
   end
 
@@ -68,11 +70,11 @@ class Enrollment < ApplicationRecord
     }
 
 
-    
+
 
     response = HTTParty.post(endpoint, headers: headers, body: contact_payload.to_json)
     contact_id = JSON.parse(response.body)['ContactId']
-    
+
 
     # Add a note
     note_payload = {
@@ -93,5 +95,5 @@ class Enrollment < ApplicationRecord
     }
     HTTParty.post(endpoint, headers: headers, body: note_payload.to_json)
 
-  end  
+  end
 end
